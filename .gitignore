@@ -1,0 +1,4 @@
+# Archivos temporales de Excel y carpeta de publicación
+~$*
+dist/
+node_modules/
