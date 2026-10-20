@@ -1,34 +1,31 @@
-// Convierte los JPG descargados a WebP livianos (máx. 1400 px de ancho) usando Chrome headless.
-// Uso: node tools/optimize-images.mjs <carpeta> [<carpeta>...]
+// Convierte los JPG y PNG descargados a WebP livianos (máx. 1400 px de ancho) usando Chrome sin ventana.
+// Uso, desde la carpeta vidriera: node tools/optimize-images.mjs <carpeta> [<carpeta>...]
+// Borra el original después de convertirlo.
 import { readFileSync, writeFileSync, readdirSync, unlinkSync } from 'node:fs';
 import { join } from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { abrirChrome } from './chrome.mjs';
 
-const skill = process.env.TASTE_SKILL;
-const { Browser } = await import(pathToFileURL(join(skill, 'scripts/lib/cdp.mjs')).href);
-const browser = await Browser.launch({ width: 800, height: 600 });
-const page = await browser.newPage({ width: 800, height: 600 });
-await page.goto('about:blank');
-
+const chrome = await abrirChrome();
 for (const dir of process.argv.slice(2)) {
-  for (const file of readdirSync(dir).filter((f) => /\.jpe?g$/i.test(f))) {
+  for (const file of readdirSync(dir).filter((f) => /\.(jpe?g|png)$/i.test(f))) {
     const src = join(dir, file);
-    const dataUrl = `data:image/jpeg;base64,${readFileSync(src).toString('base64')}`;
-    const out = await page.eval(async ({ dataUrl, max }) => {
+    const tipo = /\.png$/i.test(file) ? 'png' : 'jpeg';
+    const dataUrl = `data:image/${tipo};base64,${readFileSync(src).toString('base64')}`;
+    const out = await chrome.evaluar(`(async () => {
       const img = new Image();
-      img.src = dataUrl;
+      img.src = ${JSON.stringify(dataUrl)};
       await img.decode();
-      const scale = Math.min(1, max / img.naturalWidth);
+      const scale = Math.min(1, 1400 / img.naturalWidth);
       const c = document.createElement('canvas');
       c.width = Math.round(img.naturalWidth * scale);
       c.height = Math.round(img.naturalHeight * scale);
       c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
       return { w: c.width, h: c.height, data: c.toDataURL('image/webp', 0.78) };
-    }, { dataUrl, max: 1400 });
-    const dest = src.replace(/\.jpe?g$/i, '.webp');
+    })()`);
+    const dest = src.replace(/\.(jpe?g|png)$/i, '.webp');
     writeFileSync(dest, Buffer.from(out.data.split(',')[1], 'base64'));
     unlinkSync(src);
     console.log(`${dest}  ${out.w}x${out.h}`);
   }
 }
-await browser.close();
+chrome.cerrar();
