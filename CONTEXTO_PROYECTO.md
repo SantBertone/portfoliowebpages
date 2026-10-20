@@ -21,7 +21,14 @@
 ## 2. Estrategia comercial (ya definida en la primera sesión)
 
 - **Qué se vende:** confianza, velocidad, seguridad y clientes nuevos, no "código". Lo rentable es el **cobro mensual** de mantenimiento.
-- **Packs (precios de referencia en USD, cobrados en pesos al tipo de cambio del día, hasta 3 cuotas):**
+- **ACTUALIZACIÓN (20/10/2026, segunda sesión) — lo que vale hoy:** Santiago **solo hace la página web**. Nada de Google Maps, ficha de Google Business, SEO local, rescates de webs hackeadas ni planes mensuales.
+  - **Packs en pesos, pago único, 50% al empezar y 50% al publicar:**
+    - **Esencial $150.000:** página única (portada, servicios y contacto), botón de WhatsApp con mensaje armado, pensada para el celular, textos y fotos incluidos, candado de seguridad, 1 ronda de cambios. 5 días hábiles.
+    - **Completa $200.000 (recomendada):** + un botón de WhatsApp por servicio, reseñas del cliente y preguntas frecuentes, horarios con "abierto ahora", vista previa con foto al compartir por WhatsApp (Open Graph), título y descripción para Google + alta en Search Console, 2 rondas de cambios. 7 días hábiles.
+    - **Profesional $250.000:** + secciones extra (galería, equipo o lista de precios), estadísticas de visitas (Cloudflare Web Analytics), código QR para el local o las tarjetas, 3 rondas de cambios, 30 días de ajustes después de publicar. 10 días hábiles.
+  - **Hosting gratis en Cloudflare Pages, sin cuota mensual**, en `tunegocio.pages.dev`. El **dominio propio es opcional**: el cliente lo registra a su nombre en NIC Argentina y lo paga aparte por año; se conecta sin costo. Los cambios posteriores se cotizan aparte.
+  - Lo que sigue en esta sección (packs en USD, planes mensuales, rescate, etc.) es **la estrategia vieja**: queda como referencia, pero no está en la web.
+- **Packs viejos (ya no se ofrecen así; precios de referencia en USD):**
   - **Rescate:** desde USD 150. Limpieza de malware y spam, actualización, cambio de accesos y pedido de revisión a Google. Entrega en 48 a 72 h, con 3 meses de mantenimiento incluidos.
   - **Presencia:** desde USD 250. Landing de una página con WhatsApp, mapa, horarios y textos. Dominio y SSL por un año. Entrega en 5 días hábiles.
   - **Profesional:** desde USD 500. Hasta 5 secciones, SEO local, optimización de la ficha de Google Business, formulario y estadísticas, opción de WordPress seguro. Entrega en 7 a 10 días.
@@ -93,8 +100,8 @@ portfoliowebpages/             raíz del repo de GitHub (rama main)
 ### Cómo está hecho cada sitio (rediseño del 20/10/2026, segunda sesión)
 El primer diseño (hecho con la skill `design-taste-frontend`, muy editorial y con herramientas interactivas) se **reemplazó** porque Santiago quiere landings comerciales como las de referencia. El diseño actual es propio, sin la skill.
 
-- **Agencia** (`index.html`). Crema `#f7f3ec`, tinta `#161615`, naranja `#ff8126` (botones), celeste `#4db3ff` y lima `#c5f53d` como acentos. Red Hat Display 900 + Red Hat Text. Logo: tres bloques de color + "Vidriera".
-  - Secciones: portada "Tu vidriera en Google." con foto de dueños de un café, un celular con la demo dental y una burbuja de WhatsApp; franja de rubros; "El problema" (sin web / web vieja / web hackeada, cada uno con su botón de WhatsApp); demos (capturas de escritorio y celular, "Ver la demo" y "Quiero una así"); "¿Tenés otro rubro?"; "Qué incluye" (6 ítems); precios (3 packs, Presencia destacado, + planes mensuales); proceso (Día 0, 1, 5, Online); garantías (banda naranja); preguntas; cierre "Probala antes de pagar." con chips de rubro que mandan el mensaje; pie.
+- **Agencia** (`index.html`). Ahora es una **presentación de lo que hacemos** con los packs en pesos (ver la sección 2). Crema `#f7f3ec`, tinta `#161615`, naranja `#ff8126` (botones), celeste `#4db3ff` y lima `#c5f53d` como acentos. Red Hat Display 900 + Red Hat Text. Logo: tres bloques de color + "Vidriera".
+  - Secciones: portada "Hacemos la web de tu negocio." con foto de dueños de un café, un celular con la demo dental y una burbuja de WhatsApp; franja de rubros; "Para quién es" (sin web / solo Instagram / web vieja); "Qué hacemos" (6 ítems); ejemplos (las demos, con "Quiero una así"); "¿Tenés otro rubro?"; precios (Esencial, Completa destacada, Profesional) + "¿Dónde queda tu web?" (dirección gratis .pages.dev, dominio propio opcional, cambios después); proceso (Día 0, 1, 5, Online); garantías; preguntas (incluye "¿Tengo que pagar algo por mes?" y "¿Qué es el dominio?"); cierre "Mirala antes de pagar." con chips de rubro; pie.
   - Se sacó la "vista previa en vivo" del armador de webs.
 - **Demo de odontología** ("Dental Palermo", ficticio). Crema `#f6f2ea`, cobalto `#2445e0`, amarillo `#f4d84a`. Fraunces + Figtree. Estilo bento como Miga.
   - Secciones: portada en bloques (título, foto, horario con "Abierto ahora" calculado con la hora de Buenos Aires, puntaje, franja "¿Te duele ahora?"); franja de confianza; 6 tratamientos con foto y botón de turno con mensaje; primera consulta en 3 pasos; consultorio y doctora (M.N. 00000 ficticia); "¿Atienden con tu obra social?" con chips de prepagas; reseñas **de ejemplo, con aviso**; preguntas; "Visitanos" con horarios (resalta hoy), botones y mapa de Google embebido.
