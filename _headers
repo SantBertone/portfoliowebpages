@@ -1,0 +1,13 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+/img/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/demos/*/img/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/tools/*
+  X-Robots-Tag: noindex
