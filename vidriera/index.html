@@ -39,10 +39,10 @@
     <span class="brand-blocks" aria-hidden="true"><i></i><i></i><i></i></span>Vidriera
   </a>
   <nav class="nav" id="nav" aria-label="Secciones">
+    <a href="#probala">Probala gratis</a>
     <a href="#que-hacemos">Qué hacemos</a>
     <a href="#demos">Ejemplos</a>
     <a href="#precios">Precios</a>
-    <a href="#proceso">Cómo trabajamos</a>
     <a href="#preguntas">Preguntas</a>
   </nav>
   <a class="btn btn-small top-cta" href="https://wa.me/5491135778063" data-wa="Hola, quiero un presupuesto para la web de mi negocio.">Pedí presupuesto</a>
@@ -55,11 +55,14 @@
   <section class="hero" aria-labelledby="titulo">
     <div class="hero-copy">
       <p class="pill"><svg><use href="#i-pin"/></svg>Diseño web para comercios de barrio · CABA</p>
-      <h1 id="titulo" class="hero-title" data-rise>Hacemos la web <span>de tu negocio.</span></h1>
+      <h1 id="titulo" class="hero-title" data-rise aria-label="Hacemos la web de tu negocio.">
+        <span aria-hidden="true">Hacemos la web</span>
+        <span class="hero-accent" aria-hidden="true">de tu <span class="rotator" data-palabras="negocio.|consultorio.|cerrajería.|taller.|peluquería.|café.|comercio.">negocio.</span></span>
+      </h1>
       <p class="hero-sub" data-rise style="--i:1">Una página clara, rápida y pensada para el celular, con botones que te mandan los pedidos a WhatsApp. Escribimos los textos, elegimos las fotos y la publicamos. Vos solo aprobás.</p>
       <div class="hero-actions" data-rise style="--i:2">
         <a class="btn" href="https://wa.me/5491135778063" data-wa="Hola, quiero un presupuesto para la web de mi negocio."><svg><use href="#i-wa"/></svg>Pedí tu presupuesto</a>
-        <a class="btn btn-outline" href="#precios">Ver precios</a>
+        <a class="btn btn-outline" href="#probala">Mirá tu web en vivo</a>
       </div>
       <ul class="hero-trust" role="list" data-rise style="--i:3">
         <li><strong>Desde $150.000</strong>pago único</li>
@@ -85,6 +88,91 @@
       <span aria-hidden="true">Consultorios</span><span aria-hidden="true">Cerrajerías</span><span aria-hidden="true">Talleres mecánicos</span><span aria-hidden="true">Gastronomía</span><span aria-hidden="true">Peluquerías</span><span aria-hidden="true">Estudios contables</span><span aria-hidden="true">Comercios de barrio</span>
     </div>
   </div>
+
+  <!-- Probador en vivo -->
+  <section id="probala" class="section tryit" aria-labelledby="probala-titulo">
+    <div class="section-head">
+      <p class="eyebrow">Probala gratis</p>
+      <h2 id="probala-titulo" class="h2" data-reveal>Mirá cómo quedaría tu web, ahora.</h2>
+      <p class="section-sub" data-reveal style="--i:1">Poné el nombre de tu negocio y jugá con el rubro y los colores: el boceto cambia mientras elegís.</p>
+    </div>
+
+    <div class="tryit-grid">
+      <form class="tryit-form" id="tryit-form" autocomplete="off">
+        <label class="field-label" for="t-nombre">Nombre de tu negocio</label>
+        <input class="field" id="t-nombre" name="n" type="text" maxlength="32" placeholder="Ej.: Ferretería Don Luis">
+
+        <fieldset class="field-group">
+          <legend class="field-label">Rubro</legend>
+          <div class="options" id="t-rubros"></div>
+        </fieldset>
+
+        <label class="field-label" for="t-zona">Barrio <span class="optional">(opcional)</span></label>
+        <input class="field" id="t-zona" name="z" type="text" maxlength="28" placeholder="Ej.: Villa Crespo">
+
+        <fieldset class="field-group">
+          <legend class="field-label">Color</legend>
+          <div class="swatches" id="t-colores"></div>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend class="field-label">Estilo</legend>
+          <div class="options">
+            <label class="option"><input type="radio" name="e" value="claro" checked><span>Claro</span></label>
+            <label class="option"><input type="radio" name="e" value="oscuro"><span>Oscuro</span></label>
+          </div>
+        </fieldset>
+
+        <a class="btn tryit-send" id="t-quiero" href="https://wa.me/5491135778063"><svg><use href="#i-wa"/></svg>Quiero esta web</a>
+        <button class="btn btn-outline tryit-copy" id="t-copiar" type="button">Copiar el link de mi boceto</button>
+      </form>
+
+      <div class="tryit-view">
+        <div class="tryit-bar">
+          <div class="segmented" role="group" aria-label="Ver el boceto en">
+            <button type="button" class="is-on" data-device="compu" aria-pressed="true">Compu</button>
+            <button type="button" data-device="celu" aria-pressed="false">Celular</button>
+          </div>
+          <p class="live-tag"><span class="live-dot"></span>Boceto en vivo</p>
+        </div>
+
+        <div class="stage">
+          <div class="device is-compu" id="t-device">
+            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span id="t-url">tunegocio.pages.dev</span></div>
+            <div class="device-screen">
+              <div class="mini" id="mini">
+                <div class="mini-nav">
+                  <span class="mini-logo"><b id="m-inicial">T</b><span id="m-nombre">Tu negocio</span></span>
+                  <span class="mini-links"><span>Servicios</span><span>Nosotros</span><span>Contacto</span></span>
+                  <span class="mini-burger" aria-hidden="true"><svg><use href="#i-menu"/></svg></span>
+                </div>
+                <div class="mini-hero">
+                  <div class="mini-copy">
+                    <p class="mini-pill" id="m-etiqueta">Consultorio</p>
+                    <p class="mini-title" id="m-titulo">Tu salud, sin esperas ni sorpresas.</p>
+                    <p class="mini-sub" id="m-bajada">Turnos en el día, obras sociales y presupuesto por escrito.</p>
+                    <button class="mini-cta" type="button" id="m-cta">Pedir turno</button>
+                  </div>
+                  <div class="mini-photo"><img id="m-foto" src="demos/odontologia/img/consulta.webp" width="1400" height="1050" loading="lazy" alt="Foto de ejemplo del rubro elegido"></div>
+                </div>
+                <div class="mini-cards" id="m-servicios"></div>
+                <div class="mini-foot">
+                  <span class="mini-zone"><svg><use href="#i-pin"/></svg><span id="m-zona">Tu barrio</span></span>
+                  <span class="mini-open"><span class="dot-ok"></span>Abierto ahora</span>
+                  <button class="mini-wa" type="button" id="m-wa" aria-label="Escribir por WhatsApp"><svg><use href="#i-wa"/></svg></button>
+                </div>
+              </div>
+            </div>
+            <div class="mini-toast" id="m-toast" role="status" aria-live="polite">
+              <svg><use href="#i-wa"/></svg>
+              <span><b>Te llegó un mensaje</b><span id="m-toast-texto">“Hola, quiero pedir un turno.”</span></span>
+            </div>
+          </div>
+        </div>
+        <p class="tryit-note">Tocá los botones del boceto para ver qué mensaje te llegaría. Es una vista rápida: tu web final lleva tus fotos, tus textos y tu estilo.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Para quién -->
   <section class="section" aria-labelledby="para-quien-titulo">
@@ -140,40 +228,59 @@
     <div class="section-head">
       <p class="eyebrow">Ejemplos</p>
       <h2 id="demos-titulo" class="h2" data-reveal>Así queda una web hecha por nosotros.</h2>
-      <p class="section-sub" data-reveal style="--i:1">Abrilas desde el celular, que es como las ven tus clientes. Probá los botones: el mensaje llega armado a WhatsApp.</p>
+      <p class="section-sub" data-reveal style="--i:1">Miralas como en la compu o como en el celular, o entrá y probá los botones: el mensaje llega armado a WhatsApp.</p>
     </div>
     <div class="demos">
       <article class="demo demo-blue" data-reveal>
-        <a class="demo-shots" href="demos/odontologia/index.html" aria-label="Abrir el ejemplo de consultorio odontológico">
-          <img class="demo-desk" src="img/agencia/demo-odontologia.webp" width="1440" height="900" loading="lazy" alt="Captura del ejemplo de consultorio odontológico en la computadora">
-          <span class="phone demo-phone"><img src="img/agencia/demo-odontologia-movil.webp" width="780" height="1688" loading="lazy" alt="Captura del ejemplo de consultorio odontológico en el celular"></span>
-        </a>
+        <div class="demo-stage is-compu">
+          <div class="demo-browser">
+            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>dentalpalermo.pages.dev</span></div>
+            <div class="scroller"><img src="img/agencia/demo-odontologia-full.webp" width="864" height="4039" loading="lazy" alt="Página completa del ejemplo de consultorio odontológico, vista en la computadora"></div>
+          </div>
+          <div class="demo-phone">
+            <div class="scroller"><img src="img/agencia/demo-odontologia-movil-full.webp" width="546" height="11382" loading="lazy" alt="Página completa del ejemplo de consultorio odontológico, vista en el celular"></div>
+          </div>
+        </div>
         <div class="demo-body">
           <p class="demo-cat">Salud y estética</p>
           <h3>Consultorio odontológico</h3>
           <p>Tratamientos con botón para pedir turno, obras sociales, reseñas, preguntas frecuentes y horarios con cartel de “abierto ahora”.</p>
-          <div class="demo-actions">
-            <a class="btn btn-small" href="demos/odontologia/index.html">Ver el ejemplo <svg><use href="#i-arrow"/></svg></a>
-            <a class="btn btn-small btn-outline" href="https://wa.me/5491135778063" data-wa="Hola, quiero una web como el ejemplo del consultorio.">Quiero una así</a>
+          <div class="demo-controls">
+            <div class="segmented" role="group" aria-label="Ver el ejemplo en">
+              <button type="button" class="is-on" data-device="compu" aria-pressed="true">Compu</button>
+              <button type="button" data-device="celu" aria-pressed="false">Celular</button>
+            </div>
+            <a class="live-link" href="demos/odontologia/index.html">Ver en vivo <svg><use href="#i-arrow"/></svg></a>
           </div>
+          <a class="btn btn-small btn-outline demo-want" href="https://wa.me/5491135778063" data-wa="Hola, quiero una web como el ejemplo del consultorio.">Quiero una así</a>
         </div>
       </article>
       <article class="demo demo-ink" data-reveal style="--i:1">
-        <a class="demo-shots" href="demos/cerrajeria/index.html" aria-label="Abrir el ejemplo de cerrajería">
-          <img class="demo-desk" src="img/agencia/demo-cerrajeria.webp" width="1440" height="900" loading="lazy" alt="Captura del ejemplo de cerrajería en la computadora">
-          <span class="phone demo-phone"><img src="img/agencia/demo-cerrajeria-movil.webp" width="780" height="1688" loading="lazy" alt="Captura del ejemplo de cerrajería en el celular"></span>
-        </a>
+        <div class="demo-stage is-compu">
+          <div class="demo-browser">
+            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>llaveya.pages.dev</span></div>
+            <div class="scroller"><img src="img/agencia/demo-cerrajeria-full.webp" width="864" height="3953" loading="lazy" alt="Página completa del ejemplo de cerrajería, vista en la computadora"></div>
+          </div>
+          <div class="demo-phone">
+            <div class="scroller"><img src="img/agencia/demo-cerrajeria-movil-full.webp" width="546" height="13815" loading="lazy" alt="Página completa del ejemplo de cerrajería, vista en el celular"></div>
+          </div>
+        </div>
         <div class="demo-body">
           <p class="demo-cat">Urgencias 24 h</p>
           <h3>Cerrajería</h3>
           <p>Para servicios que se contratan con apuro: botón de llamar siempre a mano, “¿qué te pasó?” con mensaje armado y barrios con tiempo de llegada.</p>
-          <div class="demo-actions">
-            <a class="btn btn-small" href="demos/cerrajeria/index.html">Ver el ejemplo <svg><use href="#i-arrow"/></svg></a>
-            <a class="btn btn-small btn-outline" href="https://wa.me/5491135778063" data-wa="Hola, quiero una web como el ejemplo de la cerrajería.">Quiero una así</a>
+          <div class="demo-controls">
+            <div class="segmented" role="group" aria-label="Ver el ejemplo en">
+              <button type="button" class="is-on" data-device="compu" aria-pressed="true">Compu</button>
+              <button type="button" data-device="celu" aria-pressed="false">Celular</button>
+            </div>
+            <a class="live-link" href="demos/cerrajeria/index.html">Ver en vivo <svg><use href="#i-arrow"/></svg></a>
           </div>
+          <a class="btn btn-small btn-outline demo-want" href="https://wa.me/5491135778063" data-wa="Hola, quiero una web como el ejemplo de la cerrajería.">Quiero una así</a>
         </div>
       </article>
     </div>
+    <p class="demos-hint">Pasá el mouse (o tocá) sobre una captura para recorrerla de arriba a abajo.</p>
     <a class="demo-yours" href="https://wa.me/5491135778063" data-wa="Hola, tengo otro rubro y quiero ver cómo quedaría la web de mi negocio." data-reveal>
       <span><strong>¿Tenés otro rubro?</strong> Te mostramos cómo quedaría la tuya antes de cobrarte nada.</span>
       <svg><use href="#i-arrow"/></svg>
@@ -319,27 +426,39 @@
   </section>
 
   <!-- Cierre -->
-  <section class="final" aria-labelledby="final-titulo">
+  <section id="contacto" class="final" aria-labelledby="final-titulo">
     <div class="final-copy">
+      <p class="final-tag">Empecemos</p>
       <h2 id="final-titulo" class="final-title" data-reveal>Mirala antes de pagar.</h2>
       <p data-reveal style="--i:1">Contanos qué negocio tenés y te pasamos el presupuesto en el día. Si avanzamos, ves la web funcionando antes del pago final.</p>
-      <p class="final-ask">¿Qué negocio tenés?</p>
-      <div class="chips">
-        <a class="chip" href="https://wa.me/5491135778063" data-wa="Hola, tengo un consultorio y quiero un presupuesto para mi web.">Consultorio</a>
-        <a class="chip" href="https://wa.me/5491135778063" data-wa="Hola, tengo una cerrajería y quiero un presupuesto para mi web.">Cerrajería</a>
-        <a class="chip" href="https://wa.me/5491135778063" data-wa="Hola, tengo un taller mecánico y quiero un presupuesto para mi web.">Taller</a>
-        <a class="chip" href="https://wa.me/5491135778063" data-wa="Hola, tengo un restaurante o café y quiero un presupuesto para mi web.">Restaurante o café</a>
-        <a class="chip" href="https://wa.me/5491135778063" data-wa="Hola, tengo una peluquería y quiero un presupuesto para mi web.">Peluquería</a>
-        <a class="chip" href="https://wa.me/5491135778063" data-wa="Hola, tengo un comercio y quiero un presupuesto para mi web.">Comercio</a>
-        <a class="chip chip-alt" href="https://wa.me/5491135778063" data-wa="Hola, quiero un presupuesto para la web de mi negocio. Mi rubro es: ">Otro</a>
+      <div class="final-direct">
+        <a class="final-wa" href="https://wa.me/5491135778063" data-wa="Hola, quiero hacer una consulta."><svg><use href="#i-wa"/></svg>11 3577-8063</a>
+        <a class="final-mail" href="mailto:santiobertone@gmail.com">santiobertone@gmail.com</a>
       </div>
     </div>
-    <div class="final-photos" aria-hidden="true">
-      <img src="img/agencia/tienda-ropa.webp" width="1400" height="935" loading="lazy" alt="">
-      <img src="img/agencia/taller.webp" width="1400" height="934" loading="lazy" alt="">
-      <img src="img/agencia/peluqueria.webp" width="1400" height="934" loading="lazy" alt="">
-      <img src="img/agencia/cafeteria.webp" width="1400" height="788" loading="lazy" alt="">
-    </div>
+    <form class="contact-form" id="contacto-form">
+      <label class="field-label" for="c-nombre">Tu nombre</label>
+      <input class="field" id="c-nombre" type="text" maxlength="40" autocomplete="given-name" placeholder="Ej.: Laura" required>
+
+      <label class="field-label" for="c-negocio">Tu negocio</label>
+      <input class="field" id="c-negocio" type="text" maxlength="60" placeholder="Ej.: una verdulería en Caballito" required>
+
+      <fieldset class="field-group">
+        <legend class="field-label">¿Qué web te interesa?</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="pack" value="la Esencial ($150.000)"><span>Esencial</span></label>
+          <label class="option"><input type="radio" name="pack" value="la Completa ($200.000)"><span>Completa</span></label>
+          <label class="option"><input type="radio" name="pack" value="la Profesional ($250.000)"><span>Profesional</span></label>
+          <label class="option"><input type="radio" name="pack" value="" checked><span>No sé todavía</span></label>
+        </div>
+      </fieldset>
+
+      <label class="field-label" for="c-mensaje">Contanos un poco más <span class="optional">(opcional)</span></label>
+      <textarea class="field" id="c-mensaje" rows="3" maxlength="400" placeholder="Ej.: quiero que me puedan pedir por WhatsApp desde la web."></textarea>
+
+      <button class="btn contact-send" type="submit"><svg><use href="#i-wa"/></svg>Enviar por WhatsApp <svg><use href="#i-arrow"/></svg></button>
+      <p class="contact-note">Se abre WhatsApp con tu mensaje armado. Lo revisás y lo mandás vos.</p>
+    </form>
   </section>
 </main>
 

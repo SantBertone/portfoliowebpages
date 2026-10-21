@@ -18,6 +18,7 @@ tools/                      Utilidades locales (no se publican)
 - Son **landings informativas**: portada, servicios, cómo trabajamos, reseñas, preguntas, horarios y contacto.
 - La única interacción es **WhatsApp con mensaje armado**: cada link con `data-wa="..."` abre WhatsApp con ese texto ya escrito. El número está una sola vez, en la constante `WHATSAPP` de cada `app.js` (y en `assets/agencia.js`).
 - La demo de odontología muestra "Abierto ahora" con la hora de Buenos Aires. El horario está en la constante `HORARIO` de `demos/odontologia/app.js`.
+- La web de la agencia tiene un **probador en vivo** (`#probala`). El botón "Copiar el link de mi boceto" da un link como `index.html?n=Ferreteria%20Don%20Luis&r=comercio&z=Caballito&c=verde&e=claro#probala`, que abre el boceto ya armado: sirve para mandárselo a un prospecto. Rubros válidos: consultorio, cerrajeria, taller, peluqueria, gastronomia, comercio. Colores: azul, verde, naranja, violeta, rosa, grafito.
 - Cada demo es independiente: no usa archivos de afuera de su carpeta, salvo el link a la web de la agencia.
 - Todas las rutas son relativas, para que funcione con doble clic y publicado.
 
@@ -52,7 +53,7 @@ Después abrí http://localhost:4321
 node tools/captura.mjs
 ```
 
-Regenera las capturas de las demos que se ven en la web de la agencia. Correlo cada vez que cambies una demo.
+Regenera las capturas de las demos que se ven en la web de la agencia (primera pantalla y página completa). Correlo cada vez que cambies una demo, y actualizá el `height` de las imágenes `-full` en `index.html` con lo que imprime.
 
 ```bash
 node tools/optimize-images.mjs demos/odontologia/img
