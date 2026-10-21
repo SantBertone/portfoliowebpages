@@ -161,7 +161,7 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
 /* ---------- primera consulta ---------- */
 .steps-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
 .steps-photo { border-radius: var(--radius); overflow: hidden; }
-.steps-photo img { width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover; }
+.steps-photo img { width: 100%; aspect-ratio: 4 / 3.4; object-fit: cover; }
 .steps { margin-top: 32px; display: grid; gap: 14px; }
 .steps li { display: flex; gap: 18px; align-items: flex-start; padding: 22px; background: var(--surface); border-radius: var(--radius-sm); }
 .step-n { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--blue-soft); color: var(--blue); font-weight: 700; display: grid; place-items: center; font-size: 18px; }
