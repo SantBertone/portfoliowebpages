@@ -228,6 +228,22 @@ const conectarDispositivo = (grupo, alCambiar) => {
     if (mas) texto += ` ${mas}`;
     abrirWhatsApp(texto);
   });
+
+  // La misma consulta, por mail: le llega a la casilla con la respuesta automática de Vidriera.
+  const MAIL = 'santiobertone+vidriera@gmail.com';
+  document.getElementById('contacto-mail')?.addEventListener('click', () => {
+    if (!form.reportValidity()) return;
+    const nombre = document.getElementById('c-nombre').value.trim();
+    const negocio = document.getElementById('c-negocio').value.trim();
+    const pack = form.querySelector('input[name="pack"]:checked').value;
+    const mas = document.getElementById('c-mensaje').value.trim();
+    let cuerpo = `Hola, soy ${nombre}. Tengo ${negocio} y quiero una web.`;
+    cuerpo += pack ? ` Me interesa ${pack}.` : ' Todavía no sé qué web me conviene.';
+    if (mas) cuerpo += `\n\n${mas}`;
+    cuerpo += `\n\n${nombre}`;
+    const asunto = `Quiero una web para ${negocio}`;
+    location.href = `mailto:${MAIL}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+  });
 })();
 
 // ---------- Entradas suaves: se muestran una vez, nunca quedan ocultas ----------

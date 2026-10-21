@@ -270,6 +270,7 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
 .final-mail { color: #fff; font-weight: 600; text-underline-offset: 4px; }
 .contact-form { background: #fff; color: var(--ink); border-radius: var(--radius); padding: clamp(24px, 3vw, 34px); }
 .contact-send { width: 100%; margin-top: 24px; }
+.contact-mail { width: 100%; margin-top: 10px; }
 .contact-note { margin-top: 10px; font-size: 13px; color: var(--muted); text-align: center; }
 @media (max-width: 960px) { .final { grid-template-columns: 1fr; } }
 
