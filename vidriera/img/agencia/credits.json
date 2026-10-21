@@ -1,16 +1,6 @@
 {
   "nota": "Fotos de Unsplash: la licencia permite uso comercial y no exige atribución. Igual se deja el link de origen de cada una.",
   "fotos": {
-    "duenos-cafe.webp": {
-      "fuente": "https://unsplash.com/photos/dU3KJqyYlO0",
-      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)",
-      "tamano": "1400x788"
-    },
-    "carnicero-celular.webp": {
-      "fuente": "https://unsplash.com/photos/uk3ey_vhDKA",
-      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)",
-      "tamano": "1400x934"
-    },
     "taller.webp": {
       "fuente": "https://unsplash.com/photos/VdXnpwrp1qc",
       "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)",
@@ -46,6 +36,16 @@
     "demo-cerrajeria-movil.webp": {
       "fuente": "Captura propia de la demo",
       "licencia": "Propia"
+    },
+    "barberia.webp": {
+      "fuente": "https://unsplash.com/photos/KipnoM-k7Lc",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)",
+      "tamano": "1400x2488"
+    },
+    "hombre-celular.webp": {
+      "fuente": "https://unsplash.com/photos/HwPiswam8tI",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)",
+      "tamano": "1400x2100"
     }
   }
 }
