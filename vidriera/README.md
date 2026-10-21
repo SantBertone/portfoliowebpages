@@ -61,6 +61,12 @@ node tools/optimize-images.mjs demos/odontologia/img
 
 Convierte los JPG o PNG de esa carpeta a WebP livianos de 1400 px de ancho.
 
+```bash
+node tools/og.mjs
+```
+
+Regenera `img/og-vidriera.jpg`, la imagen que aparece al compartir la web por WhatsApp. El diseño está en `tools/og-vidriera.html` (si cambiás precios o textos, cambialos ahí también). Después subí el número de `?v=` en el `og:image` de `index.html` para que WhatsApp la vuelva a buscar.
+
 ## Publicar en Cloudflare Pages (gratis, permite uso comercial)
 
 El repo de GitHub está conectado (o se conecta) a Cloudflare Pages: **cada `git push` a `main` publica solo**.

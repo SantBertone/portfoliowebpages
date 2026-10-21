@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<!-- Tarjeta que se ve al compartir la web (1200x630). Se convierte en img/og-vidriera.jpg con: node tools/og.mjs -->
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700;900&family=Red+Hat+Text:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; background: #f7f3ec; color: #161615; font-family: 'Red Hat Text', sans-serif; }
+  .blob { position: absolute; border-radius: 50%; }
+  .b1 { width: 560px; height: 560px; right: -60px; top: -40px; background: #ff8126; }
+  .b2 { width: 220px; height: 220px; right: 420px; bottom: -90px; background: #4db3ff; }
+  .b3 { width: 120px; height: 120px; right: 40px; bottom: 40px; background: #c5f53d; }
+  .copy { position: absolute; left: 72px; top: 64px; width: 600px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-family: 'Red Hat Display'; font-weight: 900; font-size: 40px; letter-spacing: -0.02em; }
+  .blocks { display: flex; align-items: flex-end; gap: 4px; height: 38px; }
+  .blocks i { width: 12px; border-radius: 3px; }
+  .blocks i:nth-child(1) { height: 100%; background: #ff8126; }
+  .blocks i:nth-child(2) { height: 70%; background: #4db3ff; }
+  .blocks i:nth-child(3) { height: 85%; background: #9ccf12; }
+  h1 { margin-top: 56px; font-family: 'Red Hat Display'; font-weight: 900; font-size: 80px; line-height: 0.95; letter-spacing: -0.045em; }
+  h1 span { display: block; color: #ff8126; }
+  .facts { display: flex; gap: 10px; margin-top: 40px; }
+  .facts span { padding: 12px 18px; border-radius: 999px; background: #fff; white-space: nowrap; font-weight: 700; font-size: 22px; box-shadow: 0 6px 18px rgba(22, 22, 21, 0.08); }
+  .facts span:first-child { background: #161615; color: #fff; }
+  .url { margin-top: 34px; font-weight: 700; font-size: 24px; color: #5d5a54; }
+  .phone { position: absolute; width: 250px; border: 9px solid #161615; border-radius: 40px; overflow: hidden; background: #161615; box-shadow: 0 30px 60px rgba(22, 22, 21, 0.35); }
+  .phone img { display: block; width: 100%; aspect-ratio: 390 / 760; object-fit: cover; object-position: top; border-radius: 31px; }
+  .p1 { right: 250px; top: 70px; transform: rotate(-5deg); }
+  .p2 { right: 40px; top: 120px; transform: rotate(6deg); }
+  .bubble { position: absolute; right: 190px; top: 34px; display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-radius: 22px 22px 6px 22px; background: #e7fbd9; font-weight: 700; font-size: 22px; box-shadow: 0 14px 30px rgba(22, 22, 21, 0.2); z-index: 2; }
+  .bubble svg { width: 30px; height: 30px; color: #1fae55; }
+</style>
+</head>
+<body>
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="copy">
+    <p class="brand"><span class="blocks"><i></i><i></i><i></i></span>Vidriera</p>
+    <h1>Hacemos la web <span>de tu negocio.</span></h1>
+    <p class="facts"><span>Desde $150.000</span><span>Lista en 5 días</span><span>$0 por mes</span></p>
+    <p class="url">vidriera.pages.dev</p>
+  </div>
+  <div class="phone p1"><img src="../img/agencia/demo-odontologia-movil.webp" alt=""></div>
+  <div class="phone p2"><img src="../img/agencia/demo-cerrajeria-movil.webp" alt=""></div>
+  <p class="bubble"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></svg>“Hola, quiero pedir un turno.”</p>
+</body>
+</html>
