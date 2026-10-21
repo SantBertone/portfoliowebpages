@@ -63,17 +63,29 @@ Convierte los JPG o PNG de esa carpeta a WebP livianos de 1400 px de ancho.
 
 ## Publicar en Cloudflare Pages (gratis, permite uso comercial)
 
-Publicá solo los archivos del sitio, sin `tools/`, `README.md` ni los `credits.json`:
+El repo de GitHub está conectado (o se conecta) a Cloudflare Pages: **cada `git push` a `main` publica solo**.
+
+Configuración del proyecto en Cloudflare (Workers & Pages → Create → Pages → Connect to Git):
+
+| Campo | Valor |
+|---|---|
+| Repositorio | `SantBertone/portfoliowebpages` |
+| Production branch | `main` |
+| Framework preset | None |
+| Build command | `node vidriera/tools/build.mjs` |
+| Build output directory | `dist` |
+
+`tools/build.mjs` copia `vidriera/` a `dist/` sin `tools/`, `README.md`, los `credits.json` ni los archivos de Vercel. Para ver qué se publica, corrélo desde la raíz del repo:
 
 ```bash
-npx wrangler login
+node vidriera/tools/build.mjs
 ```
 
-```bash
-npx wrangler pages deploy dist --project-name vidriera
-```
+Links para mandar (cambiá `vidriera` por el nombre que tenga el proyecto en Cloudflare):
 
-(`dist/` es una copia de la carpeta sin esos archivos.) También se puede conectar el repo de GitHub a Cloudflare Pages para que publique solo con cada cambio.
+- Web de la agencia: `https://vidriera.pages.dev/`
+- Ejemplos: `https://vidriera.pages.dev/demos/odontologia/` y `https://vidriera.pages.dev/demos/cerrajeria/`
+- Boceto armado para un prospecto: `https://vidriera.pages.dev/?n=Ferreteria%20Don%20Luis&r=comercio&z=Caballito&c=verde&e=claro#probala`
 
 ## Fotos
 

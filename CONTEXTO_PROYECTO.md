@@ -120,7 +120,7 @@ El primer diseño (hecho con la skill `design-taste-frontend`, muy editorial y c
 ### Pendientes en el sitio
 - Agregar el **CUIT** al pie de `index.html` cuando Santiago tenga el monotributo (hoy dice "© 2026 Vidriera, de Santiago Bertone.").
 - Confirmar o cambiar el nombre "Vidriera". Aparece en el título, el logo en bloques, los textos y los guiones de la planilla.
-- **Publicar en Cloudflare Pages:**
+- **Publicar en Cloudflare Pages (decidido: conectar el repo de GitHub):** Santiago crea la cuenta y conecta el repo (Claude no puede crear cuentas ni autorizar GitHub). Build command `node vidriera/tools/build.mjs`, output `dist`, rama `main`. Después de cada `git push` se publica solo. Cuando esté la URL definitiva, pasar `og:image` a una dirección absoluta (WhatsApp no muestra la vista previa con rutas relativas). Método viejo, por si hace falta:
   - Santiago crea su cuenta e inicia sesión con `npx wrangler login`. Claude no puede crear cuentas ni ingresar credenciales.
   - Publicar **solo los archivos del sitio** (`vidriera/`), sin `tools/`, `.taste-skill/`, `README.md` ni los `credits.json`. Lo más simple es copiarlos a una carpeta `dist/` y correr `npx wrangler pages deploy dist --project-name vidriera`. Alternativa: conectar el repo de GitHub a Cloudflare Pages.
 - Opcional: sumar demos de taller mecánico, gastronomía y estudio contable (mismo estilo landing), y migrar las plantillas a Astro para generar demos personalizadas más rápido.
