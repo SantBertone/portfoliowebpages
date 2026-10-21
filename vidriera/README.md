@@ -32,7 +32,7 @@ tools/                      Utilidades locales (no se publican)
 ## Datos cargados
 
 - WhatsApp y teléfono: +54 11 3577-8063 (en los links figura como `5491135778063` y `+541135778063`). En las demos también apuntan a este número, para que el mensaje de prueba le llegue a Santiago.
-- Contacto: Santiago Bertone, santiobertone@gmail.com.
+- Contacto: Santiago Bertone, tuvidrieradesarrollo@gmail.com.
 - Falta el CUIT: agregalo al pie de `index.html` cuando tengas el monotributo.
 - "Vidriera" es un nombre de trabajo; está en `index.html` (título, logo y textos).
 - Demos: los negocios, direcciones, matrículas, reseñas y tiempos de llegada son ficticios.

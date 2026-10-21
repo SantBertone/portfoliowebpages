@@ -230,7 +230,7 @@ const conectarDispositivo = (grupo, alCambiar) => {
   });
 
   // La misma consulta, por mail: le llega a la casilla con la respuesta automática de Vidriera.
-  const MAIL = 'santiobertone+vidriera@gmail.com';
+  const MAIL = 'tuvidrieradesarrollo@gmail.com';
   document.getElementById('contacto-mail')?.addEventListener('click', () => {
     if (!form.reportValidity()) return;
     const nombre = document.getElementById('c-nombre').value.trim();
