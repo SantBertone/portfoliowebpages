@@ -1,4 +1,4 @@
-/* HUMO Burgers. Dirección "El nombre como monumento": el nombre de punta a punta, mostaza, carbón y kétchup. */
+/* LOBO Burgers. Dirección "El nombre como monumento": el nombre de punta a punta, mostaza, carbón y kétchup. */
 :root {
   --mustard: #f2b705;
   --mustard-2: #f7cd45;
@@ -54,7 +54,7 @@ button, input, select { font: inherit; color: inherit; }
 .tr { grid-column: 2; grid-row: 1; display: flex; justify-content: flex-end; gap: 24px; font-weight: 500; }
 .tr a { text-decoration: none; padding-bottom: 2px; border-bottom: 3px solid transparent; transition: border-color 160ms ease; }
 @media (hover: hover) { .tr a:hover { border-color: var(--ink); } }
-.monument { grid-column: 1 / -1; grid-row: 2; align-self: center; font-family: var(--display); font-weight: 400; font-size: calc((100vw - 36px) / 5.62); line-height: 0.8; letter-spacing: -0.02em; text-align: center; white-space: nowrap; }
+.monument { grid-column: 1 / -1; grid-row: 2; align-self: center; font-family: var(--display); font-weight: 400; font-size: calc((100vw - 36px) / 5.14); line-height: 0.8; letter-spacing: -0.02em; text-align: center; white-space: nowrap; }
 .bl { grid-column: 1; grid-row: 3; align-self: end; font-size: var(--body); font-weight: 500; }
 .br { grid-column: 2; grid-row: 3; align-self: end; justify-self: end; margin-right: 210px; font-size: var(--body); font-weight: 500; }
 [data-estado] { display: inline-flex; align-items: center; gap: 10px; }
@@ -142,7 +142,7 @@ a.row { transition: color 160ms ease; }
 .footer-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; font-size: var(--small); }
 .footer-cols li:first-child { font-weight: 600; color: #fff; }
 .footer-cols li { color: #cfc4b6; }
-.wordmark { grid-row: 2; font-family: var(--display); font-size: calc((100vw - 36px) / 5.62); line-height: 0.8; letter-spacing: -0.02em; text-align: center; white-space: nowrap; color: var(--mustard); }
+.wordmark { grid-row: 2; font-family: var(--display); font-size: calc((100vw - 36px) / 5.14); line-height: 0.8; letter-spacing: -0.02em; text-align: center; white-space: nowrap; color: var(--mustard); }
 .legal { grid-row: 3; margin-top: -100px; font-size: var(--small); color: #cfc4b6; }
 
 /* ---------- El pedido ---------- */
@@ -194,7 +194,7 @@ a.row { transition: color 160ms ease; }
   :root { --margin: 16px; }
   .hero { grid-template-columns: 1fr; grid-template-rows: auto auto auto auto 1fr; min-height: 0; gap: 18px; }
   .tr { grid-column: 1; grid-row: 1; justify-content: flex-start; gap: 18px; flex-wrap: wrap; }
-  .monument { grid-row: 2; font-size: calc((100vw - 32px) / 5.62); margin-top: 12svh; }
+  .monument { grid-row: 2; font-size: calc((100vw - 32px) / 5.14); margin-top: 12svh; }
   .tl { grid-row: 3; }
   .tl .btn { width: 100%; }
   .bl { grid-row: 4; }
