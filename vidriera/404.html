@@ -11,6 +11,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700;900&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Rutas absolutas a propósito: Cloudflare muestra esta página en cualquier dirección que no exista. -->
+  <script>
+    // Modo claro u oscuro: el que eligió la persona, o el del sistema. Va antes del CSS para que no parpadee.
+    (function () {
+      var t; try { t = localStorage.getItem('vidriera-tema'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      var r = document.documentElement;
+      r.dataset.theme = t;
+      document.querySelector('meta[name="theme-color"]').content = t === 'dark' ? '#131312' : '#f7f3ec';
+    })();
+  </script>
   <link rel="stylesheet" href="/assets/agencia.css">
   <style>
     .lost { min-height: 100svh; display: grid; place-content: center; gap: 22px; padding: 40px 20px; text-align: center; }

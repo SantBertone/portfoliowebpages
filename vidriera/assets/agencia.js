@@ -22,6 +22,32 @@ document.querySelectorAll('[data-wa]').forEach((a) => {
   addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrar(); });
 })();
 
+// ---------- Modo claro / oscuro: se recuerda lo que elige la persona ----------
+(() => {
+  const botones = document.querySelectorAll('[data-tema]');
+  const raiz = document.documentElement;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  const sistema = matchMedia('(prefers-color-scheme: dark)');
+  const aplicar = (t) => {
+    raiz.dataset.theme = t;
+    meta.content = t === 'dark' ? '#131312' : '#f7f3ec';
+    botones.forEach((b) => {
+      b.setAttribute('aria-pressed', String(t === 'dark'));
+      if (b.classList.contains('theme-row')) b.querySelector('span').textContent = t === 'dark' ? 'Modo claro' : 'Modo oscuro';
+      else b.setAttribute('aria-label', t === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro');
+    });
+  };
+  const guardado = () => { try { return localStorage.getItem('vidriera-tema'); } catch { return null; } };
+  aplicar(raiz.dataset.theme === 'dark' ? 'dark' : 'light');
+  botones.forEach((b) => b.addEventListener('click', () => {
+    const t = raiz.dataset.theme === 'dark' ? 'light' : 'dark';
+    aplicar(t);
+    try { localStorage.setItem('vidriera-tema', t); } catch {}
+  }));
+  // Si nunca eligió, acompaña los cambios del sistema (por ejemplo, el celular que pasa a oscuro de noche)
+  sistema.addEventListener('change', (e) => { if (!guardado()) aplicar(e.matches ? 'dark' : 'light'); });
+})();
+
 // ---------- Cabecera con línea al bajar y botón flotante después de la portada ----------
 (() => {
   const top = document.getElementById('top');
