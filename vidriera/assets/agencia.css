@@ -8,10 +8,11 @@
   --line: #e6e0d5;
   --orange: #ff8126;
   --orange-soft: #ffe3cc;
+  --orange-ink: #b8470b; /* naranja para texto: contraste legible sobre el crema */
   --sky: #4db3ff;
   --lime: #c5f53d;
   --red: #de194b;
-  --wa: #1fae55;
+  --wa: #128041;
 
   --font-display: 'Red Hat Display', system-ui, sans-serif;
   --font-text: 'Red Hat Text', system-ui, sans-serif;
@@ -85,7 +86,7 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
 .hero-copy { container-type: inline-size; }
 .hero-title { font-family: var(--font-display); font-weight: 900; font-size: clamp(36px, 1.6rem + 3vw, 80px); font-size: min(80px, 10.4cqi); line-height: 0.95; letter-spacing: -0.045em; margin-top: 24px; }
 .hero-title > span { display: block; white-space: nowrap; }
-.hero-accent { color: var(--orange); }
+.hero-accent { color: var(--orange-ink); }
 .rotator { display: inline-block; transition: opacity 260ms ease, transform 260ms var(--ease); }
 .rotator.is-out { opacity: 0; transform: translateY(0.3em); }
 .hero-sub { margin-top: 24px; font-size: clamp(18px, 1rem + 0.4vw, 21px); color: var(--muted); max-width: 40ch; }
@@ -167,6 +168,14 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
 .demo-yours { display: flex; align-items: center; gap: 16px; margin-top: var(--gap); padding: 22px 28px; border-radius: var(--radius); background: var(--lime); text-decoration: none; font-size: 18px; }
 .demo-yours > svg { margin-left: auto; width: 26px; height: 26px; transition: transform 200ms var(--ease); }
 @media (hover: hover) { .demo-yours:hover > svg { transform: translateX(5px); } }
+
+/* Promesa de la portada y ayuda para elegir pack */
+.hero-promise { display: flex; align-items: center; gap: 10px; margin-top: 18px; font-size: 16px; font-weight: 600; color: var(--ink); }
+.hero-promise svg { flex: none; width: 22px; height: 22px; padding: 4px; border-radius: 50%; background: var(--lime); color: var(--ink); }
+.plans-help { display: flex; align-items: center; gap: 16px; margin-top: var(--gap); padding: 20px 28px; border-radius: var(--radius); background: var(--orange-soft); color: var(--ink); text-decoration: none; font-size: 17px; }
+.plans-help > svg { flex: none; margin-left: auto; width: 24px; height: 24px; transition: transform 200ms var(--ease); }
+@media (hover: hover) { .plans-help:hover > svg { transform: translateX(5px); } }
+@media (max-width: 520px) { .plans-help { padding: 18px 20px; font-size: 16px; } .hero-promise { font-size: 15px; align-items: flex-start; } }
 @media (max-width: 960px) { .demos { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .demo-stage { height: 320px; padding: 18px 18px 0; } .demo-stage.is-celu { padding: 18px; } .demo-body { padding: 22px; } .demo-yours { padding: 18px 20px; font-size: 16px; } }
 
@@ -340,7 +349,8 @@ textarea.field { min-height: 96px; resize: vertical; }
 .mini-foot { display: flex; align-items: center; gap: 14px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--m-line); color: var(--m-muted); font-size: 13px; }
 .mini-zone { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
 .mini-zone svg { color: var(--c-text); }
-.mini-open { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; color: #23a361; font-weight: 700; white-space: nowrap; }
+.mini-open { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; color: #157a45; font-weight: 700; white-space: nowrap; }
+.mini.is-dark .mini-open { color: #4ade80; }
 .dot-ok { width: 8px; height: 8px; border-radius: 50%; background: #2fbf71; }
 .mini-wa { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--wa); color: #fff; box-shadow: 0 6px 16px rgba(31, 174, 85, 0.35); }
 .mini-wa svg { width: 22px; height: 22px; }
