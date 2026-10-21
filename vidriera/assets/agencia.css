@@ -173,7 +173,7 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
 /* ---------- qué incluye ---------- */
 .included { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
 .included-photo { position: relative; border-radius: var(--radius); overflow: hidden; }
-.included-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
+.included-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 20%; }
 .included-photo figcaption { position: absolute; left: 16px; right: 16px; bottom: 16px; display: flex; gap: 12px; align-items: center; padding: 16px 18px; border-radius: 16px; background: rgba(255, 255, 255, 0.94); font-weight: 600; font-size: 15px; }
 .included-photo figcaption svg { color: var(--wa); width: 26px; height: 26px; }
 .features { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 32px; margin-top: 36px; }
