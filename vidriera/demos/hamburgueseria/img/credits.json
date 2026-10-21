@@ -1,0 +1,57 @@
+{
+  "nota": "Fotos de Unsplash: la licencia permite uso comercial y no exige atribución. Igual se deja el link de origen de cada una.",
+  "fotos": {
+    "doble-queso.webp": {
+      "fuente": "https://unsplash.com/photos/jh5XyK4Rr3Y",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "clasica.webp": {
+      "fuente": "https://unsplash.com/photos/sc5sTPMrVfk",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "doble-pepinillos.webp": {
+      "fuente": "https://unsplash.com/photos/pu6b4yIlQF4",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "tabla.webp": {
+      "fuente": "https://unsplash.com/photos/MNHQqLNEvow",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "en-mano.webp": {
+      "fuente": "https://unsplash.com/photos/hyIE90CN6b0",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "con-papas.webp": {
+      "fuente": "https://unsplash.com/photos/8l8Yl2ruUsg",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "cheese.webp": {
+      "fuente": "https://unsplash.com/photos/j1NmLRIlJGI",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "cebolla.webp": {
+      "fuente": "https://unsplash.com/photos/6nPusAuBdOw",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "papas.webp": {
+      "fuente": "https://unsplash.com/photos/qgZRZI-pKgM",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "papas-cono.webp": {
+      "fuente": "https://unsplash.com/photos/IRHPJVoP7qw",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "batido.webp": {
+      "fuente": "https://unsplash.com/photos/wwdhV_rC6cE",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "plancha.webp": {
+      "fuente": "https://unsplash.com/photos/K5iPiJL6CDo",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "parrilla.webp": {
+      "fuente": "https://unsplash.com/photos/DBxW9qSsbLQ",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    }
+  }
+}

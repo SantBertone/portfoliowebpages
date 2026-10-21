@@ -1,0 +1,53 @@
+{
+  "nota": "Fotos de Unsplash: la licencia permite uso comercial y no exige atribución. Igual se deja el link de origen de cada una.",
+  "fotos": {
+    "espresso-pizarra.webp": {
+      "fuente": "https://unsplash.com/photos/21tOEaJPM_o",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "salon.webp": {
+      "fuente": "https://unsplash.com/photos/qE1jxYXiwOA",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "rincon-plantas.webp": {
+      "fuente": "https://unsplash.com/photos/5WA_BHD7nOA",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "mostrador.webp": {
+      "fuente": "https://unsplash.com/photos/F2eHfMwIOxA",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "latte-art.webp": {
+      "fuente": "https://unsplash.com/photos/nzyzAUsbV0M",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "latte-corazon.webp": {
+      "fuente": "https://unsplash.com/photos/XOhI_kW_TaM",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "capuccino-croissant.webp": {
+      "fuente": "https://unsplash.com/photos/12z0NP3X3LI",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "medialunas.webp": {
+      "fuente": "https://unsplash.com/photos/z3em1GBRhvY",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "tostado-huevo.webp": {
+      "fuente": "https://unsplash.com/photos/IQSDSFO9UuI",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "palta.webp": {
+      "fuente": "https://unsplash.com/photos/ZSAE2DubK94",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "torta-porcion.webp": {
+      "fuente": "https://unsplash.com/photos/kBlgFSSNWEk",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "barista.webp": {
+      "fuente": "https://unsplash.com/photos/QfTpbOey94s",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    }
+  }
+}

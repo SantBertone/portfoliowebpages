@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa Nube | Peluquería y estética en Palermo Soho</title>
+  <meta name="description" content="Cortes, color, uñas y pestañas en Palermo Soho. Mirá los precios, armá tu turno y pedilo por WhatsApp.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#a3294a">
+  <meta property="og:title" content="Casa Nube | Peluquería y estética en Palermo Soho">
+  <meta property="og:description" content="Precios claros y turnos por WhatsApp.">
+  <meta property="og:image" content="https://vidriera.pages.dev/demos/peluqueria/img/brushing.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231c1a19'/%3E%3Crect x='14' y='14' width='36' height='36' fill='%23a3294a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="skip" href="#precios">Saltar a los precios</a>
+
+<header class="hero" aria-labelledby="titulo">
+  <div class="hero-left">
+    <a class="wordmark" href="#">Casa Nube</a>
+    <p class="hero-sub" data-rise>Cortes, color, uñas y pestañas en Palermo Soho. Mirá los precios y pedí tu turno por WhatsApp.</p>
+    <a class="btn" href="#precios" data-rise style="--i:1">Armar mi turno</a>
+    <p class="hero-status" data-estado><span class="dot" aria-hidden="true"></span><span data-estado-texto>Martes a sábado de 10 a 20 h</span></p>
+  </div>
+  <div class="hero-right">
+    <nav class="nav" aria-label="Secciones">
+      <a href="#precios">Precios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <h1 id="titulo" class="hero-title lines"><span class="line"><span data-line style="--i:0">Peluquería</span></span><span class="line"><span data-line style="--i:1">y estética</span></span></h1>
+    <figure class="hero-figure">
+      <img src="img/brushing.webp" width="1400" height="934" fetchpriority="high" alt="Estilista haciendo un brushing con secador y cepillo redondo">
+      <p class="accent-block">Primera vez en Casa Nube: 15% en tu primer color.</p>
+    </figure>
+  </div>
+</header>
+
+<main>
+  <!-- Precios: la tabla es también el armador del turno -->
+  <section id="precios" class="prices" aria-labelledby="precios-titulo">
+    <h2 id="precios-titulo" class="statement-title" data-reveal>Precios sin sorpresas</h2>
+    <p class="prices-help" data-reveal style="--i:1">Tildá lo que te querés hacer y te sumamos el tiempo y el precio. Después elegís el día y nos mandás el turno por WhatsApp.</p>
+    <div class="prices-grid">
+      <div class="prices-photos" aria-hidden="true">
+        <img src="img/sillas.webp" width="1400" height="934" loading="lazy" alt="">
+        <img src="img/unas-detalle.webp" width="1400" height="934" loading="lazy" alt="">
+        <img src="img/pestanas-bandeja.webp" width="1400" height="934" loading="lazy" alt="">
+      </div>
+      <aside class="turno" id="turno" aria-labelledby="turno-titulo" aria-live="polite">
+        <h3 id="turno-titulo">Tu turno</h3>
+        <p class="turno-empty" id="turno-vacio"></p>
+        <div id="turno-detalle" hidden>
+          <p class="turno-sum"><span>Duración</span><strong id="turno-tiempo">0 min</strong></p>
+          <p class="turno-sum"><span>Precio</span><strong id="turno-precio">$0</strong></p>
+          <label for="t-dia">Día</label>
+          <select class="field" id="t-dia"></select>
+          <label for="t-franja">Horario</label>
+          <select class="field" id="t-franja"><option>A la mañana</option><option>Al mediodía</option><option>A la tarde</option></select>
+          <a class="btn btn-block" id="turno-enviar" href="https://wa.me/5491135778063" target="_blank" rel="noopener">Pedir el turno por WhatsApp</a>
+        </div>
+      </aside>
+      <table class="price-table">
+        <caption class="sr-only">Lista de precios con duración de cada servicio</caption>
+        <thead><tr><th scope="col">Servicio</th><th scope="col">Tiempo</th><th scope="col">Precio</th></tr></thead>
+        <tbody>
+          <tr class="group"><th colspan="3" scope="rowgroup">Pelo</th></tr>
+          <tr data-servicio="Corte y peinado" data-min="45" data-precio="18000"><td>Corte y peinado</td><td>45 min</td><td class="nums">$18.000</td></tr>
+          <tr data-servicio="Corte de hombre" data-min="30" data-precio="12000"><td>Corte de hombre</td><td>30 min</td><td class="nums">$12.000</td></tr>
+          <tr data-servicio="Brushing" data-min="40" data-precio="11000"><td>Brushing</td><td>40 min</td><td class="nums">$11.000</td></tr>
+          <tr data-servicio="Peinado para evento" data-min="60" data-precio="25000"><td>Peinado para evento</td><td>1 h</td><td class="nums">$25.000</td></tr>
+          <tr class="group"><th colspan="3" scope="rowgroup">Color</th></tr>
+          <tr data-servicio="Color de raíz" data-min="90" data-precio="28000"><td>Color de raíz</td><td>1 h 30</td><td class="nums">$28.000</td></tr>
+          <tr data-servicio="Balayage" data-min="180" data-precio="65000"><td>Balayage</td><td>3 h</td><td class="nums">$65.000</td></tr>
+          <tr data-servicio="Baño de brillo" data-min="40" data-precio="16000"><td>Baño de brillo</td><td>40 min</td><td class="nums">$16.000</td></tr>
+          <tr data-servicio="Alisado" data-min="150" data-precio="55000"><td>Alisado</td><td>2 h 30</td><td class="nums">$55.000</td></tr>
+          <tr class="group"><th colspan="3" scope="rowgroup">Uñas</th></tr>
+          <tr data-servicio="Esmaltado semipermanente" data-min="60" data-precio="14000"><td>Esmaltado semipermanente</td><td>1 h</td><td class="nums">$14.000</td></tr>
+          <tr data-servicio="Uñas esculpidas" data-min="120" data-precio="26000"><td>Uñas esculpidas</td><td>2 h</td><td class="nums">$26.000</td></tr>
+          <tr data-servicio="Kapping" data-min="75" data-precio="18000"><td>Kapping</td><td>1 h 15</td><td class="nums">$18.000</td></tr>
+          <tr data-servicio="Pedicuría" data-min="60" data-precio="16000"><td>Pedicuría</td><td>1 h</td><td class="nums">$16.000</td></tr>
+          <tr class="group"><th colspan="3" scope="rowgroup">Pestañas y cejas</th></tr>
+          <tr data-servicio="Lifting de pestañas" data-min="60" data-precio="20000"><td>Lifting de pestañas</td><td>1 h</td><td class="nums">$20.000</td></tr>
+          <tr data-servicio="Extensiones pelo a pelo" data-min="120" data-precio="32000"><td>Extensiones pelo a pelo</td><td>2 h</td><td class="nums">$32.000</td></tr>
+          <tr data-servicio="Perfilado de cejas" data-min="20" data-precio="8000"><td>Perfilado de cejas</td><td>20 min</td><td class="nums">$8.000</td></tr>
+          <tr data-servicio="Laminado de cejas" data-min="45" data-precio="15000"><td>Laminado de cejas</td><td>45 min</td><td class="nums">$15.000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prices-note">Precios de ejemplo. Pago en efectivo, transferencia o tarjeta.</p>
+  </section>
+
+  <!-- Trabajos: pared de fotos y palabras -->
+  <section id="trabajos" class="wall" aria-labelledby="trabajos-titulo">
+    <h2 id="trabajos-titulo" class="statement-title" data-reveal>Lo que hacemos</h2>
+    <ul class="wall-grid" role="list">
+      <li class="cell photo" data-reveal><img src="img/rizos.webp" width="1400" height="934" loading="lazy" alt="Estilista haciendo ondas con una buclera"><span class="cap">Ondas y peinados</span></li>
+      <li class="cell word w1" data-reveal style="--i:1"><span class="big">Color</span><span class="cap">Balayage, raíz y baños de brillo</span></li>
+      <li class="cell photo" data-reveal style="--i:2"><img src="img/manicura.webp" width="1400" height="934" loading="lazy" alt="Manicura trabajando en las uñas de una clienta"><span class="cap">Uñas esculpidas</span></li>
+      <li class="cell word w2" data-reveal style="--i:3"><span class="big">Corte</span><span class="cap">Para ella, para él y para chicos</span></li>
+      <li class="cell word w3" data-reveal><span class="big">Uñas</span><span class="cap">Semipermanente, kapping y pedicuría</span></li>
+      <li class="cell photo" data-reveal style="--i:1"><img src="img/pestanas.webp" width="1400" height="934" loading="lazy" alt="Aplicación de extensiones de pestañas"><span class="cap">Pestañas pelo a pelo</span></li>
+      <li class="cell word w1" data-reveal style="--i:2"><span class="big">Cejas</span><span class="cap">Perfilado y laminado</span></li>
+      <li class="cell photo" data-reveal style="--i:3"><img src="img/unas-rosa.webp" width="1400" height="934" loading="lazy" alt="Mano con uñas pintadas de rosa claro"><span class="cap">Semipermanente</span></li>
+      <li class="cell photo" data-reveal><img src="img/corte.webp" width="1400" height="934" loading="lazy" alt="Clienta en el lavacabezas mientras le cortan el pelo"><span class="cap">Lavado y corte</span></li>
+      <li class="cell word w2" data-reveal style="--i:1"><span class="big">Novias</span><span class="cap">Peinado y maquillaje con prueba</span></li>
+      <li class="cell photo" data-reveal style="--i:2"><img src="img/planchita.webp" width="1400" height="934" loading="lazy" alt="Estilista armando ondas con una buclera"><span class="cap">Brushing</span></li>
+      <li class="cell word w3" data-reveal style="--i:3"><span class="big">Alisado</span><span class="cap">Sin formol</span></li>
+    </ul>
+  </section>
+
+  <!-- Equipo: retrato como letra capital -->
+  <section id="equipo" class="about" aria-labelledby="equipo-titulo">
+    <h2 id="equipo-titulo" class="sr-only">Quiénes somos</h2>
+    <ul class="facts" role="list">
+      <li>Armenia 1700, Palermo Soho</li>
+      <li>Abierto desde 2016</li>
+      <li>Turnos por WhatsApp</li>
+    </ul>
+    <div class="bio" data-reveal>
+      <p><img class="drop" src="img/peinado.webp" width="1400" height="934" loading="lazy" alt="Estilista peinando a una clienta frente al espejo"><strong>Romina Ferraro</strong> abrió Casa Nube en 2016, después de diez años como colorista en salones del centro. Hoy somos cinco: dos estilistas, una manicura, una especialista en pestañas y cejas, y Romina, que sigue haciendo cada color.</p>
+      <p class="bio-more">Trabajamos con productos sin formol y te mostramos el tono antes de aplicarlo. Si es tu primera vez, te recomendamos un diagnóstico de 15 minutos sin cargo.</p>
+    </div>
+  </section>
+
+  <!-- Preguntas: una franja por pregunta -->
+  <section class="faq" aria-labelledby="preguntas-titulo">
+    <div class="faq-head"><h2 id="preguntas-titulo" data-reveal>Antes de venir</h2></div>
+    <div class="band"><h3>¿Con cuánta anticipación pido turno?</h3><p>Para corte y uñas, con uno o dos días suele alcanzar. Para color, balayage o alisado, conviene una semana antes.</p></div>
+    <div class="band"><h3>¿Qué pasa si llego tarde?</h3><p>Te esperamos hasta 15 minutos. Si se te complica, avisanos por WhatsApp y te reprogramamos sin cargo.</p></div>
+    <div class="band"><h3>¿Hacen peinados para casamientos?</h3><p>Sí, con una prueba previa. También vamos a domicilio o al salón de fiesta, con un adicional según la zona.</p></div>
+    <div class="band"><h3>¿Cómo pago?</h3><p>Efectivo, transferencia, Mercado Pago o tarjeta de débito y crédito, hasta tres cuotas en color y alisado.</p></div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact" aria-labelledby="contacto-titulo">
+    <h2 id="contacto-titulo" class="sr-only">Contacto</h2>
+    <p class="contact-line" data-reveal>Escribinos para un turno, una consulta de color o la prueba de tu peinado de novia.</p>
+    <img class="contact-photo" src="img/salon.webp" width="1400" height="934" loading="lazy" alt="Salón de peluquería con sillas negras y espejos redondos" data-reveal style="--i:1">
+    <div class="contact-links" data-reveal style="--i:2">
+      <p class="contact-q">¿Lo charlamos?</p>
+      <a href="https://wa.me/5491135778063" data-wa="Hola, quiero pedir un turno en Casa Nube.">WhatsApp 11 3577-8063</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Armenia+1700+Palermo+Buenos+Aires" target="_blank" rel="noopener">Armenia 1700, Palermo Soho</a>
+      <p class="contact-meta">Martes a sábado de 10 a 20 h. Respondemos en el día.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer-name" aria-hidden="true">Casa Nube</p>
+  <div class="footer-row">
+    <ul class="places" role="list">
+      <li><a href="https://wa.me/5491135778063" data-wa="Hola, quiero pedir un turno en Casa Nube.">WhatsApp 11 3577-8063</a></li>
+      <li><a href="tel:+541135778063">Llamar al salón</a></li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Armenia+1700+Palermo+Buenos+Aires" target="_blank" rel="noopener">Armenia 1700, Palermo</a></li>
+    </ul>
+    <ul class="footer-links" role="list">
+      <li><a href="#precios">Precios</a></li>
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+    </ul>
+  </div>
+  <p class="legal">Demo de ejemplo hecha por <a href="../../index.html">Vidriera</a>. El salón, sus precios y su equipo son ficticios. Fotos de Unsplash. ¿Querés una web así? <a href="mailto:tuvidrieradesarrollo@gmail.com">tuvidrieradesarrollo@gmail.com</a></p>
+</footer>
+
+<a class="float-wa" id="float-wa" href="https://wa.me/5491135778063" data-wa="Hola, quiero pedir un turno en Casa Nube." aria-label="Escribir por WhatsApp"><span>Pedir turno</span></a>
+
+<script src="app.js" defer></script>
+</body>
+</html>

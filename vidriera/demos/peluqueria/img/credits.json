@@ -1,0 +1,53 @@
+{
+  "nota": "Fotos de Unsplash: la licencia permite uso comercial y no exige atribución. Igual se deja el link de origen de cada una.",
+  "fotos": {
+    "corte.webp": {
+      "fuente": "https://unsplash.com/photos/Md_DhaFsnCQ",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "brushing.webp": {
+      "fuente": "https://unsplash.com/photos/FkAZqQJTbXM",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "salon.webp": {
+      "fuente": "https://unsplash.com/photos/LGXN4OSQSa4",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "sillas.webp": {
+      "fuente": "https://unsplash.com/photos/PtOfbGkU3uI",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "planchita.webp": {
+      "fuente": "https://unsplash.com/photos/wSpkThmoZQc",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "peinado.webp": {
+      "fuente": "https://unsplash.com/photos/lK8oXGycy88",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "rizos.webp": {
+      "fuente": "https://unsplash.com/photos/MMz03PyCOZg",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "manicura.webp": {
+      "fuente": "https://unsplash.com/photos/gb6gtiTZKB8",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "unas-rosa.webp": {
+      "fuente": "https://unsplash.com/photos/vtQHwU4F13s",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "unas-detalle.webp": {
+      "fuente": "https://unsplash.com/photos/r-Ej0NQmFlQ",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "pestanas.webp": {
+      "fuente": "https://unsplash.com/photos/xA_djNkH0Yo",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "pestanas-bandeja.webp": {
+      "fuente": "https://unsplash.com/photos/irXGNGSuWW4",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    }
+  }
+}

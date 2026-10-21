@@ -83,6 +83,12 @@ const conectarDispositivo = (grupo, alCambiar) => {
       servicios: [['Menú del día', 'Distinto cada día', 'Hola, ¿cuál es el menú de hoy?'], ['Para llevar', 'Listo en 20 minutos', 'Hola, quiero pedir para retirar.'], ['Envíos', 'Por el barrio', 'Hola, ¿hacen envíos a mi zona?']] },
     comercio: { nombre: 'Comercio', titulo: 'Todo lo que buscás, a la vuelta.', bajada: 'Consultá stock, precios y horarios por WhatsApp antes de venir.', cta: 'Consultar stock', msg: 'Hola, quería consultar si tienen stock de…', foto: 'img/agencia/tienda-ropa.webp',
       servicios: [['Productos', 'Consultá stock', 'Hola, ¿tienen stock de…?'], ['Envíos', 'En el barrio', 'Hola, ¿hacen envíos?'], ['Pagos', 'Efectivo y transferencia', 'Hola, ¿qué medios de pago aceptan?']] },
+    pasteleria: { nombre: 'Pastelería', titulo: 'Tortas por encargo, como las soñaste.', bajada: 'Elegí sabores y tamaño, y encargala por WhatsApp con tres días.', cta: 'Encargar una torta', msg: 'Hola, quiero encargar una torta.', foto: 'demos/pasteleria/img/floral.webp',
+      servicios: [['Tortas', 'Desde 10 porciones', 'Hola, quiero encargar una torta de cumpleaños.'], ['Tartas y budines', 'Para el fin de semana', 'Hola, ¿qué tartas tienen?'], ['Mesa dulce', 'Para tu evento', 'Hola, quiero presupuesto de mesa dulce.']] },
+    estudio: { nombre: 'Pilates y yoga', titulo: 'Tu primera clase es gratis.', bajada: 'Grupos chicos, todos los días. Reservá tu lugar por WhatsApp.', cta: 'Reservar clase', msg: 'Hola, quiero reservar una clase de prueba.', foto: 'demos/pilates/img/reformer-3.webp',
+      servicios: [['Reformer', 'Grupos de seis', 'Hola, quiero probar reformer.'], ['Yoga', 'Mañana y noche', 'Hola, ¿qué horarios de yoga tienen?'], ['Planes', 'Por mes, sin matrícula', 'Hola, quiero saber los precios de los planes.']] },
+    veterinaria: { nombre: 'Veterinaria', titulo: 'Tu veterinaria, a la vuelta.', bajada: 'Consultas, vacunas y peluquería canina. Turnos por WhatsApp.', cta: 'Pedir turno', msg: 'Hola, quiero pedir un turno para mi mascota.', foto: 'demos/veterinaria/img/perro-toalla.webp',
+      servicios: [['Consultas', 'Con turno en el día', 'Hola, quiero un turno para una consulta.'], ['Vacunas', 'Plan completo', 'Hola, quiero vacunar a mi mascota.'], ['Peluquería canina', 'Baño y corte', 'Hola, quiero un turno de peluquería canina.']] },
   };
   const COLORES = { azul: '#2445e0', verde: '#12805a', naranja: '#e8590c', violeta: '#6d3fd6', rosa: '#d6336c', grafito: '#2b2e35' };
 

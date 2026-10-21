@@ -176,6 +176,23 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
 .plans-help > svg { flex: none; margin-left: auto; width: 24px; height: 24px; transition: transform 200ms var(--ease); }
 @media (hover: hover) { .plans-help:hover > svg { transform: translateX(5px); } }
 @media (max-width: 520px) { .plans-help { padding: 18px 20px; font-size: 16px; } .hero-promise { font-size: 15px; align-items: flex-start; } }
+/* Más rubros */
+.more { margin-top: clamp(56px, 7vw, 96px); }
+.more-title { font-family: var(--font-display); font-weight: 900; font-size: clamp(28px, 2.6vw, 38px); line-height: 1.05; letter-spacing: -0.02em; }
+.more-sub { max-width: 60ch; }
+.rubros { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+.rubro { background: var(--surface); border-radius: var(--radius); padding: 14px 14px 24px; display: flex; flex-direction: column; gap: 8px; }
+.rubro-shot { display: block; background: var(--bg); border-radius: calc(var(--radius) - 8px); padding: 14px 14px 0; overflow: hidden; margin-bottom: 10px; }
+.rubro-shot img { width: 100%; height: auto; border-radius: 8px 8px 0 0; transition: transform 400ms var(--ease); }
+@media (hover: hover) { .rubro-shot:hover img { transform: translateY(-6px); } }
+.rubro .demo-cat, .rubro h4, .rubro > p:not(.demo-cat), .rubro-links { padding: 0 10px; }
+.rubro h4 { font-family: var(--font-display); font-weight: 900; font-size: 24px; line-height: 1.1; letter-spacing: -0.01em; margin: 0; }
+.rubro > p:not(.demo-cat) { color: var(--muted); font-size: 16px; }
+.rubro-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; margin-top: auto; padding-top: 10px; }
+.rubro-want { font-weight: 700; color: var(--muted); text-underline-offset: 4px; }
+.rubro-want:hover { color: var(--ink); }
+@media (max-width: 960px) { .rubros { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .rubros { grid-template-columns: 1fr; } }
 @media (max-width: 960px) { .demos { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .demo-stage { height: 320px; padding: 18px 18px 0; } .demo-stage.is-celu { padding: 18px; } .demo-body { padding: 22px; } .demo-yours { padding: 18px 20px; font-size: 16px; } }
 

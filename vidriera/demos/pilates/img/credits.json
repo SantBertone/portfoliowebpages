@@ -1,0 +1,49 @@
+{
+  "nota": "Fotos de Unsplash: la licencia permite uso comercial y no exige atribución. Igual se deja el link de origen de cada una.",
+  "fotos": {
+    "reformer-1.webp": {
+      "fuente": "https://unsplash.com/photos/aY5uOJ2o96g",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "reformer-2.webp": {
+      "fuente": "https://unsplash.com/photos/cZ0WYsBFHhs",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "estudio.webp": {
+      "fuente": "https://unsplash.com/photos/GQuXJnv4t60",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "reformer-3.webp": {
+      "fuente": "https://unsplash.com/photos/5JQxj-zc5ng",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "dos-alumnas.webp": {
+      "fuente": "https://unsplash.com/photos/r7DWM9kAEaI",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "reformer-4.webp": {
+      "fuente": "https://unsplash.com/photos/Zp4APUiwEsM",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "yoga-clase.webp": {
+      "fuente": "https://unsplash.com/photos/UGNGnSdEklQ",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "yoga-grupo.webp": {
+      "fuente": "https://unsplash.com/photos/7kBiqkXuzBc",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "puente.webp": {
+      "fuente": "https://unsplash.com/photos/Mlnt5avLxaY",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "sala-ventanas.webp": {
+      "fuente": "https://unsplash.com/photos/tOeo4_ra6oc",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "yoga-estudio.webp": {
+      "fuente": "https://unsplash.com/photos/qY468agdO7g",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    }
+  }
+}

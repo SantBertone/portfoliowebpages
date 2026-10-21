@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HUMO Burgers | Smash burgers en Almagro, pedidos por WhatsApp</title>
+  <meta name="description" content="Smash burgers a la plancha, papas cortadas a mano y batidos en Almagro. Armá tu burger y pedí para retirar o con delivery por WhatsApp.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f2b705">
+  <meta property="og:title" content="HUMO Burgers | Smash burgers en Almagro">
+  <meta property="og:description" content="Armá tu burger y pedí por WhatsApp, para retirar o con delivery.">
+  <meta property="og:image" content="https://vidriera.pages.dev/demos/hamburgueseria/img/doble-queso.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f2b705'/%3E%3Crect x='10' y='18' width='44' height='12' rx='6' fill='%231a1410'/%3E%3Crect x='10' y='34' width='44' height='6' fill='%23d62e1f'/%3E%3Crect x='10' y='44' width='44' height='8' rx='4' fill='%231a1410'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="skip" href="#arma">Saltar a armar tu pedido</a>
+
+<main>
+  <!-- Portada: el nombre como monumento -->
+  <section class="hero" aria-labelledby="titulo">
+    <div class="corner tl">
+      <p class="hero-sub" data-rise>Smash burgers a la plancha, papas cortadas a mano y batidos. Pedí para retirar o con delivery por WhatsApp.</p>
+      <a class="btn" href="#arma" data-rise style="--i:1">Armá tu pedido</a>
+    </div>
+    <nav class="corner tr" aria-label="Secciones">
+      <a href="#arma">Armá la tuya</a>
+      <a href="#menu">Menú</a>
+      <a href="#como-pedir">Delivery</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <h1 id="titulo" class="monument"><span class="sr-only">HUMO Burgers, hamburguesería en Almagro</span><span aria-hidden="true">HUMO BURGERS</span></h1>
+    <p class="corner bl"><span data-estado><span class="dot" aria-hidden="true"></span><span data-estado-texto>Martes a domingo de 19 a 24 h</span></span></p>
+    <p class="corner br">Díaz Vélez 4100, Almagro</p>
+    <img class="hero-photo" src="img/doble-queso.webp" width="1400" height="934" fetchpriority="high" alt="Hamburguesa doble con cheddar derretido sobre una tabla de madera">
+  </section>
+
+  <!-- Armá la tuya: la burger se apila mientras elegís -->
+  <section id="arma" class="builder" aria-labelledby="arma-titulo">
+    <div class="stack-stage" aria-hidden="true">
+      <svg class="stack" id="stack" viewBox="0 0 400 420" role="img"></svg>
+    </div>
+    <form class="builder-form" id="builder">
+      <h2 id="arma-titulo" class="h2" data-reveal>Armá la tuya</h2>
+      <p class="builder-lead" data-reveal style="--i:1">Elegí y mirá cómo crece. Después la sumás al pedido.</p>
+
+      <fieldset>
+        <legend>Medallones de 90 g</legend>
+        <div class="chips">
+          <label><input type="radio" name="carne" value="1" checked><span>Uno</span></label>
+          <label><input type="radio" name="carne" value="2"><span>Doble</span></label>
+          <label><input type="radio" name="carne" value="3"><span>Triple</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Queso</legend>
+        <div class="chips">
+          <label><input type="radio" name="queso" value="cheddar" checked><span>Cheddar</span></label>
+          <label><input type="radio" name="queso" value="doble cheddar"><span>Doble cheddar</span></label>
+          <label><input type="radio" name="queso" value="sin queso"><span>Sin queso</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Extras</legend>
+        <div class="chips">
+          <label><input type="checkbox" name="extra" value="bacon"><span>Bacon</span></label>
+          <label><input type="checkbox" name="extra" value="cebolla crispy"><span>Cebolla crispy</span></label>
+          <label><input type="checkbox" name="extra" value="huevo"><span>Huevo</span></label>
+          <label><input type="checkbox" name="extra" value="pepinos"><span>Pepinos</span></label>
+          <label><input type="checkbox" name="extra" value="lechuga y tomate"><span>Lechuga y tomate</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Pan</legend>
+        <div class="chips">
+          <label><input type="radio" name="pan" value="de papa" checked><span>De papa</span></label>
+          <label><input type="radio" name="pan" value="sin TACC"><span>Sin TACC</span></label>
+        </div>
+      </fieldset>
+      <label class="combo"><input type="checkbox" id="combo"> <span>Hacela combo: papas chicas y gaseosa</span></label>
+
+      <div class="builder-foot">
+        <p class="price nums" id="precio" aria-live="polite">$9.500</p>
+        <button class="btn" type="submit">Sumar al pedido</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Menú: palabra gigante y barras que se abren -->
+  <section id="menu" class="menu" aria-labelledby="menu-titulo">
+    <img class="menu-photo" src="img/con-papas.webp" width="1400" height="934" loading="lazy" alt="Hamburguesa con cheddar y papas fritas sobre una tabla">
+    <div class="menu-col">
+      <h2 id="menu-titulo" class="giant" data-reveal>Menú</h2>
+      <details open>
+        <summary>Smash burgers</summary>
+        <ul class="items" role="list">
+          <li data-item="Simple" data-precio="9500"><span>Simple<small>Un medallón, cheddar y salsa HUMO.</small></span><span class="nums">$9.500</span></li>
+          <li data-item="Doble" data-precio="12500"><span>Doble<small>Dos medallones, doble cheddar.</small></span><span class="nums">$12.500</span></li>
+          <li data-item="Triple" data-precio="15500"><span>Triple<small>Para los que vienen con hambre.</small></span><span class="nums">$15.500</span></li>
+          <li data-item="Bacon doble" data-precio="14500"><span>Bacon doble<small>Bacon crocante, cheddar y cebolla caramelizada.</small></span><span class="nums">$14.500</span></li>
+          <li data-item="Americana" data-precio="13200"><span>Americana<small>Lechuga, tomate, pepinos y mostaza.</small></span><span class="nums">$13.200</span></li>
+        </ul>
+      </details>
+      <details>
+        <summary>Veggie</summary>
+        <ul class="items" role="list">
+          <li data-item="NotBurger doble" data-precio="13500"><span>NotBurger doble<small>Medallón vegetal, cheddar y pepinos.</small></span><span class="nums">$13.500</span></li>
+          <li data-item="Hongos y provolone" data-precio="12900"><span>Hongos y provolone<small>Medallón de lentejas, hongos salteados y provolone.</small></span><span class="nums">$12.900</span></li>
+        </ul>
+      </details>
+      <details>
+        <summary>Papas y para picar</summary>
+        <ul class="items" role="list">
+          <li data-item="Papas chicas" data-precio="4200"><span>Papas chicas</span><span class="nums">$4.200</span></li>
+          <li data-item="Papas grandes" data-precio="5800"><span>Papas grandes</span><span class="nums">$5.800</span></li>
+          <li data-item="Papas con cheddar y bacon" data-precio="7200"><span>Papas con cheddar y bacon</span><span class="nums">$7.200</span></li>
+          <li data-item="Aros de cebolla" data-precio="5500"><span>Aros de cebolla</span><span class="nums">$5.500</span></li>
+        </ul>
+      </details>
+      <details>
+        <summary>Bebidas y batidos</summary>
+        <ul class="items" role="list">
+          <li data-item="Gaseosa en lata" data-precio="2500"><span>Gaseosa en lata</span><span class="nums">$2.500</span></li>
+          <li data-item="Agua sin gas" data-precio="2000"><span>Agua sin gas</span><span class="nums">$2.000</span></li>
+          <li data-item="Batido de frutilla" data-precio="6500"><span>Batido de frutilla</span><span class="nums">$6.500</span></li>
+          <li data-item="Batido de dulce de leche" data-precio="6800"><span>Batido de dulce de leche</span><span class="nums">$6.800</span></li>
+        </ul>
+      </details>
+      <details>
+        <summary>Postres</summary>
+        <ul class="items" role="list">
+          <li data-item="Brownie con helado" data-precio="6200"><span>Brownie con helado</span><span class="nums">$6.200</span></li>
+          <li data-item="Cookie de chocolate" data-precio="2800"><span>Cookie de chocolate</span><span class="nums">$2.800</span></li>
+        </ul>
+      </details>
+      <p class="menu-note">Precios de ejemplo. Combo con papas chicas y gaseosa: $4.500 más.</p>
+    </div>
+  </section>
+
+  <!-- Fotos de la plancha -->
+  <section class="strip" aria-labelledby="plancha-titulo">
+    <h2 id="plancha-titulo" class="sr-only">De la plancha</h2>
+    <figure data-reveal style="--i:0"><img src="img/plancha.webp" width="1400" height="934" loading="lazy" alt="Cocinero aplastando medallones en la plancha"><figcaption>El medallón se aplasta en la plancha caliente.</figcaption></figure>
+    <figure data-reveal style="--i:1"><img src="img/cheese.webp" width="1400" height="934" loading="lazy" alt="Hamburguesa de cuatro medallones con cheddar"><figcaption>Cheddar que se derrite solo.</figcaption></figure>
+    <figure data-reveal style="--i:2"><img src="img/cebolla.webp" width="1400" height="934" loading="lazy" alt="Hamburguesa doble con cebolla morada"><figcaption>Cebolla morada y pepinos.</figcaption></figure>
+    <figure data-reveal style="--i:3"><img src="img/papas.webp" width="1400" height="934" loading="lazy" alt="Papas fritas con salsa para mojar"><figcaption>Papas cortadas a mano todos los días.</figcaption></figure>
+    <figure data-reveal style="--i:4"><img src="img/batido.webp" width="1400" height="934" loading="lazy" alt="Batido de frutilla con crema"><figcaption>Batidos con helado artesanal.</figcaption></figure>
+  </section>
+
+  <!-- Cómo pedir -->
+  <section id="como-pedir" class="howto" aria-labelledby="como-titulo">
+    <h2 id="como-titulo" class="howto-title" data-reveal>Cómo pedir</h2>
+    <div class="howto-cols">
+      <div data-reveal style="--i:0"><h3>Para retirar</h3><p>Armá el pedido acá, mandalo por WhatsApp y te avisamos cuando está listo. En 15 a 20 minutos lo tenés.</p><ul role="list"><li>Díaz Vélez 4100, Almagro</li><li>Sin fila: pasás, pagás y te vas</li><li>Efectivo, transferencia o Mercado Pago</li></ul></div>
+      <div data-reveal style="--i:1"><h3>Delivery</h3><p>Llegamos en 30 a 45 minutos, con el pedido cerrado y caliente.</p><ul role="list"><li>Almagro, Boedo, Caballito y Villa Crespo</li><li>Envío $1.500</li><li>Pedido mínimo $15.000</li></ul></div>
+      <div data-reveal style="--i:2"><h3>Para grupos</h3><p>Cumpleaños, partidos o la oficina: avisanos con un día de anticipación y preparamos todo junto.</p><ul role="list"><li>Desde 10 burgers</li><li>10% de descuento</li><li>Salsas y servilletas para todos</li></ul></div>
+    </div>
+  </section>
+
+  <!-- Preguntas -->
+  <section id="preguntas" class="faq" aria-labelledby="preguntas-titulo">
+    <h2 id="preguntas-titulo" class="faq-head" data-reveal>Preguntas</h2><span></span>
+    <h3 class="q">¿Hasta qué hora toman pedidos?</h3><p class="a">Hasta las 23:30, de martes a domingo. Los lunes descansamos.</p>
+    <h3 class="q">¿Tienen opciones veggie o sin TACC?</h3><p class="a">Sí: dos burgers veggie y pan sin TACC para cualquier burger, por $1.500 más. La plancha se limpia antes de cocinar sin TACC.</p>
+    <h3 class="q">¿Cómo pago el delivery?</h3><p class="a">Con transferencia o Mercado Pago antes de que salga, o en efectivo al recibirlo. Te pasamos el total por WhatsApp.</p>
+    <h3 class="q">¿Puedo cambiar ingredientes?</h3><p class="a">Sí, en “Armá la tuya” elegís todo. Si querés algo que no está, escribilo en el mensaje y te decimos si se puede.</p>
+  </section>
+
+  <!-- Contacto en filas grandes -->
+  <section class="address" aria-labelledby="direccion-titulo">
+    <h2 id="direccion-titulo" class="sr-only">Dirección y horarios</h2>
+    <p class="row row-first">HUMO Burgers <img class="row-photo" src="img/tabla.webp" width="1400" height="934" loading="lazy" alt="Hamburguesa con sésamo sobre una tabla"></p>
+    <a class="row" href="https://www.google.com/maps/search/?api=1&query=Diaz+Velez+4100+Almagro+Buenos+Aires" target="_blank" rel="noopener">Díaz Vélez 4100</a>
+    <p class="row">Almagro, Buenos Aires</p>
+    <p class="row">Mar a Dom, 19 a 24 h</p>
+    <a class="row" href="tel:+541135778063">11 3577-8063</a>
+    <p class="row row-go">Pedí ya <a class="go" href="https://wa.me/5491135778063" data-wa="Hola, quiero hacer un pedido." aria-label="Pedir por WhatsApp">→</a></p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-cols">
+    <ul role="list"><li>Dirección</li><li>Díaz Vélez 4100</li><li>Almagro, Buenos Aires</li></ul>
+    <ul role="list"><li>Secciones</li><li><a href="#arma">Armá la tuya</a></li><li><a href="#menu">Menú</a></li><li><a href="#como-pedir">Delivery</a></li></ul>
+    <ul role="list"><li>Horario</li><li>Martes a domingo</li><li>19 a 24 h</li></ul>
+    <ul role="list"><li>Pedidos</li><li><a href="https://wa.me/5491135778063" data-wa="Hola, quiero hacer un pedido.">WhatsApp</a></li><li><a href="tel:+541135778063">11 3577-8063</a></li></ul>
+  </div>
+  <p class="wordmark" aria-hidden="true">HUMO BURGERS</p>
+  <p class="legal">Demo de ejemplo hecha por <a href="../../index.html">Vidriera</a>. El local, sus precios y sus datos son ficticios. Fotos de Unsplash. ¿Querés una web así? <a href="mailto:tuvidrieradesarrollo@gmail.com">tuvidrieradesarrollo@gmail.com</a></p>
+</footer>
+
+<!-- El pedido: un botón fijo que abre el detalle -->
+<button class="cart-btn" type="button" id="cart-btn" aria-expanded="false" aria-controls="cart">Tu pedido <span class="nums" id="cart-count">(0)</span></button>
+<aside class="cart" id="cart" aria-labelledby="cart-titulo" hidden>
+  <div class="cart-head"><h2 id="cart-titulo">Tu pedido</h2><button type="button" class="cart-close" id="cart-close" aria-label="Cerrar el pedido">×</button></div>
+  <p class="cart-empty" id="cart-empty">Todavía no sumaste nada. Armá tu burger o agregá algo del menú.</p>
+  <ul class="cart-list" id="cart-list" role="list"></ul>
+  <div class="cart-form" id="cart-form" hidden>
+    <p class="cart-total">Total <strong class="nums" id="cart-total">$0</strong></p>
+    <fieldset class="chips">
+      <legend class="sr-only">Entrega</legend>
+      <label><input type="radio" name="entrega" value="retiro" checked><span>Retiro</span></label>
+      <label><input type="radio" name="entrega" value="delivery"><span>Delivery</span></label>
+    </fieldset>
+    <label class="cart-label" for="direccion" id="direccion-label" hidden>Dirección de entrega</label>
+    <input class="field" id="direccion" type="text" autocomplete="street-address" placeholder="Calle, número y depto" hidden>
+    <label class="cart-label" for="c-nombre">Tu nombre</label>
+    <input class="field" id="c-nombre" type="text" autocomplete="given-name" placeholder="Para el pedido">
+    <a class="btn btn-block" id="cart-send" href="https://wa.me/5491135778063" target="_blank" rel="noopener">Mandar pedido por WhatsApp</a>
+  </div>
+</aside>
+
+<script src="app.js" defer></script>
+</body>
+</html>

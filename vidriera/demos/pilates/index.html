@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Respiro Estudio | Pilates reformer y yoga en Colegiales</title>
+  <meta name="description" content="Estudio de pilates reformer y yoga en Colegiales. Grupos de seis, clases todos los días y la primera clase gratis. Reservá por WhatsApp.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f2efe9">
+  <meta property="og:title" content="Respiro Estudio | Pilates reformer y yoga">
+  <meta property="og:description" content="Grupos de seis y la primera clase gratis.">
+  <meta property="og:image" content="https://vidriera.pages.dev/demos/pilates/img/reformer-3.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233f5a48'/%3E%3Cpath d='M14 40c8-14 28-14 36 0' stroke='%23f2efe9' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=zodiak@100,300&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="skip" href="#clases">Saltar a las clases</a>
+
+<header class="top">
+  <a class="top-link" href="#clases">Clases</a>
+  <a class="wordmark" href="#">Respiro Estudio</a>
+  <a class="top-link top-cta" href="#prueba">Clase de prueba</a>
+</header>
+
+<main>
+  <!-- Portada: título escalonado y dos fotos -->
+  <section class="hero" aria-labelledby="titulo">
+    <img class="hero-small" src="img/reformer-3.webp" width="1400" height="787" fetchpriority="high" alt="Alumna estirada sobre un reformer, con la pierna apoyada en la barra">
+    <h1 id="titulo" class="hero-title">
+      <span class="l1" data-rise>Pilates</span>
+      <span class="l2" data-rise style="--i:1">y yoga</span>
+    </h1>
+    <img class="hero-tall" src="img/dos-alumnas.webp" width="1400" height="1750" alt="Dos alumnas estirando en la torre de pilates del estudio">
+    <div class="hero-copy" data-rise style="--i:2">
+      <p>Estudio de pilates reformer y yoga en Colegiales. Grupos de seis, con una profesora que te corrige. La primera clase es gratis.</p>
+      <a class="btn" href="#prueba">Reservar clase de prueba</a>
+      <p class="estado" data-estado><span data-estado-texto>Lunes a viernes de 7 a 21 h, sábados de 9 a 13 h</span></p>
+    </div>
+  </section>
+
+  <!-- Clases: la grilla de la semana, filtrable -->
+  <section id="clases" class="classes" aria-labelledby="clases-titulo">
+    <h2 id="clases-titulo" class="h2 indent" data-reveal>Clases chicas, todos los días</h2>
+    <div class="classes-body">
+      <figure class="classes-photo" data-reveal>
+        <img src="img/reformer-2.webp" width="1400" height="1980" loading="lazy" alt="Alumna haciendo un ejercicio de equilibrio en el reformer">
+      </figure>
+      <div class="schedule">
+        <div class="days" role="group" aria-label="Elegir día" id="dias"></div>
+        <div class="kinds" role="group" aria-label="Tipo de clase" id="tipos">
+          <button type="button" class="kind" aria-pressed="true" data-tipo="todas">Todas</button>
+          <button type="button" class="kind" aria-pressed="false" data-tipo="Reformer">Reformer</button>
+          <button type="button" class="kind" aria-pressed="false" data-tipo="Mat">Mat</button>
+          <button type="button" class="kind" aria-pressed="false" data-tipo="Yoga">Yoga</button>
+        </div>
+        <ul class="rows" id="filas" role="list" aria-live="polite">
+          <li class="row-static">Lunes a viernes: reformer a las 8, 12:30, 18 y 19:30 h; mat y yoga a la mañana y a la noche. Sábados de 9 a 13 h.</li>
+        </ul>
+        <p class="schedule-note">Seis reformers por clase. Tocá una para reservarla como tu clase de prueba.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- El estudio: fotos a distintos tamaños -->
+  <section class="studio" aria-labelledby="estudio-titulo">
+    <div class="studio-copy">
+      <h2 id="estudio-titulo" class="h2" data-reveal>Mucha luz, poca gente</h2>
+      <p data-reveal style="--i:1">Un primer piso sobre la calle Conde, con dos salas: una con seis reformers y una torre, otra con piso de madera para mat y yoga. Hay vestuario con ducha, lockers y agua fresca.</p>
+    </div>
+    <img class="st-wide" src="img/estudio.webp" width="1400" height="903" loading="lazy" alt="Sala amplia con reformers en fila y ventanales" data-reveal>
+    <img class="st-tall" src="img/sala-ventanas.webp" width="1400" height="1050" loading="lazy" alt="Sala blanca con ventanas redondas y colchonetas de yoga" data-reveal>
+    <img class="st-square" src="img/puente.webp" width="1400" height="1867" loading="lazy" alt="Alumnas en clase de mat con las piernas en alto" data-reveal>
+    <p class="st-note" data-reveal>Las clases son de 50 minutos y empiezan en punto. Llegá cinco minutos antes la primera vez.</p>
+  </section>
+
+  <!-- Planes: precios como un menú -->
+  <section id="planes" class="plans" aria-labelledby="planes-titulo">
+    <div class="plans-side">
+      <h2 id="planes-titulo" class="h2" data-reveal>Planes</h2>
+      <p data-reveal style="--i:1">Por mes, sin matrícula. Las clases que no usás se pasan a la semana siguiente.</p>
+      <img src="img/yoga-clase.webp" width="1400" height="2100" loading="lazy" alt="Alumnas estirando en una clase de yoga" data-reveal>
+    </div>
+    <div class="menu">
+      <div class="group" data-reveal>
+        <h3>Reformer</h3>
+        <ul role="list">
+          <li><span class="name">Una vez por semana</span><span class="price nums">$38.000</span><small>4 clases al mes, en el horario que elijas.</small></li>
+          <li><span class="name">Dos veces por semana</span><span class="price nums">64.000</span><small>El plan que más se usa.</small></li>
+          <li><span class="name">Tres veces por semana</span><span class="price nums">84.000</span><small>12 clases al mes.</small></li>
+          <li><span class="name">Clase suelta</span><span class="price nums">12.000</span><small>Para venir cuando puedas.</small></li>
+        </ul>
+      </div>
+      <div class="group" data-reveal style="--i:1">
+        <h3>Mat y yoga</h3>
+        <ul role="list">
+          <li><span class="name">Una vez por semana</span><span class="price nums">$26.000</span><small>Mat, yoga suave o vinyasa.</small></li>
+          <li><span class="name">Dos veces por semana</span><span class="price nums">42.000</span><small>Podés combinar mat y yoga.</small></li>
+          <li><span class="name">Pase libre</span><span class="price nums">55.000</span><small>Todas las clases de mat y yoga del mes.</small></li>
+          <li><span class="name">Clase suelta</span><span class="price nums">8.000</span><small>Traé tu mat o usá uno del estudio.</small></li>
+        </ul>
+      </div>
+      <div class="group" data-reveal>
+        <h3>Combinados</h3>
+        <ul role="list">
+          <li><span class="name">Reformer dos veces y yoga libre</span><span class="price nums">$92.000</span><small>Lo mejor de las dos salas.</small></li>
+          <li><span class="name">Pack de 10 clases de reformer</span><span class="price nums">105.000</span><small>Vence a los tres meses.</small></li>
+        </ul>
+      </div>
+      <div class="group" data-reveal style="--i:1">
+        <h3>Privadas</h3>
+        <ul role="list">
+          <li><span class="name">Clase individual</span><span class="price nums">$25.000</span><small>Para empezar de cero o volver después de una lesión.</small></li>
+          <li><span class="name">Clase de a dos</span><span class="price nums">36.000</span><small>Con quien quieras, el precio es por las dos personas.</small></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clase de prueba -->
+  <section id="prueba" class="trial" aria-labelledby="prueba-titulo">
+    <img class="trial-photo" src="img/reformer-4.webp" width="1400" height="990" loading="lazy" alt="Alumna en posición de plancha sobre el reformer" data-reveal>
+    <form class="trial-form" id="form-prueba" data-reveal>
+      <h2 id="prueba-titulo" class="h2">Tu primera clase es gratis</h2>
+      <p>Elegí la clase y contanos un poco de vos. Te confirmamos el lugar por WhatsApp.</p>
+      <label for="p-clase">Clase</label>
+      <select class="field" id="p-clase"><option value="">La que me recomienden</option></select>
+      <label for="p-nombre">Tu nombre</label>
+      <input class="field" id="p-nombre" type="text" autocomplete="given-name" required placeholder="Ej.: Carla">
+      <fieldset class="levels">
+        <legend>¿Hiciste pilates o yoga antes?</legend>
+        <label><input type="radio" name="nivel" value="Nunca hice pilates ni yoga" checked> Nunca</label>
+        <label><input type="radio" name="nivel" value="Hice pilates o yoga alguna vez"> Alguna vez</label>
+        <label><input type="radio" name="nivel" value="Hago pilates o yoga seguido"> Seguido</label>
+      </fieldset>
+      <label for="p-nota">¿Alguna lesión o algo que tengamos que saber? <span>(opcional)</span></label>
+      <textarea class="field" id="p-nota" rows="3" placeholder="Ej.: me operé la rodilla hace un año"></textarea>
+      <button class="btn btn-light" type="submit">Pedir mi clase por WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Preguntas -->
+  <section id="preguntas" class="faq" aria-labelledby="preguntas-titulo">
+    <h2 id="preguntas-titulo" class="faq-title" data-reveal>Antes de tu primera clase</h2>
+    <div class="faq-list">
+      <details data-reveal><summary>¿Necesito experiencia?</summary><p>No. Las clases de reformer inicial y de yoga suave son para empezar de cero, y la profesora corrige a cada una.</p></details>
+      <details data-reveal><summary>¿Qué tengo que traer?</summary><p>Ropa cómoda y medias antideslizantes para el reformer (si no tenés, te prestamos). Las colchonetas las pone el estudio.</p></details>
+      <details data-reveal><summary>¿Puedo ir con una lesión?</summary><p>Sí, contanos antes qué te pasó. Si hace falta te recomendamos empezar con una clase privada o con el apto de tu médico.</p></details>
+      <details data-reveal><summary>¿Y si falto a una clase?</summary><p>Avisá con dos horas de anticipación y la recuperás en otro horario de la misma semana o de la siguiente.</p></details>
+      <details data-reveal><summary>¿Cómo se paga?</summary><p>Efectivo, transferencia o Mercado Pago, del 1 al 10 de cada mes.</p></details>
+      <details data-reveal><summary>¿Hay clases para embarazadas?</summary><p>Sí, los martes y jueves a las 10 h hay pilates prenatal en mat, con grupos de cuatro.</p></details>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="contact" aria-label="Contacto">
+    <p class="contact-sentence" data-reveal>Escribinos para reservar o preguntar qué clase te conviene.</p>
+    <img class="contact-photo" src="img/yoga-estudio.webp" width="1400" height="933" loading="lazy" alt="Clase de yoga en una sala con ventanales" data-reveal>
+    <div class="contact-links" data-reveal>
+      <p class="contact-q">¿Querés venir esta semana?</p>
+      <a href="https://wa.me/5491135778063" data-wa="Hola, quiero reservar una clase en Respiro.">WhatsApp 11 3577-8063</a>
+      <a href="https://maps.google.com/?q=Conde+1100,+Colegiales,+Buenos+Aires" target="_blank" rel="noopener">Conde 1100, Colegiales</a>
+      <p class="contact-city">Respondemos en el día, de lunes a sábado.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <img class="footer-photo" src="img/reformer-1.webp" width="1400" height="1980" loading="lazy" alt="Detalle de una pierna en alto con la correa del reformer">
+  <div class="footer-side">
+    <p class="footer-mark">Respiro Estudio</p>
+    <nav class="footer-menu" aria-label="Secciones">
+      <a href="#clases">Clases</a>
+      <a href="#planes">Planes</a>
+      <a href="#prueba">Clase de prueba</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="footer-blocks">
+      <p>Conde 1100, Colegiales<br>Lunes a viernes de 7 a 21 h<br>Sábados de 9 a 13 h</p>
+      <p><a href="https://wa.me/5491135778063" data-wa="Hola, quiero reservar una clase en Respiro.">WhatsApp</a><br><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+    <p class="legal">Demo de ejemplo hecha por <a href="../../index.html">Vidriera</a>. El estudio, sus precios y sus datos son ficticios. Fotos de Unsplash. ¿Querés una web así? <a href="mailto:tuvidrieradesarrollo@gmail.com">tuvidrieradesarrollo@gmail.com</a></p>
+  </div>
+</footer>
+
+<a class="float-wa" id="float-wa" href="https://wa.me/5491135778063" data-wa="Hola, quiero reservar una clase de prueba en Respiro." aria-label="Escribir por WhatsApp">Reservar por WhatsApp</a>
+
+<script src="app.js" defer></script>
+</body>
+</html>

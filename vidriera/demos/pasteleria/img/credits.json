@@ -1,0 +1,57 @@
+{
+  "nota": "Fotos de Unsplash: la licencia permite uso comercial y no exige atribución. Igual se deja el link de origen de cada una.",
+  "fotos": {
+    "chocolate-cumple.webp": {
+      "fuente": "https://unsplash.com/photos/LRIQuZyxKRM",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "velas.webp": {
+      "fuente": "https://unsplash.com/photos/d8s13D29QiE",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "floral.webp": {
+      "fuente": "https://unsplash.com/photos/g5bgYkKa8y0",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "naked-frutas.webp": {
+      "fuente": "https://unsplash.com/photos/6SHd7Q-l1UQ",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "tres-pisos.webp": {
+      "fuente": "https://unsplash.com/photos/2O4va26lBEI",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "frutillas.webp": {
+      "fuente": "https://unsplash.com/photos/4rfVL3NNGrA",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "chocolate-sirope.webp": {
+      "fuente": "https://unsplash.com/photos/QLSh4y2v93c",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "azul.webp": {
+      "fuente": "https://unsplash.com/photos/ttY5ZD2O3h8",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "cortando.webp": {
+      "fuente": "https://unsplash.com/photos/tfTr4x5-4E8",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "cocina.webp": {
+      "fuente": "https://unsplash.com/photos/0sbq9Rxcx-c",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "tarta.webp": {
+      "fuente": "https://unsplash.com/photos/z4BJGODf6O4",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "porciones.webp": {
+      "fuente": "https://unsplash.com/photos/n025kIRhIII",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "limon-frutilla.webp": {
+      "fuente": "https://unsplash.com/photos/lD0JFJDXBfQ",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    }
+  }
+}

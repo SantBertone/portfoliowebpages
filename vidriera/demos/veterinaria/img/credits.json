@@ -1,0 +1,49 @@
+{
+  "nota": "Fotos de Unsplash: la licencia permite uso comercial y no exige atribución. Igual se deja el link de origen de cada una.",
+  "fotos": {
+    "vacuna.webp": {
+      "fuente": "https://unsplash.com/photos/fQeLC7WlNm8",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "dientes.webp": {
+      "fuente": "https://unsplash.com/photos/sdpIuIbKaQg",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "camilla.webp": {
+      "fuente": "https://unsplash.com/photos/I3KxEBS6iOc",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "dachshund.webp": {
+      "fuente": "https://unsplash.com/photos/e4f87NzUJsU",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "gato-atigrado.webp": {
+      "fuente": "https://unsplash.com/photos/w12NAMymqnk",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "gato-brazos.webp": {
+      "fuente": "https://unsplash.com/photos/tDlo2ZPlQlU",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "gatito-vet.webp": {
+      "fuente": "https://unsplash.com/photos/5Bi6MWlWMbw",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "perro-toalla.webp": {
+      "fuente": "https://unsplash.com/photos/ikv10lHZUas",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "secador-perro.webp": {
+      "fuente": "https://unsplash.com/photos/F57xLufncj8",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "cachorro-bano.webp": {
+      "fuente": "https://unsplash.com/photos/LaLIxDwT4tk",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    },
+    "perro-blanco.webp": {
+      "fuente": "https://unsplash.com/photos/YV0rHiHzUbE",
+      "licencia": "Licencia de Unsplash (uso comercial permitido, sin atribución obligatoria)"
+    }
+  }
+}

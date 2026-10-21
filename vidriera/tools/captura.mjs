@@ -1,6 +1,7 @@
 // Regenera las capturas de las demos que se muestran en la web de la agencia (img/agencia/demo-*.webp):
 // la primera pantalla (para la portada) y la página completa (para recorrerla en "Ejemplos").
 // Uso, desde la carpeta vidriera: node tools/captura.mjs
+// También saca la primera pantalla de las demos de "Más rubros" (img/agencia/rubro-*.webp).
 // Correlo cada vez que cambies el diseño de una demo. Después revisá el width y height de esas imágenes en index.html.
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -43,5 +44,16 @@ for (const demo of demos) {
     writeFileSync(destino, Buffer.from(data, 'base64'));
     console.log(`${destino}  ${Math.round(t.width * t.escala)}x${Math.round(total * t.escala)}`);
   }
+}
+// Más rubros: solo la primera pantalla de compu, achicada a la mitad (img/agencia/rubro-*.webp)
+const rubros = ['cafeteria', 'hamburgueseria', 'peluqueria', 'pasteleria', 'pilates', 'veterinaria'];
+for (const demo of rubros) {
+  await chrome.send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 900, deviceScaleFactor: 1, mobile: false });
+  await chrome.send('Page.navigate', { url: pathToFileURL(resolve(`demos/${demo}/index.html`)).href });
+  await sleep(3500);
+  const { data } = await chrome.send('Page.captureScreenshot', { format: 'webp', quality: 80, clip: { x: 0, y: 0, width: 1440, height: 900, scale: 0.5 } });
+  const destino = `img/agencia/rubro-${demo}.webp`;
+  writeFileSync(destino, Buffer.from(data, 'base64'));
+  console.log(`${destino}  720x450`);
 }
 chrome.cerrar();
