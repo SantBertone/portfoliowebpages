@@ -9,5 +9,8 @@
 /demos/*/img/*
   Cache-Control: public, max-age=2592000, immutable
 
+/demos/*/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
 /tools/*
   X-Robots-Tag: noindex

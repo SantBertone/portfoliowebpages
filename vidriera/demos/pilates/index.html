@@ -9,14 +9,12 @@
   <meta name="theme-color" content="#f2efe9">
   <meta property="og:title" content="Respiro Estudio | Pilates reformer y yoga">
   <meta property="og:description" content="Grupos de seis y la primera clase gratis.">
-  <meta property="og:image" content="https://vidriera.pages.dev/demos/pilates/img/reformer-3.webp">
+  <meta property="og:image" content="https://vidriera.pages.dev/demos/pilates/img/reformer-3-900.webp">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233f5a48'/%3E%3Cpath d='M14 40c8-14 28-14 36 0' stroke='%23f2efe9' stroke-width='4' fill='none'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://api.fontshare.com">
-  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/v2/css?f[]=zodiak@100,300&display=swap" rel="stylesheet">
+  <!-- Tipografías y foto principal servidas desde la misma web: sin esperar a otros servidores -->
+  <link rel="preload" href="fonts/zodiak-100.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="img/dos-alumnas-900.webp" as="image" type="image/webp" imagesrcset="img/dos-alumnas-480.webp 480w, img/dos-alumnas-900.webp 900w, img/dos-alumnas-1200.webp 1200w" imagesizes="(max-width: 720px) 72vw, 30vw" fetchpriority="high">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="estilos.css">
 </head>
@@ -32,12 +30,17 @@
 <main>
   <!-- Portada: título escalonado y dos fotos -->
   <section class="hero" aria-labelledby="titulo">
-    <img class="hero-small" src="img/reformer-3.webp" width="1400" height="787" fetchpriority="high" alt="Alumna estirada sobre un reformer, con la pierna apoyada en la barra">
+    <ul class="hero-facts" role="list">
+      <li><strong>6</strong> reformers por clase</li>
+      <li><strong>50</strong> minutos de clase</li>
+      <li>Reformer, mat y yoga en Colegiales</li>
+    </ul>
+    <img class="hero-small" src="img/reformer-3-900.webp" srcset="img/reformer-3-480.webp 480w, img/reformer-3-900.webp 900w, img/reformer-3-1200.webp 1200w" sizes="(max-width: 720px) 46vw, 33vw" width="1400" height="787" alt="Alumna estirada sobre un reformer, con la pierna apoyada en la barra">
     <h1 id="titulo" class="hero-title">
       <span class="l1" data-rise>Pilates</span>
       <span class="l2" data-rise style="--i:1">y yoga</span>
     </h1>
-    <img class="hero-tall" src="img/dos-alumnas.webp" width="1400" height="1750" alt="Dos alumnas estirando en la torre de pilates del estudio">
+    <img class="hero-tall" fetchpriority="high" src="img/dos-alumnas-900.webp" srcset="img/dos-alumnas-480.webp 480w, img/dos-alumnas-900.webp 900w, img/dos-alumnas-1200.webp 1200w" sizes="(max-width: 720px) 72vw, 30vw" width="1400" height="1750" alt="Dos alumnas estirando en la torre de pilates del estudio">
     <div class="hero-copy" data-rise style="--i:2">
       <p>Estudio de pilates reformer y yoga en Colegiales. Grupos de seis, con una profesora que te corrige. La primera clase es gratis.</p>
       <a class="btn" href="#prueba">Reservar clase de prueba</a>
@@ -50,7 +53,7 @@
     <h2 id="clases-titulo" class="h2 indent" data-reveal>Clases chicas, todos los días</h2>
     <div class="classes-body">
       <figure class="classes-photo" data-reveal>
-        <img src="img/reformer-2.webp" width="1400" height="1980" loading="lazy" alt="Alumna haciendo un ejercicio de equilibrio en el reformer">
+        <img src="img/reformer-2-900.webp" srcset="img/reformer-2-480.webp 480w, img/reformer-2-900.webp 900w, img/reformer-2-1200.webp 1200w" sizes="(max-width: 720px) 60vw, 30vw" width="1400" height="1980" loading="lazy" alt="Alumna haciendo un ejercicio de equilibrio en el reformer">
       </figure>
       <div class="schedule">
         <div class="days" role="group" aria-label="Elegir día" id="dias"></div>
@@ -74,9 +77,9 @@
       <h2 id="estudio-titulo" class="h2" data-reveal>Mucha luz, poca gente</h2>
       <p data-reveal style="--i:1">Un primer piso sobre la calle Conde, con dos salas: una con seis reformers y una torre, otra con piso de madera para mat y yoga. Hay vestuario con ducha, lockers y agua fresca.</p>
     </div>
-    <img class="st-wide" src="img/estudio.webp" width="1400" height="903" loading="lazy" alt="Sala amplia con reformers en fila y ventanales" data-reveal>
-    <img class="st-tall" src="img/sala-ventanas.webp" width="1400" height="1050" loading="lazy" alt="Sala blanca con ventanas redondas y colchonetas de yoga" data-reveal>
-    <img class="st-square" src="img/puente.webp" width="1400" height="1867" loading="lazy" alt="Alumnas en clase de mat con las piernas en alto" data-reveal>
+    <img class="st-wide" src="img/estudio-900.webp" srcset="img/estudio-480.webp 480w, img/estudio-900.webp 900w, img/estudio-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 50vw" width="1400" height="903" loading="lazy" alt="Sala amplia con reformers en fila y ventanales" data-reveal>
+    <img class="st-tall" src="img/sala-ventanas-900.webp" srcset="img/sala-ventanas-480.webp 480w, img/sala-ventanas-900.webp 900w, img/sala-ventanas-1200.webp 1200w" sizes="(max-width: 720px) 64vw, 30vw" width="1400" height="1050" loading="lazy" alt="Sala blanca con ventanas redondas y colchonetas de yoga" data-reveal>
+    <img class="st-square" src="img/puente-900.webp" srcset="img/puente-480.webp 480w, img/puente-900.webp 900w, img/puente-1200.webp 1200w" sizes="(max-width: 720px) 54vw, 22vw" width="1400" height="1867" loading="lazy" alt="Alumnas en clase de mat con las piernas en alto" data-reveal>
     <p class="st-note" data-reveal>Las clases son de 50 minutos y empiezan en punto. Llegá cinco minutos antes la primera vez.</p>
   </section>
 
@@ -85,7 +88,7 @@
     <div class="plans-side">
       <h2 id="planes-titulo" class="h2" data-reveal>Planes</h2>
       <p data-reveal style="--i:1">Por mes, sin matrícula. Las clases que no usás se pasan a la semana siguiente.</p>
-      <img src="img/yoga-clase.webp" width="1400" height="2100" loading="lazy" alt="Alumnas estirando en una clase de yoga" data-reveal>
+      <img src="img/yoga-clase-900.webp" srcset="img/yoga-clase-480.webp 480w, img/yoga-clase-900.webp 900w, img/yoga-clase-1200.webp 1200w" sizes="(max-width: 720px) 60vw, (max-width: 1000px) 45vw, 22vw" width="1400" height="2100" loading="lazy" alt="Alumnas estirando en una clase de yoga" data-reveal>
     </div>
     <div class="menu">
       <div class="group" data-reveal>
@@ -125,7 +128,7 @@
 
   <!-- Clase de prueba -->
   <section id="prueba" class="trial" aria-labelledby="prueba-titulo">
-    <img class="trial-photo" src="img/reformer-4.webp" width="1400" height="990" loading="lazy" alt="Alumna en posición de plancha sobre el reformer" data-reveal>
+    <img class="trial-photo" src="img/reformer-4-900.webp" srcset="img/reformer-4-480.webp 480w, img/reformer-4-900.webp 900w, img/reformer-4-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 50vw" width="1400" height="990" loading="lazy" alt="Alumna en posición de plancha sobre el reformer" data-reveal>
     <form class="trial-form" id="form-prueba" data-reveal>
       <h2 id="prueba-titulo" class="h2">Tu primera clase es gratis</h2>
       <p>Elegí la clase y contanos un poco de vos. Te confirmamos el lugar por WhatsApp.</p>
@@ -161,7 +164,7 @@
   <!-- Contacto -->
   <section class="contact" aria-label="Contacto">
     <p class="contact-sentence" data-reveal>Escribinos para reservar o preguntar qué clase te conviene.</p>
-    <img class="contact-photo" src="img/yoga-estudio.webp" width="1400" height="933" loading="lazy" alt="Clase de yoga en una sala con ventanales" data-reveal>
+    <img class="contact-photo" src="img/yoga-estudio-900.webp" srcset="img/yoga-estudio-480.webp 480w, img/yoga-estudio-900.webp 900w, img/yoga-estudio-1200.webp 1200w" sizes="(max-width: 720px) 96px, 22vw" width="1400" height="933" loading="lazy" alt="Clase de yoga en una sala con ventanales" data-reveal>
     <div class="contact-links" data-reveal>
       <p class="contact-q">¿Querés venir esta semana?</p>
       <a href="https://wa.me/5491135778063" data-wa="Hola, quiero reservar una clase en Respiro.">WhatsApp 11 3577-8063</a>
@@ -172,7 +175,7 @@
 </main>
 
 <footer class="footer">
-  <img class="footer-photo" src="img/reformer-1.webp" width="1400" height="1980" loading="lazy" alt="Detalle de una pierna en alto con la correa del reformer">
+  <img class="footer-photo" src="img/reformer-1-900.webp" srcset="img/reformer-1-480.webp 480w, img/reformer-1-900.webp 900w, img/reformer-1-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 50vw" width="1400" height="1980" loading="lazy" alt="Detalle de una pierna en alto con la correa del reformer">
   <div class="footer-side">
     <p class="footer-mark">Respiro Estudio</p>
     <nav class="footer-menu" aria-label="Secciones">

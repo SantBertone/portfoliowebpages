@@ -74,6 +74,12 @@ node tools/optimize-images.mjs demos/odontologia/img
 Convierte los JPG o PNG de esa carpeta a WebP livianos de 1400 px de ancho.
 
 ```bash
+node tools/responsive-images.mjs demos/pilates/img
+```
+
+Genera versiones de 480, 900 y 1200 px de cada WebP (`foto-480.webp`, `foto-900.webp`, `foto-1200.webp`) para usarlas con `srcset` y `sizes`: el celular baja la chica y la compu la que necesita. La demo de pilates ya las usa; el original de 1400 px queda como fuente para volver a generarlas.
+
+```bash
 node tools/og.mjs
 ```
 

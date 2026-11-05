@@ -41,6 +41,7 @@ export async function abrirChrome() {
   });
   const send = (method, params = {}) => new Promise((r) => { const i = ++id; pendientes.set(i, r); ws.send(JSON.stringify({ id: i, method, params })); });
   const evaluar = async (expression) => (await send('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true })).result?.value;
-  const cerrar = () => { ws.close(); proceso.kill(); setTimeout(() => rmSync(perfil, { recursive: true, force: true }), 500); };
+  // Chrome a veces tarda en soltar archivos del perfil temporal: si no se puede borrar, queda en la carpeta temporal del sistema.
+  const cerrar = () => { ws.close(); proceso.kill(); setTimeout(() => { try { rmSync(perfil, { recursive: true, force: true }); } catch {} }, 500); };
   return { send, evaluar, cerrar };
 }
