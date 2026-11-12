@@ -1,16 +1,16 @@
-/* LOBO Burgers. Dirección "El nombre como monumento": el nombre de punta a punta, mostaza, carbón y kétchup. */
+/* LOBO Burgers. Estilo de referencia: Roberta's (Refero Styles). Parrilla punk: blanco, carbón, un rojo de neón y bordes de mantel cuadriculado. */
 :root {
-  --mustard: #f2b705;
-  --mustard-2: #f7cd45;
-  --ink: #1a1410;
-  --ink-2: #2a221c;
-  --soft: #4a3f36;
-  --ketchup: #c8281b;
-  --ketchup-2: #a51f14;
-  --bun: #fff4d8;
+  --mustard: #ffffff; /* el lienzo blanco */
+  --mustard-2: #f1f1ef;
+  --ink: #2b2f36;
+  --ink-2: #3a3f47;
+  --soft: #5b6068;
+  --ketchup: #ed2023;
+  --ketchup-2: #c8181b;
+  --bun: #ffffff;
 
   --display: "Anton", Impact, sans-serif;
-  --text: "Work Sans", system-ui, sans-serif;
+  --text: "Space Grotesk", system-ui, sans-serif;
 
   --small: clamp(0.875rem, 0.84rem + 0.1vw, 0.9375rem);
   --body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
@@ -211,3 +211,23 @@ a.row { transition: color 160ms ease; }
   .footer { gap: 72px 0; }
   .legal { margin-top: -56px; }
 }
+
+
+/* ---------- Capa Roberta's: rojo como único grito, sombra dura y mantel a cuadros ---------- */
+body { letter-spacing: 0.01em; }
+.btn { border-radius: 7px; box-shadow: 4px 4px 0 var(--ink); }
+.btn:active { box-shadow: 1px 1px 0 var(--ink); transform: translate(3px, 3px); }
+.chips span { border-radius: 999px; }
+.chips input:checked + span, .cart .chips input:checked + span { background: var(--ketchup); color: #fff; }
+.chips input:focus-visible + span { outline-color: var(--ketchup); }
+@media (hover: hover) { .chips input:checked + span { background: var(--ketchup); } }
+.combo input { accent-color: var(--ketchup); }
+.price, .faq-head { color: var(--ketchup); }
+.add { color: #fff; border-radius: 7px; }
+.cart-btn { border-radius: 999px; box-shadow: 4px 4px 0 var(--ink); }
+/* borde de mantel: una tira de cuadros rojos y blancos arriba de las bandas oscuras */
+.builder, .footer { position: relative; }
+.builder::before, .footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 24px; background: repeating-conic-gradient(var(--ketchup) 0 25%, #fff 0 50%) 0 0 / 24px 24px; }
+.builder { padding-top: calc(clamp(80px, 9vw, 140px) + 24px); }
+.monument { color: var(--ketchup); }
+.menu-title, .menu h2 { color: var(--ink); }

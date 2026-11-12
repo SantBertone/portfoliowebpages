@@ -30,7 +30,7 @@ document.querySelectorAll('[data-wa]').forEach((a) => {
   const sistema = matchMedia('(prefers-color-scheme: dark)');
   const aplicar = (t) => {
     raiz.dataset.theme = t;
-    meta.content = t === 'dark' ? '#131312' : '#f7f3ec';
+    meta.content = t === 'dark' ? '#17110a' : '#fbf5e7';
     botones.forEach((b) => {
       b.setAttribute('aria-pressed', String(t === 'dark'));
       if (b.classList.contains('theme-row')) b.querySelector('span').textContent = t === 'dark' ? 'Modo claro' : 'Modo oscuro';

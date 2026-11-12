@@ -1,19 +1,19 @@
-/* Lola Pastelería. Un solo motivo: el círculo de la torta vista desde arriba.
+/* Lola Pastelería. Estilo de referencia: Mr. Pops (Refero Styles): heladería retro, blanco, rojo cereza y crema. Un solo motivo: el círculo de la torta vista desde arriba.
    Vuelve como máscara de cada foto, forma de los botones, viñeta del catálogo, diagrama y marca. */
 
 :root {
-  --ground: #fff5f6;
-  --ink: #3a1f2b;
-  --ink-soft: #6e4b59;
-  --berry: #c42b4f;
-  --berry-dark: #a11f3f;
-  --pink: #f8d3da;
-  --pista: #cfe6c3;
+  --ground: #ffffff;
+  --ink: #000000;
+  --ink-soft: #5c5c5c;
+  --berry: #b00e2f;
+  --berry-dark: #8c0a25;
+  --pink: #fee5ca;
+  --pista: #fff1e0;
   --white: #ffffff;
 
   --m: clamp(16px, 4.4vw, 64px);
-  --display: 'Stack Sans Headline', 'Avenir Next', system-ui, sans-serif;
-  --text: 'Stack Sans Text', 'Avenir Next', system-ui, sans-serif;
+  --display: 'Oswald', 'Arial Narrow', sans-serif;
+  --text: 'Inter', 'Helvetica Neue', system-ui, sans-serif;
 
   --h1: clamp(52px, 8.4vw, 150px);
   --h2: clamp(38px, 4.6vw, 76px);
@@ -282,3 +282,14 @@ select.field { appearance: none; background-image: none; cursor: pointer; }
   .footer-cols { grid-template-columns: 1fr; }
   .float-wa { left: 16px; right: 16px; justify-content: center; }
 }
+
+
+/* ---------- Capa Mr. Pops: letras de marquesina apiladas, rojo cereza como trazo ---------- */
+h1, h2, h3 { font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; line-height: 0.88; }
+.footer-cols .fh { font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
+.card { border-radius: 0 40px 40px 40px; border: 1.5px solid var(--berry); }
+/* La portada y el pie son la marquesina roja de la heladería */
+.hero, .footer { background: var(--berry); }
+.c3 { --c: var(--pista); }
+.cell:hover { background: #fdd6ad; }
+.legal { color: #f5c9d2; }

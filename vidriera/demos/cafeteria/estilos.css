@@ -1,17 +1,17 @@
-/* Ombú Café. Dirección "La página es el objeto": la web se arma como la carta de papel del café. */
+/* Ombú Café. Estilo de referencia: Assembly Coffee (Refero Styles). Brasas en un tostadero oscuro: la carta de papel sobre la mesa negra, itálicas con serifa. */
 :root {
-  --paper: #f7f7f4;
-  --paper-2: #e9e4dc;
-  --ink: #241a14;
-  --muted: #5b4a3f;
-  --caramel: #7a5236; /* marrón café: el tono del salón en la foto */
-  --caramel-2: #e9dccb;
-  --green: #2f5d46;
-  --green-2: #22463a;
-  --green-ink: #ffffff;
+  --paper: #f6f7f2; /* papel de la carta */
+  --paper-2: #dfdbca;
+  --ink: #0e1311;
+  --muted: #4d4a31;
+  --caramel: #6b2618; /* brasa: el fondo cálido de las fotos */
+  --caramel-2: #faf080;
+  --green: #f6f7f2;
+  --green-2: #ffffff;
+  --green-ink: #0e1311;
 
-  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
-  --text: "Barlow", system-ui, sans-serif;
+  --display: "Cormorant Garamond", Georgia, serif;
+  --text: "Inter", system-ui, sans-serif;
 
   --small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
   --body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
@@ -19,6 +19,10 @@
   --card: clamp(2.25rem, 1.4rem + 1.6vw, 2.6rem);
   --head: clamp(3rem, 1.2rem + 6vw, 6.5rem);
 
+  --night: #0e1311; /* la mesa: fondo de la página */
+  --night-2: #1a1a1a;
+  --olive: #4d4a31;
+  --gold: #cfa53b;
   --margin: clamp(16px, 3vw, 40px);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -211,3 +215,21 @@ button, input, select { font: inherit; color: inherit; }
   .items .add::before { content: "+"; font-size: 22px; line-height: 1; }
   .items .add.is-added::before { content: attr(data-count); font-size: 18px; }
 }
+
+
+/* ---------- Capa Assembly: la página es de noche; el papel queda claro encima ---------- */
+body { background: var(--night); color: var(--paper); }
+.h2, .card-title, .order-title, .sheet-title, .menu-group h3, .sign, .coupon-title, .postcard-title, .facts { font-style: italic; font-weight: 500; text-transform: none; letter-spacing: -0.01em; }
+.h2, .sheet-title { line-height: 0.95; }
+.sheet, .letter, .postcard, .order { color: var(--ink); }
+.menu-section { background: var(--night); }
+.about { background: var(--night-2); }
+.postcard-section, .coupon { background: var(--olive); }
+.coupon, .postcard-section { color: var(--paper); }
+.btn, .add.is-added, .t1 .strip { color: var(--green-ink); }
+.btn-dark { background: var(--night); color: var(--paper); }
+.add.is-added { background: var(--ink); color: var(--paper); }
+.t1 .strip { background: var(--paper); }
+.card { border-radius: 4px; }
+.field { border-radius: 4px; }
+.tear { border-top-color: var(--gold); }

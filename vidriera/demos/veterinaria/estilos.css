@@ -1,17 +1,22 @@
-/* Huella Veterinaria. Media pantalla quieta: la foto no se mueve mientras leés,
+/* Huella Veterinaria. Estilo de referencia: Finn (Refero Styles): veterinaria de barrio cálida, texto marrón cacao, azul noche en la acción y lavados rosa y celeste. Media pantalla quieta: la foto no se mueve mientras leés,
    y cambia según la parte. La portada es la tapa de la libreta sanitaria, con su franja. */
 
 :root {
-  --ground: #dfe7e2;
-  --paper: #f6f8f7;
-  --ink: #16302d;
-  --ink-soft: #4b5f5b;
-  --teal: #1d5f5a;
-  --teal-dark: #154a46;
-  --marker: #f2d65c;
+  --ground: #ffffff;
+  --paper: #f9f9f9;
+  --ink: #321004;
+  --ink-soft: #6b5248;
+  --teal: #161345;
+  --teal-dark: #0d0b2e;
+  --marker: #ffcfdb;
 
   --m: clamp(16px, 4vw, 64px);
-  --serif: 'EB Garamond', 'Iowan Old Style', Georgia, serif;
+  --serif: 'DM Sans', system-ui, sans-serif;
+  --display: 'Antonio', 'Arial Narrow', sans-serif;
+  --blush: #ffcfdb;
+  --sky: #d7ecff;
+  --mint: #60c4bf;
+  --ember: #ff7f00;
   --h2: clamp(34px, 2.8vw, 44px);
 }
 
@@ -235,3 +240,15 @@ mark { background: var(--marker); color: inherit; padding: 0 .15em; }
   .footer-right { text-align: left; }
   .float-wa { left: 16px; right: 16px; justify-content: center; bottom: 16px; }
 }
+
+
+/* ---------- Capa Finn: botones en píldora azul noche, títulos condensados y lavados de color ---------- */
+body { font-size: 17px; }
+.btn { border-radius: 60px; background: var(--teal); color: #fff; }
+.btn:hover { background: var(--teal-dark); }
+.wordmark { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }
+h1, h2 { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: 0.01em; line-height: 0.95; }
+.card[data-seccion="portada"] { background: var(--blush); }
+.plan { background: var(--sky); }
+.faq { background: var(--paper); }
+h1, h2, .wordmark, h1 em, h2 em { font-style: normal; }

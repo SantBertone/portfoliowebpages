@@ -1,22 +1,24 @@
-/* Demo odontología: landing cálida en bloques, crema + cobalto + amarillo. */
+/* Demo odontología. Estilo de referencia: Alden (Refero Styles). Consultorio sereno sobre papel tibio: blanco, crema, tinta, un celeste resaltador y un verde salvia para la acción. */
 
 :root {
-  --bg: #f6f2ea;
-  --surface: #ffffff;
-  --ink: #10162f;
-  --muted: #586078;
-  --line: #e5dfd3;
-  --blue: #2445e0;
-  --blue-deep: #1a33b3;
-  --blue-soft: #e6ebff;
-  --sun: #f4d84a;
+  --bg: #ffffff;
+  --surface: #f3f1eb;
+  --ink: #28262a;
+  --muted: #4a4a4c;
+  --line: #dddcdd;
+  --blue: #28262a; /* acentos de texto: tinta, el color va solo en el resaltado y en el botón */
+  --blue-deep: #b3cf8e;
+  --blue-soft: #e4f1f7;
+  --sun: #c8dfaa;
+  --sky: #97cde5;
+  --sage: #c8dfaa;
   --wa: #128041;
 
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-text: 'Figtree', system-ui, sans-serif;
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-text: 'Inter', system-ui, sans-serif;
 
-  --radius: 26px;
-  --radius-sm: 16px;
+  --radius: 16px;
+  --radius-sm: 12px;
   --gap: clamp(10px, 1.2vw, 16px);
   --margin: clamp(16px, 3vw, 40px);
   --max: 1320px;
@@ -265,3 +267,37 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
   .js [data-reveal].is-in { opacity: 1; transform: none; }
 }
 @keyframes rise { to { opacity: 1; transform: none; } }
+
+
+/* ---------- Capa Alden: sin sombras, tipografía apretada, el celeste como resaltador ---------- */
+body { letter-spacing: -0.02em; }
+.h2, .hero-title { font-weight: 500; letter-spacing: -0.04em; }
+.hl { background: linear-gradient(transparent 58%, var(--sky) 58% 94%, transparent 94%); padding: 0 0.04em; }
+.card-blue { background: var(--surface); color: var(--ink); }
+.card-sun { background: var(--sage); color: var(--ink); }
+.card-ink { background: var(--ink); color: #fff; }
+.btn { background: var(--sage); color: var(--ink); font-weight: 500; }
+.btn-light { background: #fff; color: var(--ink); }
+@media (hover: hover) { .btn:hover { background: var(--blue-deep); color: var(--ink); } .btn-light:hover { background: var(--sage); } }
+.eyebrow { color: var(--muted); font-weight: 500; letter-spacing: 0.06em; }
+.top { background: rgba(255, 255, 255, 0.9); }
+.top.is-scrolled { box-shadow: 0 1px 0 var(--line); }
+.brand-mark { background: var(--ink); }
+.brand-mark::after { background: var(--sky); }
+.ticker span::after { color: var(--sky); }
+.step-n, .avatar { background: var(--surface); color: var(--ink); }
+.hours tr.is-today th::after { background: var(--sage); color: var(--ink); }
+.checks svg, .perk svg, .treat-link { color: var(--ink); }
+.treat-link { text-decoration: underline; text-underline-offset: 0.3em; text-decoration-color: var(--sky); text-decoration-thickness: 2px; }
+@media (hover: hover) { .chip:hover { background: var(--sage); } }
+[class*="card"], .nav, .float-wa { box-shadow: none !important; }
+@media (max-width: 960px) { .nav { border: 1px solid var(--line); } }
+/* Las tarjetas que eran azules ahora son crema: sus textos y botones claros pasan a tinta */
+.card-blue .btn-ghost-light, .card-blue .chip-alt { color: var(--ink); border: 1px solid rgba(40, 38, 42, 0.35); }
+@media (hover: hover) { .card-blue .btn-ghost-light:hover, .card-blue .chip-alt:hover { background: rgba(40, 38, 42, 0.06); border-color: var(--ink); } }
+.card-blue .pill { background: #fff; }
+.card-blue .hero-sub, .coverage p { color: var(--muted); }
+.card-blue .chip { background: #fff; }
+.card-blue .btn-light { background: var(--sage); }
+.card-blue .btn-ghost-light { background: transparent; }
+.btn-ghost-light { background: transparent; }

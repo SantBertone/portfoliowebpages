@@ -1,20 +1,20 @@
-/* Demo cerrajería: landing de urgencia, negro + amarillo de obra, títulos condensados. */
+/* Demo cerrajería. Estilo de referencia: ON.energy (Refero Styles). Amarillo de precaución sobre acero negro, títulos livianos y apretados, bloques de lado a lado. */
 
 :root {
-  --bg: #f2f0eb;
+  --bg: #eeeeee;
   --surface: #ffffff;
-  --ink: #111111;
-  --ink-2: #1d1d1d;
-  --muted: #5e5c58;
-  --line: #dcd8cf;
-  --sun: #ffd400;
-  --sun-deep: #f0c400;
+  --ink: #000000;
+  --ink-2: #333333;
+  --muted: #4b4b4b;
+  --line: #d4d4d4;
+  --sun: #fff313;
+  --sun-deep: #ece000;
   --wa: #128041;
 
-  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-  --font-text: 'Barlow', system-ui, sans-serif;
+  --font-display: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-text: 'Inter', 'Helvetica Neue', sans-serif;
 
-  --radius: 18px;
+  --radius: 9px;
   --gap: clamp(10px, 1.2vw, 16px);
   --margin: clamp(16px, 3vw, 40px);
   --max: 1320px;
@@ -228,3 +228,13 @@ svg { width: 1.15em; height: 1.15em; flex: none; }
   .js [data-reveal].is-in { opacity: 1; transform: none; }
 }
 @keyframes rise { to { opacity: 1; transform: none; } }
+
+
+/* ---------- Capa ON.energy: títulos en peso 300, sin mayúsculas forzadas, radios chicos ---------- */
+body { letter-spacing: -0.01em; }
+.h2, .hero-title, .service h3, .stat strong, .process-steps h3, .zone-group h3, .final-title, .eta-card strong, .process-steps span, .final-phone, .score strong, .brand { font-weight: 300; text-transform: none; }
+.h2, .hero-title, .final-title, .stat strong { letter-spacing: -0.045em; line-height: 0.98; }
+.service h3, .process-steps h3, .zone-group h3, .eta-card strong { letter-spacing: -0.03em; }
+.brand { font-weight: 400; letter-spacing: -0.04em; }
+.btn { border-radius: 6px; font-weight: 500; }
+.btn-small { border-radius: 6px; }
