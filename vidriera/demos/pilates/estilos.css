@@ -1,4 +1,4 @@
-/* Respiro Estudio. Fotos colgadas como en una pared: cada una con su tamaño y su altura,
+/* Respiro Estudio. Estilo de referencia: Aevi Wellness (Refero Styles): botica nórdica, letra liviana, blanco y un azul pizarra. Fotos colgadas como en una pared: cada una con su tamaño y su altura,
    sobre una grilla de 12 columnas que se siente aunque no se vea. */
 
 /* Tipografías alojadas en la propia web (Hanken Grotesk: OFL; Zodiak: licencia libre de Fontshare) */
@@ -7,18 +7,18 @@
 @font-face { font-family: 'Hanken Grotesk'; src: url('fonts/hanken-grotesk-latin.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
 
 :root {
-  --ground: #eef0eb;
-  --tone: #dfe4da;
-  --ink: #1f2420;
-  --ink-soft: #464d47;
-  --sage: #3f5a48;
-  --sage-dark: #2f4537;
-  --sage-light: #c9d4c4;
+  --ground: #ffffff;
+  --tone: #d5e0ea; /* franja celeste polvo */
+  --ink: #231f20;
+  --ink-soft: #5f6368;
+  --sage: #4f6d8c; /* pizarra oscuro: acentos de texto */
+  --sage-dark: #8eaccb;
+  --sage-light: #d5e0ea;
   --white: #ffffff;
 
   --m: clamp(20px, 6vw, 96px);
   --gap: clamp(12px, 1.6vw, 24px);
-  --display: 'Zodiak', 'Iowan Old Style', Georgia, serif;
+  --display: 'Hanken Grotesk', system-ui, sans-serif;
   --text: 'Hanken Grotesk', system-ui, sans-serif;
 
   --h1: clamp(72px, 8.3vw, 128px);
@@ -320,3 +320,11 @@ textarea.field { resize: vertical; }
   .footer-blocks { grid-template-columns: 1fr; margin-top: 40px; }
   .float-wa { right: 12px; bottom: 12px; min-height: 48px; padding: 0 18px; font-size: 15px; }
 }
+
+
+/* ---------- Capa Aevi: letra casi sin peso, bordes de un pelo y el azul pizarra en la acción ---------- */
+h1, h2 { font-weight: 200; letter-spacing: -0.035em; }
+.wordmark, .footer-mark, .contact-sentence { font-weight: 300; letter-spacing: -0.02em; }
+.btn { background: #a3bfdb; color: var(--ink); border-radius: 60px; }
+.btn:hover { background: var(--sage-dark); }
+::selection { background: #a3bfdb; color: var(--ink); }
