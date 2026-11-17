@@ -69,15 +69,20 @@ const abrirWhatsApp = (texto) => window.open(`https://wa.me/${WHATSAPP}?text=${e
   const el = document.querySelector('.rotator');
   if (!el || !quiereMovimiento) return;
   const palabras = el.dataset.palabras.split('|');
+  // El globo de WhatsApp de la foto muestra el mensaje típico de ese rubro
+  const globo = document.querySelector('.bubble-text');
+  const mensajes = globo ? globo.dataset.mensajes.split('|') : [];
   let i = 0;
   setInterval(() => {
     el.classList.add('is-out');
+    if (globo) globo.classList.add('is-out');
     setTimeout(() => {
       i = (i + 1) % palabras.length;
       el.textContent = palabras[i];
       el.classList.remove('is-out');
+      if (globo && mensajes[i]) { globo.textContent = mensajes[i]; globo.classList.remove('is-out'); }
     }, 260);
-  }, 2200);
+  }, 2600);
 })();
 
 // ---------- Botones Compu / Celular (probador y ejemplos) ----------

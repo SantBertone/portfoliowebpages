@@ -200,3 +200,123 @@ button, input, select { font: inherit; color: inherit; }
   .footer-row { grid-template-columns: 1fr 1fr; }
   .footer-row > div:first-child { grid-column: 1 / -1; }
 }
+
+/* ---------- Tres pasos y reseñas ---------- */
+.steps { padding: 0 var(--margin); background: var(--paper); border-bottom: 1px solid var(--ash); }
+.steps-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; }
+.steps-list li { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; padding: 28px 24px 28px 0; }
+.steps-list li + li { padding-left: 24px; border-left: 1px solid var(--ash); }
+.step-n { grid-row: span 2; display: grid; place-items: center; width: 36px; height: 36px; background: var(--ink); color: var(--paper); font-weight: 700; font-size: var(--small); font-variant-numeric: tabular-nums; }
+.steps-list h3 { font-size: var(--body); font-weight: 500; }
+.steps-list p { font-size: var(--small); color: var(--graphite); }
+
+.reviews { padding: 0 var(--margin) 96px; }
+.reviews-head { grid-template-columns: 1fr auto; align-items: end; }
+.reviews-head > div { display: grid; gap: 12px; }
+.score { display: flex; align-items: baseline; gap: 10px; font-size: var(--small); color: var(--graphite); }
+.score strong { font-size: var(--display); font-weight: 700; line-height: 1; letter-spacing: -0.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.review { display: grid; gap: 20px; align-content: space-between; padding: 28px; background: var(--paper); }
+.review blockquote { margin: 0; font-size: var(--sub); line-height: 1.35; letter-spacing: -0.01em; }
+.review-who { font-size: var(--small); font-weight: 500; }
+.review-who span { display: block; font-weight: 400; color: var(--graphite); }
+.demo-note { margin-top: 16px; font-size: var(--caption); color: var(--graphite); }
+::selection { background: var(--yellow); color: var(--ink); }
+@media (max-width: 720px) {
+  .steps-list { grid-template-columns: 1fr; }
+  .steps-list li { padding: 20px 0; }
+  .steps-list li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--ash); }
+  .reviews { padding-bottom: 64px; }
+  .reviews-head { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; gap: 8px; }
+  .review { padding: 22px; }
+}
+
+/* =====================================================================
+   Capa cálida (línea de las webs de LMS): ciruela sobre crema, títulos con serifa,
+   foto en marco redondeado, tarjetas con sombra suave y botones en píldora.
+   ===================================================================== */
+:root { --brand: #8a3358; --brand-deep: #6d2444; --yellow: #f3c64b; --ink: #2b1a22; --paper: #ffffff; --fog: #fbf5f0; --blush: #f6e4e9; --ash: #ecdfd8; --graphite: #6c5a61; --cobalt: #8a3358;
+  --font: "Figtree", ui-sans-serif, system-ui, sans-serif; --serif: "Fraunces", Georgia, serif; --r: 20px; --sombra: 0 1px 2px rgba(40, 28, 20, 0.05), 0 18px 40px -20px rgba(40, 28, 20, 0.22); }
+body { letter-spacing: 0; }
+.section-title, .hero-title, .split-title, .footer-logo, .wordmark, .review blockquote { font-family: var(--serif); font-weight: 500; letter-spacing: -0.02em; }
+.hero-title em, .section-title em { font-style: italic; color: var(--brand); }
+.eyebrow { color: var(--brand); font-weight: 600; }
+:focus-visible { outline-color: var(--brand); }
+::selection { background: var(--blush); color: var(--ink); }
+
+.btn { min-height: 52px; border-radius: 999px; background: var(--brand); color: #fff; font-size: 16px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+@media (hover: hover) { .btn:hover { box-shadow: none; background: var(--brand-deep); } }
+.btn-outline, .topbar-cta { border-radius: 999px; border-color: var(--brand); color: var(--brand); font-size: 15px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+@media (hover: hover) { .btn-outline:hover, .topbar-cta:hover { background: var(--brand); color: #fff; } }
+.field { border-radius: 12px; }
+.field:focus { border-color: var(--brand); }
+
+.utility { background: var(--brand); }
+.topbar { background: rgba(251, 245, 240, 0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom-color: var(--ash); }
+.wordmark { font-size: 24px; }
+.topbar-links a { font-size: 15px; letter-spacing: 0; text-transform: none; }
+
+/* Portada: texto a la izquierda, foto enmarcada a la derecha */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; gap: clamp(24px, 4vw, 72px); min-height: 0; padding: clamp(32px, 5vw, 72px) var(--margin) clamp(40px, 6vw, 88px); background: var(--fog); overflow: visible; }
+.hero-img { position: relative; inset: auto; grid-column: 2; grid-row: 1; width: 100%; height: auto; aspect-ratio: 4 / 4.2; border-radius: 32px; box-shadow: var(--sombra); }
+.hero-card { grid-column: 1; grid-row: 1; width: auto; margin: 0; padding: 0; gap: 20px; background: transparent; }
+.hero-mark { display: none; }
+.hero-title { font-size: clamp(44px, 1.6rem + 4vw, 86px); line-height: 1; }
+.hero-sub { font-size: 18px; max-width: 40ch; }
+.hero-status { font-size: 14px; }
+
+/* Pasos */
+.steps { padding: 0 var(--margin) 24px; background: var(--fog); border: 0; }
+.steps-list { background: var(--paper); border-radius: var(--r); box-shadow: var(--sombra); padding: 0 28px; }
+.steps-list li + li { border-left-color: var(--ash); }
+.step-n { border-radius: 50%; background: var(--blush); color: var(--brand); }
+.steps-list h3 { font-weight: 600; }
+
+/* Precios */
+.prices-photos img { border-radius: var(--r); }
+.price-card { border-radius: var(--r); box-shadow: var(--sombra); }
+.price-table .group th { font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: -0.01em; text-transform: none; border-bottom-color: var(--ash); }
+.price-table td:nth-child(3) { font-weight: 600; }
+.pick input { accent-color: var(--brand); }
+.turno { border: 0; border-radius: var(--r); box-shadow: 0 24px 60px -16px rgba(43, 26, 34, 0.4); }
+.turno h3, .turno label { color: var(--brand); }
+
+/* Paneles, trabajos y reseñas */
+.split { gap: 16px; padding: 0 var(--margin); }
+.split-panel { min-height: 62svh; border-radius: 32px; }
+.split-card { border-radius: var(--r); box-shadow: var(--sombra); }
+.split-link { color: var(--brand); }
+.work { border-radius: var(--r); overflow: hidden; box-shadow: var(--sombra); }
+.work h3 { font-weight: 600; }
+.tag { border-radius: 999px; background: var(--brand); letter-spacing: 0.02em; }
+.services-line { border-top-color: var(--ash); }
+.review { border-radius: var(--r); box-shadow: var(--sombra); }
+.review blockquote { font-size: 22px; line-height: 1.3; }
+.score strong { font-family: var(--serif); font-weight: 500; color: var(--brand); }
+
+/* Equipo: banda de color, como una tapa */
+.about { margin: 0 var(--margin); border-radius: 32px; overflow: hidden; background: var(--brand); color: #fff; }
+.about .eyebrow { color: var(--yellow); }
+.about .muted { color: #f3dbe4; }
+.facts li { border-radius: 999px; background: rgba(255, 255, 255, 0.14); color: #fff; letter-spacing: 0.02em; }
+
+.faq-list { border-top-color: var(--ash); }
+.band h3 { font-weight: 600; }
+.contact { margin: 0 var(--margin) clamp(40px, 6vw, 88px); border-radius: 32px; overflow: hidden; background: var(--paper); box-shadow: var(--sombra); }
+.footer { background: var(--blush); }
+.legal { border-top-color: #ead0d8; }
+.float-wa { border-radius: 999px; background: var(--brand); font-weight: 600; letter-spacing: 0; text-transform: none; }
+
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; padding: 16px var(--margin) 40px; gap: 24px; }
+  .hero-img { grid-column: 1; grid-row: 1; height: auto; aspect-ratio: 4 / 3.6; border-radius: 24px; }
+  .hero-card { grid-column: 1; grid-row: 2; padding: 0; }
+  .steps-list { padding: 0 20px; }
+  .steps-list li + li { border-top-color: var(--ash); }
+  .split-panel { min-height: 52svh; border-radius: 24px; }
+  .about, .contact { margin-left: 12px; margin-right: 12px; border-radius: 24px; }
+}
+/* La tarjeta del turno solo proyecta sombra cuando está a la vista */
+.turno:not(.is-on) { box-shadow: none; }
+@media (max-width: 720px) { .price-table td:nth-child(2) { padding-right: 12px; } }

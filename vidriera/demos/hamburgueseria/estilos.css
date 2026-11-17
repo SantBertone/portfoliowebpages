@@ -1,16 +1,16 @@
-/* LOBO Burgers. Estilo de referencia: Roberta's (Refero Styles). Parrilla punk: blanco, carbón, un rojo de neón y bordes de mantel cuadriculado. */
+/* LOBO Burgers. Dirección "El nombre como monumento": el nombre de punta a punta, mostaza, carbón y kétchup. */
 :root {
-  --mustard: #ffffff; /* el lienzo blanco */
-  --mustard-2: #f1f1ef;
-  --ink: #2b2f36;
-  --ink-2: #3a3f47;
-  --soft: #5b6068;
-  --ketchup: #ed2023;
-  --ketchup-2: #c8181b;
-  --bun: #ffffff;
+  --mustard: #f2b705;
+  --mustard-2: #f7cd45;
+  --ink: #1a1410;
+  --ink-2: #2a221c;
+  --soft: #4a3f36;
+  --ketchup: #c8281b;
+  --ketchup-2: #a51f14;
+  --bun: #fff4d8;
 
   --display: "Anton", Impact, sans-serif;
-  --text: "Space Grotesk", system-ui, sans-serif;
+  --text: "Work Sans", system-ui, sans-serif;
 
   --small: clamp(0.875rem, 0.84rem + 0.1vw, 0.9375rem);
   --body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
@@ -212,22 +212,41 @@ a.row { transition: color 160ms ease; }
   .legal { margin-top: -56px; }
 }
 
+/* ---------- Reseñas ---------- */
+.rs-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px; margin-bottom: clamp(28px, 4vw, 56px); }
+.rs-score { display: flex; align-items: baseline; gap: 10px; margin: 0; }
+.rs-score strong { font-variant-numeric: tabular-nums; }
+.rs-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.rs-item { display: grid; gap: 24px; align-content: space-between; padding: 28px; }
+.rs-item blockquote { margin: 0; }
+.rs-who { margin: 0; font-weight: 600; }
+.rs-who span { display: block; font-weight: 400; }
+.rs-note { margin: 18px 0 0; }
+@media (max-width: 800px) { .rs-grid { grid-template-columns: 1fr; gap: 10px; } .rs-item { padding: 22px; gap: 18px; } }
+.rs { padding: clamp(80px, 9vw, 140px) var(--margin); }
+.rs-title { font-family: var(--display); font-weight: 400; font-size: var(--head); line-height: 0.9; text-transform: uppercase; }
+.rs-score { font-size: var(--small); color: var(--soft); }
+.rs-score strong { font-family: var(--display); font-weight: 400; font-size: var(--head); line-height: 0.9; color: var(--ketchup); }
+.rs-item { background: #fff; border-radius: 20px; box-shadow: 0 1px 2px rgba(40, 28, 20, 0.05), 0 18px 40px -20px rgba(40, 28, 20, 0.22); }
+.rs-item blockquote { font-size: var(--lead); line-height: 1.2; font-weight: 500; }
+.rs-who { font-size: var(--small); }
+.rs-who span, .rs-note { color: var(--soft); }
+.rs-note { font-size: var(--small); }
 
-/* ---------- Capa Roberta's: rojo como único grito, sombra dura y mantel a cuadros ---------- */
-body { letter-spacing: 0.01em; }
-.btn { border-radius: 7px; box-shadow: 4px 4px 0 var(--ink); }
-.btn:active { box-shadow: 1px 1px 0 var(--ink); transform: translate(3px, 3px); }
-.chips span { border-radius: 999px; }
-.chips input:checked + span, .cart .chips input:checked + span { background: var(--ketchup); color: #fff; }
-.chips input:focus-visible + span { outline-color: var(--ketchup); }
-@media (hover: hover) { .chips input:checked + span { background: var(--ketchup); } }
-.combo input { accent-color: var(--ketchup); }
-.price, .faq-head { color: var(--ketchup); }
-.add { color: #fff; border-radius: 7px; }
-.cart-btn { border-radius: 999px; box-shadow: 4px 4px 0 var(--ink); }
-/* borde de mantel: una tira de cuadros rojos y blancos arriba de las bandas oscuras */
-.builder, .footer { position: relative; }
-.builder::before, .footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 24px; background: repeating-conic-gradient(var(--ketchup) 0 25%, #fff 0 50%) 0 0 / 24px 24px; }
-.builder { padding-top: calc(clamp(80px, 9vw, 140px) + 24px); }
-.monument { color: var(--ketchup); }
-.menu-title, .menu h2 { color: var(--ink); }
+/* ---------- Capa cálida: la mostaza queda en la portada; el resto respira sobre crema, con esquinas suaves ---------- */
+:root { --mustard: #fff4dc; --mustard-2: #ffe7b3; --mostaza: #f2b705; --margin: clamp(18px, 3vw, 40px); }
+.hero { background: var(--mostaza); }
+.btn, .add, .cart-btn, .chips span { border-radius: 999px; }
+.chips input:checked + span { background: var(--mostaza); }
+@media (hover: hover) { .chips input:checked + span { background: var(--mostaza); } }
+.price, .faq-head { color: var(--mostaza); }
+.add { color: #fff; }
+.field { border-radius: 12px; }
+.stack-stage, .menu-photo, .strip figure, .cart { border-radius: 22px; overflow: hidden; }
+.strip { gap: 12px; }
+.strip figure { background: #fff; box-shadow: 0 1px 2px rgba(40, 28, 20, 0.05), 0 18px 40px -20px rgba(40, 28, 20, 0.22); }
+.strip figcaption { padding: 12px 14px 16px; }
+details { border-radius: 14px; overflow: hidden; }
+.row { margin: 0 var(--margin) 8px; border-radius: 20px; }
+.qty button { border-radius: 50%; }
+::selection { background: var(--ketchup); color: #fff; }

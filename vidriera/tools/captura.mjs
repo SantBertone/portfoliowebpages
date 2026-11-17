@@ -22,6 +22,8 @@ for (const demo of demos) {
     await chrome.send('Emulation.setDeviceMetricsOverride', { width: t.width, height: t.height, deviceScaleFactor: t.deviceScaleFactor, mobile: t.mobile });
     await chrome.send('Page.navigate', { url: pathToFileURL(resolve(`demos/${demo}/index.html`)).href });
     await sleep(3000); // fuentes, fotos y animaciones de entrada
+    await chrome.evaluar(`document.head.insertAdjacentHTML('beforeend', '<style>.vd-cinta { display: none !important; }</style>')`); // la cinta de venta no va en las capturas
+    await sleep(300);
 
     // Primera pantalla
     let { data } = await chrome.send('Page.captureScreenshot', { format: 'webp', quality: 82 });
@@ -51,6 +53,8 @@ for (const demo of rubros) {
   await chrome.send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 900, deviceScaleFactor: 1, mobile: false });
   await chrome.send('Page.navigate', { url: pathToFileURL(resolve(`demos/${demo}/index.html`)).href });
   await sleep(3500);
+  await chrome.evaluar(`document.head.insertAdjacentHTML('beforeend', '<style>.vd-cinta { display: none !important; }</style>')`); // la cinta de venta no va en las capturas
+  await sleep(300);
   const { data } = await chrome.send('Page.captureScreenshot', { format: 'webp', quality: 80, clip: { x: 0, y: 0, width: 1440, height: 900, scale: 0.5 } });
   const destino = `img/agencia/rubro-${demo}.webp`;
   writeFileSync(destino, Buffer.from(data, 'base64'));

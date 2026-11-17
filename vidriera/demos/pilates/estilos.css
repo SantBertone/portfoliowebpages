@@ -1,4 +1,4 @@
-/* Respiro Estudio. Estilo de referencia: Aevi Wellness (Refero Styles): botica nórdica, letra liviana, blanco y un azul pizarra. Fotos colgadas como en una pared: cada una con su tamaño y su altura,
+/* Respiro Estudio. Fotos colgadas como en una pared: cada una con su tamaño y su altura,
    sobre una grilla de 12 columnas que se siente aunque no se vea. */
 
 /* Tipografías alojadas en la propia web (Hanken Grotesk: OFL; Zodiak: licencia libre de Fontshare) */
@@ -7,18 +7,18 @@
 @font-face { font-family: 'Hanken Grotesk'; src: url('fonts/hanken-grotesk-latin.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
 
 :root {
-  --ground: #ffffff;
-  --tone: #d5e0ea; /* franja celeste polvo */
-  --ink: #231f20;
-  --ink-soft: #5f6368;
-  --sage: #4f6d8c; /* pizarra oscuro: acentos de texto */
-  --sage-dark: #8eaccb;
-  --sage-light: #d5e0ea;
+  --ground: #eef0eb;
+  --tone: #dfe4da;
+  --ink: #1f2420;
+  --ink-soft: #464d47;
+  --sage: #3f5a48;
+  --sage-dark: #2f4537;
+  --sage-light: #c9d4c4;
   --white: #ffffff;
 
   --m: clamp(20px, 6vw, 96px);
   --gap: clamp(12px, 1.6vw, 24px);
-  --display: 'Hanken Grotesk', system-ui, sans-serif;
+  --display: 'Zodiak', 'Iowan Old Style', Georgia, serif;
   --text: 'Hanken Grotesk', system-ui, sans-serif;
 
   --h1: clamp(72px, 8.3vw, 128px);
@@ -321,10 +321,28 @@ textarea.field { resize: vertical; }
   .float-wa { right: 12px; bottom: 12px; min-height: 48px; padding: 0 18px; font-size: 15px; }
 }
 
+/* ---------- Reseñas ---------- */
+.rs-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px; margin-bottom: clamp(28px, 4vw, 56px); }
+.rs-score { display: flex; align-items: baseline; gap: 10px; margin: 0; }
+.rs-score strong { font-variant-numeric: tabular-nums; }
+.rs-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.rs-item { display: grid; gap: 24px; align-content: space-between; padding: 28px; }
+.rs-item blockquote { margin: 0; }
+.rs-who { margin: 0; font-weight: 600; }
+.rs-who span { display: block; font-weight: 400; }
+.rs-note { margin: 18px 0 0; }
+@media (max-width: 800px) { .rs-grid { grid-template-columns: 1fr; gap: 10px; } .rs-item { padding: 22px; gap: 18px; } }
+.rs { padding: clamp(96px, 10vw, 160px) var(--m) 0; }
+.rs-score { font-size: 16px; color: var(--ink-soft); }
+.rs-score strong { font: 100 var(--h2)/0.9 var(--display); color: var(--sage); }
+.rs-grid { gap: var(--gap); }
+.rs-item { background: var(--white); border-radius: 18px; box-shadow: 0 1px 2px rgba(40, 28, 20, 0.05), 0 18px 40px -20px rgba(40, 28, 20, 0.22); }
+.rs-item blockquote { font-family: var(--display); font-weight: 300; font-size: clamp(22px, 1.7vw, 28px); line-height: 1.22; }
+.rs-who { font-size: 16px; font-weight: 500; }
+.rs-who span, .rs-note { color: var(--ink-soft); }
+.rs-note { font-size: 14px; }
 
-/* ---------- Capa Aevi: letra casi sin peso, bordes de un pelo y el azul pizarra en la acción ---------- */
-h1, h2 { font-weight: 200; letter-spacing: -0.035em; }
-.wordmark, .footer-mark, .contact-sentence { font-weight: 300; letter-spacing: -0.02em; }
-.btn { background: #a3bfdb; color: var(--ink); border-radius: 60px; }
-.btn:hover { background: var(--sage-dark); }
-::selection { background: #a3bfdb; color: var(--ink); }
+/* ---------- Capa cálida: botones en píldora y fotos con esquinas suaves ---------- */
+.btn { border-radius: 999px; }
+.hero img, .classes img, .studio img, .plans img, .faq img, .contact img { border-radius: 16px; }
+::selection { background: var(--sage); color: var(--white); }

@@ -689,3 +689,37 @@ a { text-underline-offset: 0.2em; }
 .plan-price, .hosting-addr, .hero-trust strong { font-variant-numeric: tabular-nums; }
 .footer-legal { color: rgba(251, 245, 231, 0.62); }
 .footer-head { color: rgba(251, 245, 231, 0.62); }
+
+/* =====================================================================
+   Movimiento (assets/efectos.js). Estado por defecto: todo visible y quieto.
+   ===================================================================== */
+/* La idea: una frase grande que se entinta al leerla */
+.idea { padding: clamp(72px, 11vw, 168px) var(--inline) clamp(8px, 2vw, 32px); }
+.idea-text { max-width: 20ch; font-family: var(--font-display); font-weight: 500; font-size: clamp(38px, 1.2rem + 5.2vw, 104px); line-height: 0.96; letter-spacing: -0.045em; text-wrap: balance; }
+.idea-text.is-tinta span { color: color-mix(in srgb, var(--ink) 18%, transparent); transition: color 320ms ease; }
+.idea-text.is-tinta span.on { color: var(--ink); }
+.idea-text.is-tinta span.now { color: var(--orange-ink); }
+
+/* Títulos por palabra: suben desde su renglón cuando el título entra en pantalla */
+.is-split .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+.is-split .w > span { display: inline-block; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .is-split[data-reveal] { opacity: 1; transform: none; }
+  .js .is-split[data-reveal] .w > span { transform: translateY(110%); transition: transform 900ms var(--ease); transition-delay: calc(var(--w, 0) * 55ms); }
+  .js .is-split[data-reveal].is-in .w > span { transform: none; }
+}
+
+/* Proceso: la línea de arriba se completa y cada paso se enciende */
+.timeline { position: relative; padding-top: 28px; }
+.timeline::before, .timeline::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--line-soft); }
+.timeline::after { background: var(--orange); transform-origin: left; transform: scaleX(var(--avance, 1)); transition: transform 240ms linear; }
+.fx .timeline li { transition: background-color 400ms ease, border-color 400ms ease; }
+.fx .timeline li:not(.is-lit) .tl-day { background: transparent; color: var(--muted); box-shadow: inset 0 0 0 1px var(--line); }
+.fx .timeline .tl-day { transition: background-color 400ms ease, color 400ms ease, box-shadow 400ms ease; }
+
+/* Botones imán: se corren unos píxeles hacia el cursor */
+.btn.is-iman { translate: var(--mx, 0) var(--my, 0); transition: transform 160ms var(--ease), background-color 200ms ease, border-color 200ms ease, color 200ms ease, translate 260ms var(--ease); }
+
+/* Globo de la portada: cambia con el rubro del título */
+.bubble-text { display: inline-block; transition: opacity 260ms ease, transform 260ms var(--ease); }
+.bubble-text.is-out { opacity: 0; transform: translateY(0.4em); }

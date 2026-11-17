@@ -6,14 +6,14 @@
   <title>Casa Nube | Peluquería y estética en Palermo Soho</title>
   <meta name="description" content="Cortes, color, uñas y pestañas en Palermo Soho. Mirá los precios, armá tu turno y pedilo por WhatsApp.">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#8a3358">
   <meta property="og:title" content="Casa Nube | Peluquería y estética en Palermo Soho">
   <meta property="og:description" content="Precios claros y turnos por WhatsApp.">
   <meta property="og:image" content="https://vidriera.pages.dev/demos/peluqueria/img/brushing.webp">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Crect x='14' y='14' width='36' height='36' fill='%23fff116'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%238a3358'/%3E%3Crect x='14' y='14' width='36' height='36' fill='%23f6e4e9'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="estilos.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@
   <img class="hero-img" src="img/brushing.webp" width="1400" height="934" fetchpriority="high" alt="Estilista haciendo un brushing con secador y cepillo redondo">
   <div class="hero-card" data-rise>
     <p class="eyebrow">Palermo Soho · Desde 2016</p>
-    <h1 id="titulo" class="hero-title">Peluquería y estética</h1>
+    <h1 id="titulo" class="hero-title">Peluquería y estética <em>en Palermo</em></h1>
     <p class="hero-sub">Cortes, color, uñas y pestañas. Mirá los precios y pedí tu turno por WhatsApp.</p>
     <a class="btn" href="#precios">Armar mi turno</a>
     <p class="hero-status" data-estado><span class="dot" aria-hidden="true"></span><span data-estado-texto>Martes a sábado de 10 a 20 h</span></p>
@@ -53,6 +53,16 @@
 </header>
 
 <main>
+  <!-- Cómo se pide el turno -->
+  <section class="steps" aria-labelledby="pasos-titulo">
+    <h2 id="pasos-titulo" class="sr-only">Tu turno en tres pasos</h2>
+    <ol class="steps-list" role="list">
+      <li data-reveal><span class="step-n" aria-hidden="true">1</span><h3>Tildá lo que te querés hacer</h3><p>La lista suma sola el tiempo y el precio.</p></li>
+      <li data-reveal style="--i:1"><span class="step-n" aria-hidden="true">2</span><h3>Elegí día y horario</h3><p>Mañana, mediodía o tarde, de martes a sábado.</p></li>
+      <li data-reveal style="--i:2"><span class="step-n" aria-hidden="true">3</span><h3>Mandalo por WhatsApp</h3><p>Te llega el mensaje armado y te confirmamos en el día.</p></li>
+    </ol>
+  </section>
+
   <!-- Precios: la tabla es también el armador del turno -->
   <section id="precios" class="prices" aria-labelledby="precios-titulo">
     <div class="section-head">
@@ -141,6 +151,23 @@
       <li>Perfilado y laminado de cejas</li>
       <li>Diagnóstico de color sin cargo</li>
     </ul>
+  </section>
+
+  <!-- Reseñas -->
+  <section id="resenas" class="reviews" aria-labelledby="resenas-titulo">
+    <div class="section-head reviews-head">
+      <div>
+        <p class="eyebrow" data-reveal>Reseñas</p>
+        <h2 id="resenas-titulo" class="section-title" data-reveal>Lo que dicen las clientas</h2>
+      </div>
+      <p class="score" data-reveal><strong>4,8</strong><span>en Google, con 212 reseñas</span></p>
+    </div>
+    <ul class="reviews-grid" role="list">
+      <li class="review" data-reveal><blockquote>“Fui por un balayage con miedo y Romina me mostró el tono antes de empezar. Salí con el pelo sano y el color que quería.”</blockquote><p class="review-who">Camila R. <span>Balayage</span></p></li>
+      <li class="review" data-reveal style="--i:1"><blockquote>“Pedí el turno por WhatsApp un jueves a la noche y el sábado ya estaba atendida. Puntuales y muy prolijas con las uñas.”</blockquote><p class="review-who">Sol M. <span>Uñas esculpidas</span></p></li>
+      <li class="review" data-reveal style="--i:2"><blockquote>“Me encanta ver los precios antes de ir. Sabés cuánto vas a gastar y cuánto vas a tardar, sin sorpresas.”</blockquote><p class="review-who">Julieta P. <span>Corte y brushing</span></p></li>
+    </ul>
+    <p class="demo-note">Reseñas de ejemplo para esta demo. En tu web van las reseñas reales de tu ficha de Google.</p>
   </section>
 
   <!-- Equipo -->
@@ -237,5 +264,6 @@
 <a class="float-wa" id="float-wa" href="https://wa.me/5491135778063" data-wa="Hola, quiero pedir un turno en Casa Nube." aria-label="Escribir por WhatsApp"><span>Pedir turno</span></a>
 
 <script src="app.js" defer></script>
+<script src="../../assets/demo-efectos.js" defer></script>
 </body>
 </html>

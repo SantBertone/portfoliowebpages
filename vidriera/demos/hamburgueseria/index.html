@@ -6,16 +6,17 @@
   <title>LOBO Burgers | Smash burgers en Almagro, pedidos por WhatsApp</title>
   <meta name="description" content="Smash burgers a la plancha, papas cortadas a mano y batidos en Almagro. Armá tu burger y pedí para retirar o con delivery por WhatsApp.">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#f2b705">
   <meta property="og:title" content="LOBO Burgers | Smash burgers en Almagro">
   <meta property="og:description" content="Armá tu burger y pedí por WhatsApp, para retirar o con delivery.">
   <meta property="og:image" content="https://vidriera.pages.dev/demos/hamburgueseria/img/doble-queso.webp">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f2b705'/%3E%3Crect x='10' y='18' width='44' height='12' rx='6' fill='%231a1410'/%3E%3Crect x='10' y='34' width='44' height='6' fill='%23d62e1f'/%3E%3Crect x='10' y='44' width='44' height='8' rx='4' fill='%231a1410'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/demo-venta.css">
 </head>
 <body>
@@ -167,6 +168,20 @@
     </div>
   </section>
 
+  <!-- Reseñas -->
+  <section id="resenas" class="rs" aria-labelledby="rs-titulo">
+    <div class="rs-head">
+      <h2 id="rs-titulo" class="rs-title" data-reveal>Lo que dicen</h2>
+      <p class="rs-score" data-reveal><strong>4,6</strong><span>en Google, con 512 reseñas</span></p>
+    </div>
+    <ul class="rs-grid" role="list">
+      <li class="rs-item" data-reveal><blockquote>“Armé la mía doble con cebolla crispy desde la web y llegó en 35 minutos, caliente y bien cerrada.”</blockquote><p class="rs-who">Nico T. <span>Delivery</span></p></li>
+      <li class="rs-item" data-reveal style="--i:1"><blockquote>“El precio que te muestra la página es el que pagás. Sin sorpresas con el envío.”</blockquote><p class="rs-who">Flor A. <span>Delivery</span></p></li>
+      <li class="rs-item" data-reveal style="--i:2"><blockquote>“Pedimos para doce por el partido. Avisamos el día anterior y llegó todo a horario.”</blockquote><p class="rs-who">Juan M. <span>Pedido para grupo</span></p></li>
+    </ul>
+    <p class="rs-note">Reseñas de ejemplo para esta demo. En tu web van las reseñas reales de tu ficha de Google.</p>
+  </section>
+
   <!-- Preguntas -->
   <section id="preguntas" class="faq" aria-labelledby="preguntas-titulo">
     <h2 id="preguntas-titulo" class="faq-head" data-reveal>Preguntas</h2><span></span>
@@ -242,5 +257,6 @@
 </aside>
 
 <script src="app.js" defer></script>
+<script src="../../assets/demo-efectos.js" defer></script>
 </body>
 </html>

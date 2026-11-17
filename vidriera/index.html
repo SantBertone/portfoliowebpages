@@ -31,6 +31,27 @@
       document.querySelector('meta[name="theme-color"]').content = t === 'dark' ? '#17110a' : '#fbf5e7';
     })();
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Vidriera",
+    "description": "Diseño de páginas web para comercios de barrio, listas en 5 días y con pedidos por WhatsApp.",
+    "url": "https://vidriera.pages.dev/",
+    "image": "https://vidriera.pages.dev/img/og-vidriera.jpg",
+    "telephone": "+54 9 11 3577-8063",
+    "email": "tuvidrieradesarrollo@gmail.com",
+    "areaServed": { "@type": "Country", "name": "Argentina" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" },
+    "priceRange": "$150.000 - $250.000",
+    "openingHours": "Mo-Fr 09:00-19:00",
+    "makesOffer": [
+      { "@type": "Offer", "name": "Web Esencial", "price": "150000", "priceCurrency": "ARS" },
+      { "@type": "Offer", "name": "Web Completa", "price": "200000", "priceCurrency": "ARS" },
+      { "@type": "Offer", "name": "Web Profesional", "price": "250000", "priceCurrency": "ARS" }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="assets/agencia.css">
 </head>
 <body>
@@ -98,7 +119,7 @@
       <div class="phone hero-phone" aria-hidden="true">
         <img src="img/agencia/demo-odontologia-movil.webp" width="780" height="1688" alt="">
       </div>
-      <p class="bubble" aria-hidden="true"><svg><use href="#i-wa"/></svg>“Hola, quiero pedir un turno.”</p>
+      <p class="bubble" aria-hidden="true"><svg><use href="#i-wa"/></svg><span class="bubble-text" data-mensajes="“Hola, los encontré en Google.”|“Hola, quiero pedir un turno.”|“Me quedé afuera, ¿pueden venir?”|“¿Tienen turno para un service?”|“Quiero turno para color el sábado.”|“¿Me guardan una mesa para 4?”|“¿Tienen stock? Paso hoy.”">“Hola, los encontré en Google.”</span></p>
     </div>
   </section>
 
@@ -111,6 +132,11 @@
   </div>
 
   <!-- Probador en vivo -->
+  <!-- La idea: se entinta palabra por palabra al bajar -->
+  <section class="idea" aria-label="Por qué una web">
+    <p class="idea-text" data-tinta>Tu próximo cliente te está buscando en el celular. Si no te encuentra, le escribe a otro. Con una web clara, te escribe a vos.</p>
+  </section>
+
   <section id="probala" class="section tryit" aria-labelledby="probala-titulo">
     <div class="section-head">
       <h2 id="probala-titulo" class="h2" data-reveal>Probá tu web, ahora.</h2>
@@ -252,10 +278,10 @@
         <div class="demo-stage is-compu">
           <div class="demo-browser">
             <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>dentalpalermo.pages.dev</span></div>
-            <div class="scroller"><img src="img/agencia/demo-odontologia-full.webp" width="864" height="3771" loading="lazy" alt="Página completa del ejemplo de consultorio odontológico, vista en la computadora"></div>
+            <div class="scroller"><img src="img/agencia/demo-odontologia-full.webp" width="864" height="3805" loading="lazy" alt="Página completa del ejemplo de consultorio odontológico, vista en la computadora"></div>
           </div>
           <div class="demo-phone">
-            <div class="scroller"><img src="img/agencia/demo-odontologia-movil-full.webp" width="546" height="11120" loading="lazy" alt="Página completa del ejemplo de consultorio odontológico, vista en el celular"></div>
+            <div class="scroller"><img src="img/agencia/demo-odontologia-movil-full.webp" width="546" height="11280" loading="lazy" alt="Página completa del ejemplo de consultorio odontológico, vista en el celular"></div>
           </div>
         </div>
         <div class="demo-body">
@@ -276,10 +302,10 @@
         <div class="demo-stage is-compu">
           <div class="demo-browser">
             <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>llaveya.pages.dev</span></div>
-            <div class="scroller"><img src="img/agencia/demo-cerrajeria-full.webp" width="864" height="4021" loading="lazy" alt="Página completa del ejemplo de cerrajería, vista en la computadora"></div>
+            <div class="scroller"><img src="img/agencia/demo-cerrajeria-full.webp" width="864" height="3901" loading="lazy" alt="Página completa del ejemplo de cerrajería, vista en la computadora"></div>
           </div>
           <div class="demo-phone">
-            <div class="scroller"><img src="img/agencia/demo-cerrajeria-movil-full.webp" width="546" height="14417" loading="lazy" alt="Página completa del ejemplo de cerrajería, vista en el celular"></div>
+            <div class="scroller"><img src="img/agencia/demo-cerrajeria-movil-full.webp" width="546" height="13796" loading="lazy" alt="Página completa del ejemplo de cerrajería, vista en el celular"></div>
           </div>
         </div>
         <div class="demo-body">
@@ -592,5 +618,6 @@
 <a class="float-wa" id="float-wa" href="https://wa.me/5491135778063" data-wa="Hola, quiero hacer una consulta." aria-label="Escribinos por WhatsApp"><svg><use href="#i-wa"/></svg><span>WhatsApp</span></a>
 
 <script src="assets/agencia.js" defer></script>
+<script src="assets/efectos.js" defer></script>
 </body>
 </html>

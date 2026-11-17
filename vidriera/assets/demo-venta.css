@@ -51,3 +51,23 @@
   /* aire para los botones fijos de cada demo (WhatsApp, llamar, pedido) */
   .vd-cierre { padding-bottom: 120px; }
 }
+
+/* ---------- Movimiento (assets/demo-efectos.js) ---------- */
+.vd-foto { opacity: 0; transition: opacity 500ms ease; }
+.vd-foto.is-lista { opacity: 1; }
+.vd-w { display: inline-block; overflow: hidden; vertical-align: top; text-indent: 0; padding: 0.22em 0.06em 0.2em; margin: -0.22em -0.06em -0.2em; }
+.vd-w > span { display: inline-block; }
+.vd-btn { translate: var(--mx, 0) var(--my, 0); transition: background-color 180ms ease, color 180ms ease, transform 140ms cubic-bezier(0.22, 1, 0.36, 1), translate 260ms cubic-bezier(0.22, 1, 0.36, 1); }
+@media (prefers-reduced-motion: no-preference) {
+  .vd-espera .vd-w > span { transform: translateY(110%); transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1); transition-delay: calc(var(--w, 0) * 55ms); }
+  .vd-espera.is-in .vd-w > span { transform: none; }
+  .vd-titulo .vd-w > span { transform: translateY(115%); transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1); transition-delay: calc(var(--w, 0) * 55ms); }
+  .vd-titulo.vd-sube .vd-w > span { transform: none; }
+  .vd-espera .vd-datos li { clip-path: inset(0 100% 0 0); transition: clip-path 700ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .vd-espera .vd-datos li:nth-child(1) { transition-delay: 350ms; }
+  .vd-espera .vd-datos li:nth-child(2) { transition-delay: 470ms; }
+  .vd-espera .vd-datos li:nth-child(3) { transition-delay: 590ms; }
+  .vd-espera.is-in .vd-datos li { clip-path: inset(0 0 0 0); }
+  .vd-cinta { animation: vd-baja 600ms cubic-bezier(0.22, 1, 0.36, 1) 200ms backwards; }
+}
+@keyframes vd-baja { from { transform: translateY(-100%); } }
