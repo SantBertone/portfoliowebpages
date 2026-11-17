@@ -1,0 +1,53 @@
+/* Capa de venta de Vidriera sobre las demos: una cinta arriba y un cierre al final.
+   Usa los colores de Vidriera (cobalto, crema, café) para que se distinga del negocio de ejemplo. */
+
+.vd-cinta, .vd-cierre { --vd-cobalto: #0f5fe0; --vd-crema: #fbf5e7; --vd-cafe: #3d2800; --vd-mandarina: #ff7b02; font-family: 'Space Grotesk', system-ui, sans-serif; letter-spacing: 0; text-transform: none; font-style: normal; }
+.vd-cinta *, .vd-cierre * { box-sizing: border-box; }
+
+.vd-marca { display: inline-flex; align-items: flex-end; gap: 2px; height: 16px; flex: none; }
+.vd-marca i { width: 5px; background: var(--vd-mandarina); }
+.vd-marca i:nth-child(1) { height: 100%; }
+.vd-marca i:nth-child(2) { height: 68%; background: var(--vd-crema); }
+.vd-marca i:nth-child(3) { height: 84%; background: #ffb066; }
+
+/* ---------- Cinta de arriba ---------- */
+.vd-cinta { position: relative; z-index: 50; display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 44px; padding: 6px 16px; background: var(--vd-cafe); color: var(--vd-crema); font-size: 14px; font-weight: 500; line-height: 1.25; }
+.vd-cinta p { margin: 0; }
+.vd-cinta .vd-corto { display: none; }
+.vd-cinta a { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 14px; border-radius: 999px; background: var(--vd-crema); color: var(--vd-cafe); font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 180ms ease, transform 140ms cubic-bezier(0.22, 1, 0.36, 1); }
+.vd-cinta a svg, .vd-btn svg { width: 16px; height: 16px; flex: none; }
+.vd-cinta a:active, .vd-btn:active { transform: scale(0.97); }
+@media (hover: hover) { .vd-cinta a:hover { background: #fff; } .vd-cinta a:hover svg { transform: translateX(3px); } }
+.vd-cinta a svg { transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1); }
+.vd-cinta a:focus-visible, .vd-btn:focus-visible { outline: 3px solid var(--vd-mandarina); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .vd-cinta { justify-content: space-between; gap: 10px; font-size: 13px; }
+  .vd-cinta .vd-largo { display: none; }
+  .vd-cinta .vd-corto { display: inline; }
+}
+
+/* Envoltura para las demos cuya cabecera va en posición absoluta: así no pisa la cinta */
+.vd-pagina { position: relative; }
+
+/* ---------- Cierre, después del pie del negocio ---------- */
+.vd-cierre { position: relative; z-index: 2; padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 64px); background: var(--vd-cobalto); color: var(--vd-crema); font-size: 17px; line-height: 1.5; }
+.vd-cierre-in { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.25fr 1fr; gap: 32px clamp(32px, 6vw, 88px); align-items: end; }
+.vd-logo { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 22px; font-size: 20px; font-weight: 500; letter-spacing: -0.03em; color: var(--vd-crema); }
+.vd-logo .vd-marca { height: 20px; }
+.vd-logo .vd-marca i { width: 6px; }
+.vd-cierre h2 { margin: 0; font-family: inherit; font-size: clamp(34px, 1.4rem + 3vw, 64px); font-weight: 500; line-height: 0.96; letter-spacing: -0.04em; text-transform: none; text-wrap: balance; color: var(--vd-crema); }
+.vd-texto { margin: 20px 0 0; max-width: 52ch; color: #e6eeff; }
+.vd-lado { display: grid; gap: 22px; }
+.vd-datos { margin: 0; padding: 0; list-style: none; display: grid; border-top: 1px solid rgba(251, 245, 231, 0.4); }
+.vd-datos li { padding: 12px 0; border-bottom: 1px solid rgba(251, 245, 231, 0.4); font-weight: 500; }
+.vd-botones { display: grid; gap: 10px; }
+.vd-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 54px; padding: 0 24px; border-radius: 999px; border: 1px solid var(--vd-crema); background: var(--vd-crema); color: var(--vd-cafe); font-size: 16px; font-weight: 500; text-decoration: none; transition: background-color 180ms ease, color 180ms ease, transform 140ms cubic-bezier(0.22, 1, 0.36, 1); }
+.vd-btn svg { width: 20px; height: 20px; color: #128041; }
+.vd-btn-linea { background: transparent; color: var(--vd-crema); }
+@media (hover: hover) { .vd-btn:hover { background: #fff; border-color: #fff; } .vd-btn-linea:hover { background: var(--vd-crema); color: var(--vd-cafe); } }
+.vd-cierre ::selection, .vd-cinta ::selection { background: var(--vd-mandarina); color: var(--vd-cafe); }
+@media (max-width: 800px) {
+  .vd-cierre-in { grid-template-columns: 1fr; align-items: start; }
+  /* aire para los botones fijos de cada demo (WhatsApp, llamar, pedido) */
+  .vd-cierre { padding-bottom: 120px; }
+}

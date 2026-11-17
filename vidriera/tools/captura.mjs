@@ -33,7 +33,7 @@ for (const demo of demos) {
     const alto = await chrome.evaluar('document.documentElement.scrollHeight');
     for (let y = 0; y < alto; y += 500) { await chrome.evaluar(`scrollTo({ top: ${y}, behavior: 'instant' })`); await sleep(50); }
     await chrome.evaluar(`scrollTo({ top: 0, behavior: 'instant' });
-      document.head.insertAdjacentHTML('beforeend', '<style>.float-wa, .callbar { display: none !important; } .top { position: relative !important; }</style>')`);
+      document.head.insertAdjacentHTML('beforeend', '<style>.float-wa, .callbar, .vd-cinta, .vd-cierre { display: none !important; } .top { position: relative !important; }</style>')`);
     await sleep(1200);
     const total = await chrome.evaluar('document.documentElement.scrollHeight');
     ({ data } = await chrome.send('Page.captureScreenshot', {
