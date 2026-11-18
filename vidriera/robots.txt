@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /demos/
+Disallow: /tools/
+
+Sitemap: https://vidriera.pages.dev/sitemap.xml

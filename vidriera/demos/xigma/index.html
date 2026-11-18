@@ -6,18 +6,17 @@
   <title>Xigma Estilistas | Peluquería en Villa Urquiza</title>
   <meta name="description" content="Cortes, color, alisados y tratamientos en Villa Urquiza. Contanos qué te querés hacer y lo charlamos por WhatsApp.">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#a3202e">
+  <meta name="theme-color" content="#f5f1ea">
   <meta property="og:title" content="Xigma Estilistas | Peluquería en Villa Urquiza">
   <meta property="og:description" content="Boceto de la web de Xigma, hecho por Vidriera.">
   <meta property="og:image" content="https://vidriera.pages.dev/demos/xigma/img/brushing.webp">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1414'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23fff'%3Ex%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191514'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='40' fill='%23f5f1ea'%3Ex%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="estilos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/demo-venta.css">
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 <aside class="vd-cinta" aria-label="Sobre este boceto">
@@ -27,200 +26,122 @@
 </aside>
 <a class="skip" href="#servicios">Saltar a los servicios</a>
 
-<p class="utility">Díaz Colodrero 2535, Villa Urquiza · Martes a sábado de 10 a 19:30</p>
-
-<nav class="topbar" aria-label="Secciones">
-  <a class="wordmark" href="#">xigma</a>
-  <div class="topbar-links">
-    <a href="#servicios">Servicios</a>
-    <a href="#como">Cómo trabajamos</a>
-    <a href="#resenas">Reseñas</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-  <a class="topbar-cta" href="https://wa.me/5491168202779" data-wa="Hola, les escribo desde la web de Xigma. Quería hacerles una consulta.">WhatsApp</a>
-</nav>
-
-<header class="hero" aria-labelledby="titulo">
-  <img class="hero-img" src="img/brushing.webp" width="1400" height="934" fetchpriority="high" alt="Estilista haciendo un brushing con secador y cepillo redondo">
-  <div class="hero-card" data-rise>
-    <p class="eyebrow">Peluquería en Villa Urquiza</p>
-    <h1 id="titulo" class="hero-title">Tu pelo, <em>hablado</em> con tiempo</h1>
-    <p class="hero-sub">Cortes, color, alisados y tratamientos. Cada pelo es distinto: contanos qué te querés hacer, mandanos una foto y lo charlamos por WhatsApp.</p>
-    <div class="hero-btns">
-      <a class="btn" href="https://wa.me/5491168202779" data-wa="Hola, quiero consultar por un color. Les mando una foto de cómo tengo el pelo ahora y les cuento qué me gustaría.">Consultá tu color</a>
-      <a class="btn-outline" href="https://wa.me/5491168202779" data-wa="Hola, quiero pedir un turno para corte.">Pedir turno de corte</a>
-    </div>
-    <p class="hero-status" data-estado><span class="dot" aria-hidden="true"></span><span data-estado-texto>Martes a sábado de 10 a 19:30</span></p>
-  </div>
+<header class="top">
+  <a class="logo" href="#" aria-label="Xigma Estilistas, inicio">xigma <span>estilistas</span></a>
+  <a class="top-wa" href="https://wa.me/5491168202779" data-wa="Hola, les escribo desde la web. Quería hacerles una consulta.">Escribinos</a>
 </header>
 
 <main>
-  <!-- Servicios, sin precios: cada uno abre WhatsApp con su mensaje -->
-  <section id="servicios" class="works" aria-labelledby="servicios-titulo">
-    <div class="section-head">
-      <p class="eyebrow" data-reveal>Servicios</p>
-      <h2 id="servicios-titulo" class="section-title" data-reveal>Lo que hacemos</h2>
-      <p class="prices-help" data-reveal style="--i:1">Los cortes y tratamientos los podés pedir directo. El color y los alisados primero los charlamos, porque dependen de cómo tenés el pelo hoy y de lo que querés lograr.</p>
-    </div>
-    <ul class="works-grid" role="list">
-      <li class="work" data-reveal>
-        <span class="tag">Turno directo</span>
-        <img src="img/corte.webp" width="1400" height="934" loading="lazy" alt="Estilista cortando el pelo a una clienta">
-        <h3>Cortes</h3><p>Con tijera o a navaja, pensados para tu pelo y tus facciones.</p>
-        <a class="work-link" href="https://wa.me/5491168202779" data-wa="Hola, quiero pedir un turno para corte.">Pedir turno</a>
-      </li>
-      <li class="work" data-reveal style="--i:1">
-        <span class="tag tag-charla">Lo charlamos</span>
-        <img src="img/rizos.webp" width="1400" height="934" loading="lazy" alt="Pelo con ondas y reflejos claros">
-        <h3>Color</h3><p>Iluminación, reflejos, mechas y baños de luz. Arreglamos colores que salieron mal.</p>
-        <a class="work-link" href="https://wa.me/5491168202779" data-wa="Hola, quiero consultar por un color. Les mando una foto de cómo tengo el pelo ahora y les cuento qué me gustaría.">Consultar mi color</a>
-      </li>
-      <li class="work" data-reveal style="--i:2">
-        <span class="tag tag-charla">Lo charlamos</span>
-        <img src="img/planchita.webp" width="1400" height="934" loading="lazy" alt="Estilista trabajando el largo del pelo">
-        <h3>Alisados</h3><p>Sin formol, con Floractive. Pelo liso, brillante y sano.</p>
-        <a class="work-link" href="https://wa.me/5491168202779" data-wa="Hola, quiero consultar por un alisado. Les mando una foto de cómo tengo el pelo.">Consultar alisado</a>
-      </li>
-      <li class="work" data-reveal style="--i:3">
-        <span class="tag">Turno directo</span>
-        <img src="img/peinado.webp" width="1400" height="934" loading="lazy" alt="Estilista peinando a una clienta frente al espejo">
-        <h3>Tratamientos</h3><p>Nutrición e hidratación para recuperar el pelo entre color y color.</p>
-        <a class="work-link" href="https://wa.me/5491168202779" data-wa="Hola, quiero pedir un turno para un tratamiento.">Pedir turno</a>
-      </li>
-    </ul>
-    <ul class="services-line" role="list" data-reveal>
-      <li>Asesoramiento antes de cada cambio</li>
-      <li>Productos Matrix y Floractive</li>
-      <li>Alisado sin formol</li>
-      <li>Atención personalizada</li>
-    </ul>
-  </section>
-
-  <!-- Cómo trabajamos: el color y los alisados se hablan antes -->
-  <section id="como" class="steps" aria-labelledby="pasos-titulo">
-    <div class="section-head">
-      <p class="eyebrow" data-reveal>Color y alisados</p>
-      <h2 id="pasos-titulo" class="section-title" data-reveal>Cómo trabajamos</h2>
-    </div>
-    <ol class="steps-list" role="list">
-      <li data-reveal><span class="step-n" aria-hidden="true">1</span><h3>Mandanos una foto</h3><p>Por WhatsApp, de cómo tenés el pelo hoy y, si querés, de lo que te gustaría.</p></li>
-      <li data-reveal style="--i:1"><span class="step-n" aria-hidden="true">2</span><h3>Lo charlamos</h3><p>Te decimos qué se puede hacer con tu pelo, cuánto lleva y cuánto sale.</p></li>
-      <li data-reveal style="--i:2"><span class="step-n" aria-hidden="true">3</span><h3>Seña y prueba de mechón</h3><p>Reservás con una seña y, si hace falta, probamos el color en un mechón.</p></li>
-      <li data-reveal style="--i:3"><span class="step-n" aria-hidden="true">4</span><h3>Tu turno</h3><p>Venís sabiendo qué te vas a hacer. Sin sorpresas.</p></li>
-    </ol>
-    <p class="steps-cta" data-reveal><a class="btn" href="https://wa.me/5491168202779" data-wa="Hola, quiero consultar por un color. Les mando una foto de cómo tengo el pelo ahora y les cuento qué me gustaría.">Empezar por WhatsApp</a></p>
-  </section>
-
-  <!-- Reseñas reales de la ficha de Google -->
-  <section id="resenas" class="reviews" aria-labelledby="resenas-titulo">
-    <div class="section-head reviews-head">
-      <div>
-        <p class="eyebrow" data-reveal>Reseñas</p>
-        <h2 id="resenas-titulo" class="section-title" data-reveal>Lo que dicen en el barrio</h2>
+  <!-- Portada -->
+  <section class="hero" aria-labelledby="titulo">
+    <div class="hero-text">
+      <p class="kicker" data-sube><span class="estado" data-estado><i aria-hidden="true"></i><span data-estado-texto>Martes a sábado de 10 a 19:30</span></span></p>
+      <h1 id="titulo" data-sube>Contanos qué querés y <em>lo charlamos.</em></h1>
+      <p class="lead" data-sube>Peluquería en Villa Urquiza. Cortes, color, alisados y tratamientos, pensados para tu pelo. Mandanos una foto por WhatsApp y vemos juntos qué te conviene.</p>
+      <div class="acciones" data-sube>
+        <a class="btn" href="https://wa.me/5491168202779" data-wa="Hola, quiero consultar por un color. Les mando una foto de cómo tengo el pelo ahora y les cuento qué me gustaría.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.36A9.9 9.9 0 1 0 12.04 2Zm5.8 14.03c-.25.7-1.44 1.33-2 1.41-.5.08-1.15.11-1.86-.12-.43-.13-.98-.32-1.69-.62-2.97-1.28-4.9-4.27-5.05-4.46-.15-.2-1.2-1.6-1.2-3.06s.76-2.17 1.04-2.47c.27-.3.6-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.84 2.05.92 2.2.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.45.52-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.39 1.47.3.15.47.12.64-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.12.07.71-.18 1.4Z"/></svg>
+          Consultá tu color
+        </a>
+        <a class="btn btn-claro" href="https://wa.me/5491168202779" data-wa="Hola, quiero pedir un turno para corte.">Pedir turno de corte</a>
       </div>
-      <p class="score" data-reveal><strong>4,8</strong><span>en Google, con 170 reseñas</span></p>
     </div>
-    <ul class="reviews-grid" role="list">
-      <li class="review" data-reveal><blockquote>“Fui por primera vez para hacer un cambio y Cesar me asesoró super bien. La verdad un lujo como te va explicando cada paso, realmente uno se siente seguro.”</blockquote><p class="review-who">Virginia S. <span>Cambio de look</span></p></li>
-      <li class="review" data-reveal style="--i:1"><blockquote>“Excelente atención de cesar, me hago cada 2/3 meses alisado sin formol floractive, me queda el pelo hermoso, brillante y no me hace mal a la salud.”</blockquote><p class="review-who">Micaela C. <span>Alisado</span></p></li>
-      <li class="review" data-reveal style="--i:2"><blockquote>“Servicio de excelencia. Atención personalizada, Xigma es el mejor salón de Villa Urquiza!”</blockquote><p class="review-who">Adriana V. <span>Clienta</span></p></li>
+    <figure class="hero-foto" data-sube>
+      <img src="img/brushing.webp" width="1400" height="934" fetchpriority="high" alt="Estilista haciendo un brushing con secador y cepillo redondo">
+    </figure>
+  </section>
+
+  <!-- Servicios: dos formas de empezar -->
+  <section id="servicios" class="servicios" aria-labelledby="servicios-titulo">
+    <h2 id="servicios-titulo">Qué hacemos</h2>
+    <div class="dos">
+      <div class="grupo" data-ver>
+        <p class="grupo-titulo">Pedí tu turno directo</p>
+        <ul class="lista" role="list">
+          <li>
+            <div><h3>Cortes</h3><p>Con tijera o a navaja, pensados para tu pelo y tus facciones.</p></div>
+            <a href="https://wa.me/5491168202779" data-wa="Hola, quiero pedir un turno para corte.">Pedir turno <span aria-hidden="true">→</span></a>
+          </li>
+          <li>
+            <div><h3>Tratamientos</h3><p>Nutrición e hidratación para recuperar el pelo.</p></div>
+            <a href="https://wa.me/5491168202779" data-wa="Hola, quiero pedir un turno para un tratamiento.">Pedir turno <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="grupo" data-ver>
+        <p class="grupo-titulo">Primero lo charlamos</p>
+        <ul class="lista" role="list">
+          <li>
+            <div><h3>Color</h3><p>Iluminación, reflejos, mechas y baños de luz. También arreglamos colores que salieron mal.</p></div>
+            <a href="https://wa.me/5491168202779" data-wa="Hola, quiero consultar por un color. Les mando una foto de cómo tengo el pelo ahora y les cuento qué me gustaría.">Consultar <span aria-hidden="true">→</span></a>
+          </li>
+          <li>
+            <div><h3>Alisados</h3><p>Sin formol, con Floractive. Liso, brillante y sano.</p></div>
+            <a href="https://wa.me/5491168202779" data-wa="Hola, quiero consultar por un alisado. Les mando una foto de cómo tengo el pelo.">Consultar <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="nota" data-ver>No publicamos precios porque cada pelo es distinto: depende del largo, de cómo está hoy y de lo que quieras lograr. Escribinos y te pasamos un presupuesto para vos.</p>
+  </section>
+
+  <!-- Cómo trabajamos el color -->
+  <section class="pasos" aria-labelledby="pasos-titulo">
+    <div class="pasos-in">
+      <h2 id="pasos-titulo">Así trabajamos el color</h2>
+      <ol role="list">
+        <li data-ver><span aria-hidden="true">1</span><h3>Nos mandás una foto</h3><p>Por WhatsApp, de cómo tenés el pelo hoy y de lo que te gustaría.</p></li>
+        <li data-ver><span aria-hidden="true">2</span><h3>Lo hablamos</h3><p>Te contamos qué se puede hacer con tu pelo, cuánto lleva y cuánto sale.</p></li>
+        <li data-ver><span aria-hidden="true">3</span><h3>Seña y prueba de mechón</h3><p>Reservás tu turno con una seña y, si hace falta, probamos el color antes.</p></li>
+      </ol>
+      <a class="btn btn-invertido" href="https://wa.me/5491168202779" data-wa="Hola, quiero consultar por un color. Les mando una foto de cómo tengo el pelo ahora y les cuento qué me gustaría.">Mandar mi foto por WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Reseñas reales de Google -->
+  <section class="resenas" aria-labelledby="resenas-titulo">
+    <div class="resenas-cabeza">
+      <h2 id="resenas-titulo">Lo que dicen en el barrio</h2>
+      <p class="puntaje"><strong>4,8</strong> <span>en Google · 170 reseñas</span></p>
+    </div>
+    <ul class="citas" role="list">
+      <li data-ver><blockquote>“Fui por primera vez para hacer un cambio y Cesar me asesoró super bien. La verdad un lujo como te va explicando cada paso.”</blockquote><p>Virginia S.</p></li>
+      <li data-ver><blockquote>“Me hago cada 2/3 meses alisado sin formol floractive, me queda el pelo hermoso, brillante y no me hace mal a la salud.”</blockquote><p>Micaela C.</p></li>
+      <li data-ver><blockquote>“Servicio de excelencia. Atención personalizada, Xigma es el mejor salón de Villa Urquiza!”</blockquote><p>Adriana V.</p></li>
     </ul>
   </section>
 
-  <!-- Equipo -->
-  <section id="equipo" class="about" aria-labelledby="equipo-titulo">
-    <img class="about-img" src="img/sillas.webp" width="1400" height="934" loading="lazy" alt="Salón de peluquería con sillones y espejos">
-    <div class="about-text" data-reveal>
-      <p class="eyebrow">Quiénes somos</p>
-      <h2 id="equipo-titulo" class="section-title">Cada cabeza es un mundo</h2>
-      <p>En Xigma atiende <strong>César Suárez</strong> junto a su equipo. Antes de cortar o de aplicar un color, te escuchamos y te explicamos cada paso, para que te vayas con el pelo que querías.</p>
-      <p class="muted">Trabajamos con productos Matrix y alisados Floractive sin formol.</p>
-      <ul class="facts" role="list">
-        <li>Díaz Colodrero 2535</li>
-        <li>Villa Urquiza</li>
-        <li>Consultas por WhatsApp</li>
-      </ul>
+  <!-- Dónde estamos -->
+  <section id="visitanos" class="visita" aria-labelledby="visita-titulo">
+    <div class="visita-datos" data-ver>
+      <h2 id="visita-titulo">Visitanos</h2>
+      <p class="direccion">Díaz Colodrero 2535<br>Villa Urquiza, CABA</p>
+      <dl class="horario">
+        <div><dt>Martes a sábado</dt><dd>10 a 19:30</dd></div>
+        <div><dt>Domingo y lunes</dt><dd>Cerrado</dd></div>
+      </dl>
+      <div class="acciones">
+        <a class="btn" href="https://wa.me/5491168202779" data-wa="Hola, les escribo desde la web. Quería hacerles una consulta.">WhatsApp 11 6820-2779</a>
+        <a class="btn btn-claro" href="https://www.google.com/maps/search/?api=1&query=Xigma+Estilista+Diaz+Colodrero+2535+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
     </div>
-  </section>
-
-  <!-- Preguntas -->
-  <section class="faq" aria-labelledby="preguntas-titulo">
-    <div class="section-head">
-      <p class="eyebrow" data-reveal>Preguntas</p>
-      <h2 id="preguntas-titulo" class="section-title" data-reveal>Antes de venir</h2>
-    </div>
-    <div class="faq-list">
-      <div class="band"><h3>¿Por qué no están los precios?</h3><p>Porque un color o un alisado dependen del largo, del estado del pelo y de lo que quieras lograr. Mandanos una foto por WhatsApp y te pasamos un presupuesto para tu pelo.</p></div>
-      <div class="band"><h3>¿Hace falta dejar seña?</h3><p>Para color y alisados, sí: con la seña te reservamos el turno. Para cortes y tratamientos, pedís el turno directo.</p></div>
-      <div class="band"><h3>¿Qué es la prueba de mechón?</h3><p>Probamos el color en un mechón antes de hacerlo en todo el pelo. Así ves cómo queda y no hay sorpresas.</p></div>
-      <div class="band"><h3>Vengo con un color que salió mal, ¿lo pueden arreglar?</h3><p>Sí. Mandanos una foto y vemos juntos cómo recuperarlo.</p></div>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="contact" aria-labelledby="contacto-titulo">
-    <img class="contact-photo" src="img/salon.webp" width="1400" height="934" loading="lazy" alt="Salón de peluquería con sillas negras y espejos redondos">
-    <div class="contact-card" data-reveal>
-      <p class="eyebrow">Contacto</p>
-      <h2 id="contacto-titulo" class="section-title">¿Lo charlamos?</h2>
-      <p class="contact-line">Escribinos para un turno o para consultar por un color o un alisado. Si podés, mandanos una foto de tu pelo.</p>
-      <a class="btn-outline" href="https://wa.me/5491168202779" data-wa="Hola, les escribo desde la web de Xigma. Quería hacerles una consulta.">WhatsApp 11 6820-2779</a>
-      <a class="contact-map" href="https://www.google.com/maps/search/?api=1&query=Xigma+Estilista+Diaz+Colodrero+2535+Buenos+Aires" target="_blank" rel="noopener">Díaz Colodrero 2535, Villa Urquiza</a>
-      <p class="contact-meta">Martes a sábado de 10 a 19:30.</p>
+    <div class="mapa">
+      <iframe title="Mapa: Xigma Estilistas en Díaz Colodrero 2535" src="https://maps.google.com/maps?q=Xigma%20Estilista%2C%20D%C3%ADaz%20Colodrero%202535%2C%20Buenos%20Aires&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 </main>
 
-<footer class="footer">
-  <div class="footer-row">
-    <div>
-      <p class="footer-logo">xigma</p>
-      <p class="footer-tag">Estilistas en Villa Urquiza.</p>
-    </div>
-    <ul class="places" role="list">
-      <li class="footer-h">Visitanos</li>
-      <li><a href="https://www.google.com/maps/search/?api=1&query=Xigma+Estilista+Diaz+Colodrero+2535+Buenos+Aires" target="_blank" rel="noopener">Díaz Colodrero 2535</a></li>
-      <li>Martes a sábado, 10 a 19:30</li>
-    </ul>
-    <ul class="places" role="list">
-      <li class="footer-h">Escribinos</li>
-      <li><a href="https://wa.me/5491168202779" data-wa="Hola, les escribo desde la web de Xigma. Quería hacerles una consulta.">WhatsApp 11 6820-2779</a></li>
-      <li><a href="https://www.instagram.com/xigma_estilistas/" target="_blank" rel="noopener">Instagram</a></li>
-    </ul>
-    <ul class="footer-links" role="list">
-      <li class="footer-h">Secciones</li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#como">Cómo trabajamos</a></li>
-      <li><a href="#resenas">Reseñas</a></li>
-    </ul>
-  </div>
-  <p class="legal">Boceto hecho por <a href="../../index.html">Vidriera</a> para Xigma Estilistas. Las fotos son de muestra (Unsplash): en la web final van las de tus trabajos.</p>
+<footer class="pie">
+  <p class="logo">xigma <span>estilistas</span></p>
+  <p><a href="https://www.instagram.com/xigma_estilistas/" target="_blank" rel="noopener">Instagram @xigma_estilistas</a></p>
+  <p class="legal">Boceto hecho por <a href="../../index.html">Vidriera</a>. Las fotos son de muestra: en la web final van las de tus trabajos.</p>
 </footer>
 
-<section class="vd-cierre" aria-labelledby="vd-titulo">
-  <div class="vd-cierre-in">
-    <div>
-      <p class="vd-logo"><span class="vd-marca" aria-hidden="true"><i></i><i></i><i></i></span>Vidriera</p>
-      <h2 id="vd-titulo">Este es el boceto de tu web.</h2>
-      <p class="vd-texto">Los textos, los servicios y las reseñas ya son de Xigma. Las fotos son de muestra: en la versión final van las de tus trabajos. Decime qué te gustaría cambiar y lo ajustamos.</p>
-    </div>
-    <div class="vd-lado">
-      <ul class="vd-datos">
-        <li>Plan intermedio: $200.000, pago único</li>
-        <li>Mitad al empezar, mitad al terminar</li>
-        <li>Sin cuota mensual</li>
-      </ul>
-      <div class="vd-botones">
-        <a class="vd-btn" href="https://wa.me/5491135778063?text=Hola%20Santiago%2C%20vi%20el%20boceto%20de%20Xigma.%20Te%20cuento%20qu%C3%A9%20cambiar%C3%ADa%3A%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></svg>Pedir cambios</a>
-        <a class="vd-btn vd-btn-linea" href="https://wa.me/5491135778063?text=Hola%20Santiago%2C%20me%20gust%C3%B3%20el%20boceto%20de%20Xigma.%20%C2%BFC%C3%B3mo%20seguimos%3F" target="_blank" rel="noopener">Me gusta, sigamos</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<a class="float-wa" id="float-wa" href="https://wa.me/5491168202779" data-wa="Hola, les escribo desde la web de Xigma. Quería hacerles una consulta." aria-label="Escribir por WhatsApp a Xigma"><span>Consultar</span></a>
+<a class="flotante" id="flotante" href="https://wa.me/5491168202779" data-wa="Hola, les escribo desde la web. Quería hacerles una consulta." aria-label="Escribir a Xigma por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.36A9.9 9.9 0 1 0 12.04 2Zm5.8 14.03c-.25.7-1.44 1.33-2 1.41-.5.08-1.15.11-1.86-.12-.43-.13-.98-.32-1.690-.62-2.97-1.28-4.9-4.27-5.05-4.46-.15-.2-1.2-1.6-1.2-3.06s.76-2.170 1.04-2.47c.27-.3.6-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.84 2.05.92 2.2.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.45.52-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.06 1.13 1.01 2.09 1.32 2.39 1.47.3.15.47.12.64-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.12.07.71-.18 1.4Z"/></svg>
+  <span>Consultar</span>
+</a>
 
 <script src="app.js" defer></script>
-<script src="../../assets/demo-efectos.js" defer></script>
 </body>
 </html>

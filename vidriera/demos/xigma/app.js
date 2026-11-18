@@ -1,4 +1,4 @@
-// Boceto Xigma Estilistas: sin precios, cada servicio abre WhatsApp con su mensaje.
+// Boceto Xigma Estilistas: sin precios, cada servicio abre WhatsApp con su mensaje ya escrito.
 
 const WHATSAPP = '5491168202779';
 // Horario por día (0 = domingo … 6 = sábado), en horas de Buenos Aires. Sin entrada = cerrado.
@@ -24,20 +24,19 @@ document.querySelectorAll('[data-wa]').forEach((a) => { a.href = wa(a.dataset.wa
   document.querySelectorAll('[data-estado]').forEach((el) => { el.classList.toggle('is-open', abierto); el.querySelector('[data-estado-texto]').textContent = texto; });
 })();
 
-// ---------- Botón flotante después de la portada ----------
+// ---------- Botón flotante: aparece después de la portada ----------
 (() => {
-  const b = document.getElementById('float-wa');
+  const b = document.getElementById('flotante');
   const portada = document.querySelector('.hero');
   const f = () => b.classList.toggle('is-on', portada.getBoundingClientRect().bottom < 0);
   addEventListener('scroll', f, { passive: true }); f();
 })();
 
-// ---------- Entradas suaves ----------
+// ---------- Entradas suaves al bajar ----------
 (() => {
-  const items = [...document.querySelectorAll('[data-reveal]')];
+  const items = [...document.querySelectorAll('[data-ver]')];
   const mostrar = (el) => el.classList.add('is-in');
   if (!('IntersectionObserver' in window)) { items.forEach(mostrar); return; }
   const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { mostrar(e.target); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
   items.forEach((el) => io.observe(el));
-  addEventListener('scroll', () => items.forEach((el) => { if (el.getBoundingClientRect().top < innerHeight) mostrar(el); }), { passive: true });
 })();
