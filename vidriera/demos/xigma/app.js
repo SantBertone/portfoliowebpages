@@ -40,3 +40,49 @@ document.querySelectorAll('[data-wa]').forEach((a) => { a.href = wa(a.dataset.wa
   const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { mostrar(e.target); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
   items.forEach((el) => io.observe(el));
 })();
+
+// ---------- Movimiento (todo opcional: sin JS o con "reducir movimiento" la página queda quieta y completa) ----------
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Título: cada palabra en su caja, para que suba desde su renglón
+  const h1 = document.querySelector('h1');
+  if (h1) {
+    h1.setAttribute('aria-label', h1.textContent.replace(/\s+/g, ' ').trim());
+    let n = 0;
+    const partir = (nodo) => {
+      [...nodo.childNodes].forEach((c) => {
+        if (c.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          c.textContent.split(/(\s+)/).forEach((t) => {
+            if (!t) return;
+            if (/^\s+$/.test(t)) { frag.append(' '); return; }
+            const caja = document.createElement('span'); caja.className = 'p-w'; caja.setAttribute('aria-hidden', 'true');
+            const p = document.createElement('span'); p.textContent = t; p.style.setProperty('--w', n++);
+            caja.append(p); frag.append(caja);
+          });
+          c.replaceWith(frag);
+        } else if (c.nodeType === 1 && c.tagName !== 'svg') partir(c);
+      });
+    };
+    partir(h1);
+    h1.classList.add('partido');
+  }
+
+  // El puntaje de Google cuenta de 0 a 4,8 cuando aparece
+  const nota = document.querySelector('[data-cuenta]');
+  if (nota && 'IntersectionObserver' in window) {
+    const fin = Number(nota.dataset.cuenta);
+    nota.textContent = '0,0';
+    new IntersectionObserver((es, io) => {
+      if (!es[0].isIntersecting) return; io.disconnect();
+      const t0 = performance.now(), dur = 1100;
+      const paso = (t) => {
+        const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+        nota.textContent = (fin * e).toFixed(1).replace('.', ',');
+        if (k < 1) requestAnimationFrame(paso);
+      };
+      requestAnimationFrame(paso);
+    }, { threshold: 0.6 }).observe(nota);
+  }
+})();
