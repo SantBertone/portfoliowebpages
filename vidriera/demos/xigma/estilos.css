@@ -129,6 +129,8 @@ h1 em { color: var(--rojo); }
   .js [data-ver].is-in { opacity: 1; transform: none; }
 }
 @keyframes sube { to { opacity: 1; transform: none; } }
+/* Portada fuera de pantalla: se apagan sus animaciones; al volver arrancan de cero */
+.js .hero.reinicio *, .js .hero.reinicio *::before { animation: none !important; }
 
 /* Tablet y celular */
 @media (max-width: 900px) {

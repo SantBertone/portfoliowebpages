@@ -32,13 +32,22 @@ document.querySelectorAll('[data-wa]').forEach((a) => { a.href = wa(a.dataset.wa
   addEventListener('scroll', f, { passive: true }); f();
 })();
 
-// ---------- Entradas suaves al bajar ----------
+// ---------- Entradas al bajar: se repiten cada vez que la sección vuelve a la pantalla ----------
 (() => {
   const items = [...document.querySelectorAll('[data-ver]')];
-  const mostrar = (el) => el.classList.add('is-in');
-  if (!('IntersectionObserver' in window)) { items.forEach(mostrar); return; }
-  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { mostrar(e.target); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
-  items.forEach((el) => io.observe(el));
+  if (!('IntersectionObserver' in window)) { items.forEach((el) => el.classList.add('is-in')); return; }
+  // Entra cuando asoma un poco; se reinicia recién cuando salió del todo, para que no parpadee en el borde.
+  const entra = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) e.target.classList.add('is-in'); }), { rootMargin: '0px 0px -6% 0px' });
+  const sale = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) e.target.classList.remove('is-in'); }));
+  items.forEach((el) => { entra.observe(el); sale.observe(el); });
+
+  // Portada: si se fue de la pantalla y volvés a subir, su animación arranca de nuevo
+  const portada = document.querySelector('.hero');
+  let fuera = false;
+  new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting) { fuera = true; portada.classList.add('reinicio'); }
+    else if (fuera) { fuera = false; portada.classList.remove('reinicio'); }
+  }).observe(portada);
 })();
 
 // ---------- Movimiento (todo opcional: sin JS o con "reducir movimiento" la página queda quieta y completa) ----------
@@ -69,17 +78,20 @@ document.querySelectorAll('[data-wa]').forEach((a) => { a.href = wa(a.dataset.wa
     h1.classList.add('partido');
   }
 
-  // El puntaje de Google cuenta de 0 a 4,8 cuando aparece
+  // El puntaje de Google cuenta de 0 a 4,8 cada vez que aparece
   const nota = document.querySelector('[data-cuenta]');
   if (nota && 'IntersectionObserver' in window) {
     const fin = Number(nota.dataset.cuenta);
+    let vuelta = 0;
     nota.textContent = '0,0';
-    new IntersectionObserver((es, io) => {
-      if (!es[0].isIntersecting) return; io.disconnect();
+    new IntersectionObserver(([e]) => {
+      const mia = ++vuelta;
+      if (!e.isIntersecting) { nota.textContent = '0,0'; return; }
       const t0 = performance.now(), dur = 1100;
       const paso = (t) => {
-        const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
-        nota.textContent = (fin * e).toFixed(1).replace('.', ',');
+        if (mia !== vuelta) return;
+        const k = Math.min(1, (t - t0) / dur), f = 1 - Math.pow(1 - k, 3);
+        nota.textContent = (fin * f).toFixed(1).replace('.', ',');
         if (k < 1) requestAnimationFrame(paso);
       };
       requestAnimationFrame(paso);
