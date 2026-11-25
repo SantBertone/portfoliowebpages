@@ -224,3 +224,49 @@ h1 em { color: var(--rojo); }
   .js [data-sube], .js [data-ver] { animation: aparece 300ms ease forwards; transform: none; transition: none; }
   @keyframes aparece { from { opacity: 0; } to { opacity: 1; } }
 }
+
+/* =====================================================================
+   Íconos (Tabler Icons, licencia MIT) y brillo del botón principal.
+   ===================================================================== */
+.ic { width: 1.15em; height: 1.15em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ic-lleno { fill: currentColor; stroke: none; }
+.btn .ic { width: 20px; height: 20px; }
+.top-wa { display: inline-flex; align-items: center; gap: 8px; }
+.top-wa .ic { width: 18px; height: 18px; }
+
+/* Servicios: ícono en un círculo a la izquierda */
+.lista li { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; }
+.servicio-ic { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--rosa); color: var(--rojo); transition: background-color 220ms ease, color 220ms ease, transform 300ms var(--ease-out, ease); }
+.servicio-ic .ic { width: 24px; height: 24px; }
+@media (hover: hover) and (pointer: fine) {
+  .lista li:hover .servicio-ic { background: var(--rojo); color: #fff; transform: rotate(-8deg); }
+}
+
+/* Pasos: ícono junto al título */
+.pasos h3 { display: flex; align-items: center; gap: 10px; }
+.pasos h3 .ic { width: 22px; height: 22px; color: #e9a3ab; }
+
+/* Estrellas de Google */
+.puntaje { flex-wrap: wrap; }
+.estrellas { display: inline-flex; gap: 2px; color: #e0a526; }
+.estrellas .ic { width: 16px; height: 16px; }
+
+/* Visita */
+.direccion { display: flex; align-items: flex-start; gap: 12px; }
+.direccion .ic { width: 26px; height: 26px; margin-top: 2px; color: var(--rojo); }
+.horario-titulo { display: flex; align-items: center; gap: 10px; margin-bottom: -12px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rojo); }
+.horario-titulo .ic { width: 18px; height: 18px; }
+.pie-ig { display: inline-flex; align-items: center; gap: 8px; }
+
+/* Brillo: un reflejo cruza el botón principal cada tanto (solo si se acepta movimiento) */
+.btn-brillo { position: relative; overflow: hidden; isolation: isolate; }
+@media (prefers-reduced-motion: no-preference) {
+  .btn-brillo::after { content: ""; position: absolute; inset: -20% auto -20% 0; z-index: -1; width: 45%; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.38), transparent); transform: translateX(-160%) skewX(-18deg); animation: brillo 4200ms var(--ease-in-out, ease-in-out) 2200ms infinite; pointer-events: none; }
+  @keyframes brillo { 0% { transform: translateX(-160%) skewX(-18deg); } 28%, 100% { transform: translateX(330%) skewX(-18deg); } }
+}
+
+@media (max-width: 560px) {
+  .lista li { grid-template-columns: auto 1fr; align-items: start; gap: 8px 14px; }
+  .lista li > a { grid-column: 2; justify-self: start; }
+  .servicio-ic { width: 44px; height: 44px; }
+}
